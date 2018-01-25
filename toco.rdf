@@ -1,0 +1,1000 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY NetworkResource "https://w3id.org/toco/" >
+    <!ENTITY dc "http://purl.org/dc/terms/" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY units "https://sweet.jpl.nasa.gov/" >
+    <!ENTITY time "http://www.w3.org/2006/time#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY om "http://purl.oclc.org/net/unis/ontology/sensordata.owl/" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:NetworkResource="https://w3id.org/toco/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:units="https://sweet.jpl.nasa.gov/"
+     xmlns:om="http://purl.oclc.org/net/unis/ontology/sensordata.owl/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/terms/">
+    <Ontology rdf:about="https://w3id.org/toco/">
+        <NetworkResource:contributor rdf:datatype="&xsd;string">Mohammad Soltani Dehghani (for LiFi networks)</NetworkResource:contributor>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">Qianru Zhou (qz1@hw.ac.uk)</rdfs:isDefinedBy>
+        <dc:license rdf:datatype="&xsd;anyURI">https://creativecommons.org/licenses/by-sa/4.0/</dc:license>
+        <rdfs:comment>Toucan Ontology (ToCo)
+
+A ontology developed for telecommunciation network systems with hybrid technologies, e.g., WiFi, LiFi, LTE, 2G/3G, optical, etc.</rdfs:comment>
+        <versionIRI rdf:resource="https://w3id.org/toco/"/>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <AnnotationProperty rdf:about="&dc;license"/>
+    
+
+
+    <!-- https://w3id.org/toco/contributor -->
+
+    <AnnotationProperty rdf:about="&NetworkResource;contributor"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/net/unis/ontology/sensordata.owl/hasUnits -->
+
+    <ObjectProperty rdf:about="&om;hasUnits">
+        <rdfs:comment rdf:datatype="&xsd;string">reused from SenSei Observation and Measurement Ontology (http://purl.oclc.org/net/unis/ontology/sensordata.owl/).</rdfs:comment>
+        <rdfs:domain rdf:resource="&om;ObervationAndMeasurement"/>
+        <rdfs:range rdf:resource="&units;Units"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/toco/associatedStations -->
+
+    <ObjectProperty rdf:about="&NetworkResource;associatedStations">
+        <rdfs:comment rdf:datatype="&xsd;string">in wireless networks, the user equipments (mobile stations in another term, e.g., phones, laptops, tablets, etc.) that are associated to the access point.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+        <rdfs:domain rdf:resource="&NetworkResource;AccessPoint"/>
+        <rdfs:range rdf:resource="&NetworkResource;UserDevice"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/toco/from -->
+
+    <ObjectProperty rdf:about="&NetworkResource;from">
+        <rdfs:comment rdf:datatype="&xsd;string">the source node that the link is transmit from.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+        <rdfs:range rdf:resource="&NetworkResource;Device"/>
+        <rdfs:domain rdf:resource="&NetworkResource;Link"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasBandwidth -->
+
+    <ObjectProperty rdf:about="&NetworkResource;hasBandwidth">
+        <rdfs:comment rdf:datatype="&xsd;string">the bandwidth of the link</rdfs:comment>
+        <rdfs:range rdf:resource="&om;ObervationAndMeasurement"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+        <rdfs:domain rdf:resource="&NetworkResource;Link"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasCablePort -->
+
+    <ObjectProperty rdf:about="&NetworkResource;hasCablePort">
+        <rdfs:domain rdf:resource="&NetworkResource;Device"/>
+        <rdfs:range rdf:resource="&NetworkResource;RJ45Port"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasPort"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasDevice -->
+
+    <ObjectProperty rdf:about="&NetworkResource;hasDevice">
+        <rdfs:domain rdf:resource="&NetworkResource;User"/>
+        <rdfs:range rdf:resource="&NetworkResource;UserDevice"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasInterface -->
+
+    <ObjectProperty rdf:about="&NetworkResource;hasInterface">
+        <rdfs:domain rdf:resource="&NetworkResource;Device"/>
+        <rdfs:range rdf:resource="&NetworkResource;Interface"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasLTEAssociation -->
+
+    <ObjectProperty rdf:about="&NetworkResource;hasLTEAssociation">
+        <rdfs:range rdf:resource="&NetworkResource;LTEAssociation"/>
+        <rdfs:domain rdf:resource="&NetworkResource;UserEquipment"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasWirelessAssociation"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasLiFiAssociation -->
+
+    <ObjectProperty rdf:about="&NetworkResource;hasLiFiAssociation">
+        <rdfs:range rdf:resource="&NetworkResource;LiFiAssociation"/>
+        <rdfs:domain rdf:resource="&NetworkResource;LiFiWLAN"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasWirelessAssociation"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasLiFiWLAN -->
+
+    <ObjectProperty rdf:about="&NetworkResource;hasLiFiWLAN">
+        <rdfs:domain rdf:resource="&NetworkResource;Device"/>
+        <rdfs:range rdf:resource="&NetworkResource;LiFiWLAN"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasWLAN"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasLink -->
+
+    <ObjectProperty rdf:about="&NetworkResource;hasLink">
+        <rdfs:domain rdf:resource="&NetworkResource;Interface"/>
+        <rdfs:range rdf:resource="&NetworkResource;Link"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasOpticalFiberPort -->
+
+    <ObjectProperty rdf:about="&NetworkResource;hasOpticalFiberPort">
+        <rdfs:domain rdf:resource="&NetworkResource;Device"/>
+        <rdfs:range rdf:resource="&NetworkResource;FiberOpticalPort"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasPort"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasPort -->
+
+    <ObjectProperty rdf:about="&NetworkResource;hasPort">
+        <rdfs:domain rdf:resource="&NetworkResource;Device"/>
+        <rdfs:range rdf:resource="&NetworkResource;WiredPort"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasInterface"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasSatelliteAssociation -->
+
+    <ObjectProperty rdf:about="&NetworkResource;hasSatelliteAssociation">
+        <rdfs:domain rdf:resource="&NetworkResource;Device"/>
+        <rdfs:range rdf:resource="&NetworkResource;SatelliteAssociation"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasWirelessAssociation"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasService -->
+
+    <ObjectProperty rdf:about="&NetworkResource;hasService">
+        <rdfs:range rdf:resource="&NetworkResource;Service"/>
+        <rdfs:domain rdf:resource="&NetworkResource;UserDevice"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasWLAN -->
+
+    <ObjectProperty rdf:about="&NetworkResource;hasWLAN">
+        <rdfs:domain rdf:resource="&NetworkResource;Device"/>
+        <rdfs:range rdf:resource="&NetworkResource;WLAN"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasInterface"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasWiFiAssociation -->
+
+    <ObjectProperty rdf:about="&NetworkResource;hasWiFiAssociation">
+        <rdfs:range rdf:resource="&NetworkResource;WiFiAssociation"/>
+        <rdfs:domain rdf:resource="&NetworkResource;WiFiWLAN"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasWirelessAssociation"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasWiFiWLAN -->
+
+    <ObjectProperty rdf:about="&NetworkResource;hasWiFiWLAN">
+        <rdfs:domain rdf:resource="&NetworkResource;Device"/>
+        <rdfs:range rdf:resource="&NetworkResource;WiFiWLAN"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasWLAN"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasWiredLink -->
+
+    <ObjectProperty rdf:about="&NetworkResource;hasWiredLink">
+        <rdfs:domain rdf:resource="&NetworkResource;Interface"/>
+        <rdfs:range rdf:resource="&NetworkResource;WiredLink"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasLink"/>
+        <propertyDisjointWith rdf:resource="&NetworkResource;hasWirelessAssociation"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasWirelessAssociation -->
+
+    <ObjectProperty rdf:about="&NetworkResource;hasWirelessAssociation">
+        <rdfs:domain rdf:resource="&NetworkResource;WLAN"/>
+        <rdfs:range rdf:resource="&NetworkResource;WirelessAssociation"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasLink"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/toco/to -->
+
+    <ObjectProperty rdf:about="&NetworkResource;to">
+        <rdfs:comment rdf:datatype="&xsd;string">the destination node of the link.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+        <rdfs:range rdf:resource="&NetworkResource;Device"/>
+        <rdfs:domain rdf:resource="&NetworkResource;Link"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/net/unis/ontology/sensordata.owl/hasUnit -->
+
+    <DatatypeProperty rdf:about="&om;hasUnit">
+        <rdfs:comment rdf:datatype="&xsd;string">reused from SENSEI Observation and Measurement Ontology.</rdfs:comment>
+        <rdfs:domain rdf:resource="&om;ObervationAndMeasurement"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/net/unis/ontology/sensordata.owl/hasValue -->
+
+    <DatatypeProperty rdf:about="&om;hasValue">
+        <rdfs:comment rdf:datatype="&xsd;string">reused from SENSEI observation and measurement ontology.</rdfs:comment>
+        <rdfs:domain rdf:resource="&om;ObervationAndMeasurement"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasAntennaGain -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasAntennaGain">
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain rdf:resource="&NetworkResource;WLAN"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasAntennaHeight -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasAntennaHeight">
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain rdf:resource="&NetworkResource;WLAN"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasConnectionEndTime -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasConnectionEndTime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain rdf:resource="&NetworkResource;Service"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasConnectionStartTime -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasConnectionStartTime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain rdf:resource="&NetworkResource;Service"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasDistance -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasDistance">
+        <rdfs:comment rdf:datatype="&xsd;string">the Euclidean distance between the LiFi user equipment and access point.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain rdf:resource="&NetworkResource;LiFiAssociation"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasLiFiAssociationProperty"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasEndTime -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasEndTime">
+        <rdfs:comment rdf:datatype="&xsd;string">the time that a service ends.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain rdf:resource="&NetworkResource;Service"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasErrorCode -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasErrorCode">
+        <rdfs:comment rdf:datatype="&xsd;string">the error code of a service.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&NetworkResource;Service"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasFieldOfView -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasFieldOfView">
+        <rdfs:comment rdf:datatype="&xsd;string">Field of view (FOV) is the open observable area where a LiFi user equipment could receive visiable light signal. It is defined by let the incident angle of the LiFi user equipment equals to Pi/2.
+
+If the incident angle larger than Pi/2, the light ray is out of the FOV, thus cannot be received by the LiFi user equipment.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain rdf:resource="&NetworkResource;LiFiUserEuipment"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasLiFiUserEquipmentProperty"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasGainOfConcentrator -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasGainOfConcentrator">
+        <rdfs:comment rdf:datatype="&xsd;string">The gain of the concentrator on the LiFi user equipment, usually equals to 1.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain rdf:resource="&NetworkResource;LiFiUserEuipment"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasLiFiUserEquipmentProperty"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasGainofOpticalFilter -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasGainofOpticalFilter">
+        <rdfs:comment rdf:datatype="&xsd;string">Gain of optical filter on LiFi access point.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain rdf:resource="&NetworkResource;LiFiAccessPoint"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasLiFiAccessPointProperty"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasHalfIntensityAngle -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasHalfIntensityAngle">
+        <rdfs:comment rdf:datatype="&xsd;string">The angle of half intensity of the LED light transmiting visible light signal in a LiFi access point. 
+
+A fixed value. It is the angle where the radiated intensity will be half as intense as it would be at 0 degrees, or pointing straight ahead.
+
+Factors that contribute to the angle of half intensity include the amount of diffusing material in the epoxy, the shape of the reflector cup which surrounds the LED chip, the shape of the LED lens, the distance from the LED to the tip of the lens, and the type of emitter chip.
+
+The most common value is Pi/3.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain rdf:resource="&NetworkResource;LiFiAccessPoint"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasLiFiAccessPointProperty"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasIP -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasIP">
+        <rdfs:comment rdf:datatype="&xsd;string">the IP address of the interface.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&NetworkResource;Interface"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasIncidentAngle -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasIncidentAngle">
+        <rdfs:comment rdf:datatype="&xsd;string">The angle of incidence of the LED receiver on LiFi user equipment, which is the angle between the visiable light ray incident on a surface and the line perpendicular to the surface at the point of incidence, called the normal.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain rdf:resource="&NetworkResource;LiFiAssociation"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasLiFiAssociationProperty"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasLiFiAccessPointProperty -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasLiFiAccessPointProperty">
+        <rdfs:comment rdf:datatype="&xsd;string">datatype properties dedicated for LiFi access points</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain rdf:resource="&NetworkResource;LiFiAccessPoint"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasLiFiAssociationProperty -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasLiFiAssociationProperty">
+        <rdfs:comment rdf:datatype="&xsd;string">The properties of the visiable light association between the LED on LiFi access point and LiFi user equipment.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain rdf:resource="&NetworkResource;LiFiAssociation"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasWirelessLinkProperty"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasLiFiUserEquipmentProperty -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasLiFiUserEquipmentProperty">
+        <rdfs:comment rdf:datatype="&xsd;string">properties of LiFi user equipments.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain rdf:resource="&NetworkResource;LiFiUserEuipment"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasLinkProperty -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasLinkProperty">
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain rdf:resource="&NetworkResource;Link"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasMAC -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasMAC">
+        <rdfs:comment rdf:datatype="&xsd;string">the MAC address of the interface.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&NetworkResource;Interface"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasName -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasName">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&NetworkResource;Interface"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasOpticalTransmittedPower -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasOpticalTransmittedPower">
+        <rdfs:comment rdf:datatype="&xsd;string">the transmitted power of the LED on the LiFi access point</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain rdf:resource="&NetworkResource;LiFiAccessPoint"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasLiFiAccessPointProperty"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasRadianceAngle -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasRadianceAngle">
+        <rdfs:comment rdf:datatype="&xsd;string">the radiance angle of the light ray transmitted from LED on LiFi access point.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain rdf:resource="&NetworkResource;LiFiAssociation"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasLiFiAssociationProperty"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasRespansivity -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasRespansivity">
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain rdf:resource="&NetworkResource;LiFiAccessPoint"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasLiFiAccessPointProperty"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasServiceStatus -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasServiceStatus">
+        <rdfs:comment rdf:datatype="&xsd;string">the status of the service.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&NetworkResource;Service"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasServiceType -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasServiceType">
+        <rdfs:comment rdf:datatype="&xsd;string">the type of communication services, e.g., video, audio, file transmit, text transmiting, etc.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&NetworkResource;Service"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasStartTime -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasStartTime">
+        <rdfs:comment rdf:datatype="&xsd;string">the start time of a service.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain rdf:resource="&NetworkResource;Service"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasTransmitPower -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasTransmitPower">
+        <rdfs:comment rdf:datatype="&xsd;string">the power of the transmitter on the interface.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain rdf:resource="&NetworkResource;Interface"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toco/hasWirelessLinkProperty -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasWirelessLinkProperty">
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain rdf:resource="&NetworkResource;WirelessAssociation"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasLinkProperty"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/net/unis/ontology/sensordata.owl/ObervationAndMeasurement -->
+
+    <Class rdf:about="&om;ObervationAndMeasurement">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;ConceptEntities"/>
+        <rdfs:comment rdf:datatype="&xsd;string">reused from SenSei Observation And Measurement Ontology (http://purl.oclc.org/net/unis/ontology/sensordata.owl).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://sweet.jpl.nasa.gov/Units -->
+
+    <Class rdf:about="&units;Units">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;ConceptEntities"/>
+        <rdfs:comment rdf:datatype="&xsd;string">reused from NASA SWEET (semantic web for earth and environmental terminology) Ontology</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/AccessPoint -->
+
+    <Class rdf:about="&NetworkResource;AccessPoint">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;SystemDevice"/>
+        <rdfs:comment rdf:datatype="&xsd;string">a wireless access point, or more generally just access point (AP), is a networking hardware device that allows a Wi-Fi/Li-Fi device to connect to a wired network. The AP usually connects to a router (via a wired network) as a standalone device, but it can also be an integral component of the router itself. An AP is differentiated from a hotspot, which is the physical location where Wi-Fi access to a WLAN is available.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/AudioSession -->
+
+    <Class rdf:about="&NetworkResource;AudioSession">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;Session"/>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/BaseStation -->
+
+    <Class rdf:about="&NetworkResource;BaseStation">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;SystemDevice"/>
+        <rdfs:comment rdf:datatype="&xsd;string">a &quot;land station in the land mobile service.&quot; -- according to the International Telecommunication Union&apos;s (ITU) Radio Regulations (RR).
+
+it is a transceiver connecting a number of other devices to one another and/or to a wider area. In LTE, it is also known as eNodeB.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/ConceptEntities -->
+
+    <Class rdf:about="&NetworkResource;ConceptEntities">
+        <disjointWith rdf:resource="&NetworkResource;PhysicalInfrastructure"/>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/Device -->
+
+    <Class rdf:about="&NetworkResource;Device">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;PhysicalInfrastructure"/>
+        <rdfs:comment rdf:datatype="&xsd;string">represent all the devices in the physical infrastructure of telecommunciation system. 
+
+According to its user, could be divided into UserDevice and SystemDevice.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/FerruleConnector -->
+
+    <Class rdf:about="&NetworkResource;FerruleConnector">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;FiberOpticalPort"/>
+        <rdfs:comment rdf:datatype="&xsd;string">optical fiber port with metal coat.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/FiberOpticalPort -->
+
+    <Class rdf:about="&NetworkResource;FiberOpticalPort">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;WiredPort"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Port for optical fibers</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/File -->
+
+    <Class rdf:about="&NetworkResource;File">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;Service"/>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/Host -->
+
+    <Class rdf:about="&NetworkResource;Host">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;UserDevice"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A host is a computer or other device connected to a computer network. It is a network node that is assigned a network address.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/Interface -->
+
+    <Class rdf:about="&NetworkResource;Interface">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;PhysicalInfrastructure"/>
+        <rdfs:comment rdf:datatype="&xsd;string">interface on devices through with links are established.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/LTEAssociation -->
+
+    <Class rdf:about="&NetworkResource;LTEAssociation">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;WirelessAssociation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">the electromagnetic wave carring modulated signal between LTE base station, or eNodeB, and user equipment</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/LiFiAccessPoint -->
+
+    <Class rdf:about="&NetworkResource;LiFiAccessPoint">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;AccessPoint"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The access point in Li-Fi network. Li-Fi is a wireless optical networking technology that uses light-emitting diodes (LEDs) for data transmission.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/LiFiAssociation -->
+
+    <Class rdf:about="&NetworkResource;LiFiAssociation">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;WirelessAssociation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">the visiable light carring modulated signals in Li-Fi network. Transmited and received by LiFi user equipment and LiFi access point.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/LiFiUserEuipment -->
+
+    <Class rdf:about="&NetworkResource;LiFiUserEuipment">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;WirelessUserEquipment"/>
+        <rdfs:comment rdf:datatype="&xsd;string">any device used directly by an end-user to communicate. It can be a hand-held telephone, a laptop computer equipped with a mobile broadband adapter, or any other device.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/LiFiWLAN -->
+
+    <Class rdf:about="&NetworkResource;LiFiWLAN">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;WLAN"/>
+        <rdfs:comment rdf:datatype="&xsd;string">WLAN interface on the devices in LIFi network, e.g., LiFi user equipment, LiFi access point.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/Link -->
+
+    <Class rdf:about="&NetworkResource;Link">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;PhysicalInfrastructure"/>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/LucentConnector -->
+
+    <Class rdf:about="&NetworkResource;LucentConnector">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;FiberOpticalPort"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Fiber optical port for fibers with the bandwidth of 2GB.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/PhysicalInfrastructure -->
+
+    <Class rdf:about="&NetworkResource;PhysicalInfrastructure">
+        <rdfs:comment rdf:datatype="&xsd;string">Describe all the physical resources in a telecommunication network system, which is divided into three main modules, namely, device, interface, link. 
+
+Please be reminded the electromagnetic wave (which is the links of all wireless communication netwoks), even if it is invisable, physically exists. Thus, it is also described in the subclass of &quot;net;PhysicalInfrastructure&quot;.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/RJ45Port -->
+
+    <Class rdf:about="&NetworkResource;RJ45Port">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;WiredPort"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The RJ-45 port for twisted cables 10BASE-T, 100BASE-TX, and 1000BASE-T.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/SatelliteAssociation -->
+
+    <Class rdf:about="&NetworkResource;SatelliteAssociation">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;WirelessAssociation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">the milli-meter electromagnetic wave carring modulated signal between satellite base stations and ground station.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/SatelliteGroundStation -->
+
+    <Class rdf:about="&NetworkResource;SatelliteGroundStation">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;WirelessUserEquipment"/>
+        <rdfs:comment rdf:datatype="&xsd;string">used in satellite network. Also known as earth station, or earth terminal, it is a terrestrial radio station designed for extraplanetary telecommunication with spacecraft (constituting part of the ground segment of the spacecraft system), or reception of radio waves from astronomical radio sources. Ground stations may be located either on the surface of the Earth, or in its atmosphere.[1] Earth stations communicate with spacecraft by transmitting and receiving radio waves in the super high frequency or extremely high frequency bands (e.g., microwaves). When a ground station successfully transmits radio waves to a spacecraft (or vice versa), it establishes a telecommunications link. A principal telecommunications device of the ground station is the parabolic antenna.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/SatelliteRelayStation -->
+
+    <Class rdf:about="&NetworkResource;SatelliteRelayStation">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;SystemDevice"/>
+        <rdfs:comment rdf:datatype="&xsd;string">An artificial satellite, that relays and amplifies radio telecommunications signals via a transponder; it creates a communication channel between a source transmitter and a receiver at different locations on Earth. Communications satellites are used for television, telephone, radio, internet, and military applications.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/Service -->
+
+    <Class rdf:about="&NetworkResource;Service">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;ConceptEntities"/>
+        <rdfs:comment rdf:datatype="&xsd;string">a communication service, e.g., voice, video, file uploading/downloading, etc.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/Session -->
+
+    <Class rdf:about="&NetworkResource;Session">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;Service"/>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/SmartCard -->
+
+    <Class rdf:about="&NetworkResource;SmartCard">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;FiberOpticalPort"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Smart Card port for optical fiber with the bandwidth of 1GB.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/Switch -->
+
+    <Class rdf:about="&NetworkResource;Switch">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;SystemDevice"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A network switch (also called switching hub, bridging hub, officially MAC bridge) is a computer networking device that connects devices together on a computer network by using packet switching to receive, process, and forward data to the destination device.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/SystemDevice -->
+
+    <Class rdf:about="&NetworkResource;SystemDevice">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;Device"/>
+        <rdfs:comment rdf:datatype="&xsd;string">All the physical facilities in the telecommunication system that provide the communication service to uses. For example: base station towers, Wi-Fi access points, switches, servers, etc.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/Text -->
+
+    <Class rdf:about="&NetworkResource;Text">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;Service"/>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/User -->
+
+    <Class rdf:about="&NetworkResource;User">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;ConceptEntities"/>
+        <rdfs:comment rdf:datatype="&xsd;string">reused from foaf (http://xmlns.com/foaf/0.1/). Represent a user in the telecommunication system.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/UserDevice -->
+
+    <Class rdf:about="&NetworkResource;UserDevice">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;Device"/>
+        <rdfs:comment rdf:datatype="&xsd;string">User Devices, requiring connectivity services, e.g., phones, tablets, laptops, wearable devices, etc.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/UserEquipment -->
+
+    <Class rdf:about="&NetworkResource;UserEquipment">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;WirelessUserEquipment"/>
+        <rdfs:comment rdf:datatype="&xsd;string">any device used directly by an end-user to communicate. It can be a hand-held telephone, a laptop computer equipped with a mobile broadband adapter, or any other device. It connects to the base station Node B/eNodeB as specified in the ETSI 125/136-series and 3GPP 25/36-series of specifications. It roughly corresponds to the mobile station (MS) in GSM systems.
+
+The radio interface between the UE and the Node B is called Uu. The radio interface between the UE and the eNodeB is called LTE-Uu.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/VideoSession -->
+
+    <Class rdf:about="&NetworkResource;VideoSession">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;Session"/>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/WLAN -->
+
+    <Class rdf:about="&NetworkResource;WLAN">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;Interface"/>
+        <disjointWith rdf:resource="&NetworkResource;WiredPort"/>
+        <rdfs:comment>A wireless local area network (WLAN) interface, also known as WLAN, is the interface of a wireless computer network that links two or more devices using wireless communication within a limited area such as a home, school, computer laboratory, or office building.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/WiFiAccessPoint -->
+
+    <Class rdf:about="&NetworkResource;WiFiAccessPoint">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;AccessPoint"/>
+        <rdfs:comment rdf:datatype="&xsd;string">An access point in a WiFi network</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/WiFiAssociation -->
+
+    <Class rdf:about="&NetworkResource;WiFiAssociation">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;WirelessAssociation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">the electromagnetic wave carring modulated signal between LTE base station, or eNodeB, and user equipment</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/WiFiUserEuipment -->
+
+    <Class rdf:about="&NetworkResource;WiFiUserEuipment">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;WirelessUserEquipment"/>
+        <rdfs:comment rdf:datatype="&xsd;string">a user quipment in Wi-Fi network</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/WiFiWLAN -->
+
+    <Class rdf:about="&NetworkResource;WiFiWLAN">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;WLAN"/>
+        <rdfs:comment rdf:datatype="&xsd;string">WLAN interface on the devices in LIFi network, e.g., LiFi user equipment, LiFi access point.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/WiredLink -->
+
+    <Class rdf:about="&NetworkResource;WiredLink">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;Link"/>
+        <rdfs:comment>wired link through twisted cable, optical fiber, etc.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/WiredPort -->
+
+    <Class rdf:about="&NetworkResource;WiredPort">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;Interface"/>
+        <rdfs:comment rdf:datatype="&xsd;string">the port on devices in wired networks, into which a wired cable, e.g., twisted cable, optical fiber, can be inserted.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/WirelessAssociation -->
+
+    <Class rdf:about="&NetworkResource;WirelessAssociation">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;Link"/>
+        <rdfs:comment rdf:datatype="&xsd;string">the electromeganetic radio transmiting through wireless channels in wireless network, carring communication data. Depend on its frequency, it could be visiable light, micro waves, radio waves.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/toco/WirelessUserEquipment -->
+
+    <Class rdf:about="&NetworkResource;WirelessUserEquipment">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;UserDevice"/>
+        <rdfs:comment rdf:datatype="&xsd;string">any device used directly by an end-user to communicate. It can be a hand-held telephone, a laptop computer equipped with a mobile broadband adapter, or any other device.</rdfs:comment>
+    </Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
