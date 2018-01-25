@@ -1,2 +1,4 @@
 # toco_ontology
-TOUCAN Ontology, an ontology for hybrid telecommunication networks
+TOUCAN Ontology (toco), an ontology for hybrid telecommunication networks.
+
+
