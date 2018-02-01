@@ -2,8 +2,8 @@
 
 
 <!DOCTYPE rdf:RDF [
-    <!ENTITY NetworkResource "https://w3id.org/toco/" >
-    <!ENTITY dc "http://purl.org/dc/terms/" >
+    <!ENTITY NetworkResource "http://purl.org/toco/" >
+    <!ENTITY toco "https://w3id.org/toco/" >
     <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
     <!ENTITY units "https://sweet.jpl.nasa.gov/" >
     <!ENTITY time "http://www.w3.org/2006/time#" >
@@ -17,7 +17,8 @@
 
 <rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl"
-     xmlns:NetworkResource="https://w3id.org/toco/"
+     xmlns:NetworkResource="http://purl.org/toco/"
+     xmlns:toco="https://w3id.org/toco/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
@@ -25,16 +26,15 @@
      xmlns:time="http://www.w3.org/2006/time#"
      xmlns:units="https://sweet.jpl.nasa.gov/"
      xmlns:om="http://purl.oclc.org/net/unis/ontology/sensordata.owl/"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:dc="http://purl.org/dc/terms/">
-    <Ontology rdf:about="https://w3id.org/toco/">
-        <NetworkResource:contributor rdf:datatype="&xsd;string">Mohammad Soltani Dehghani (for LiFi networks)</NetworkResource:contributor>
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">
+    <Ontology rdf:about="http://purl.org/toco/">
+        <toco:contributor rdf:datatype="&xsd;string">Mohammad Soltani Dehghani (for LiFi networks)</toco:contributor>
         <rdfs:isDefinedBy rdf:datatype="&xsd;string">Qianru Zhou (qz1@hw.ac.uk)</rdfs:isDefinedBy>
-        <dc:license rdf:datatype="&xsd;anyURI">https://creativecommons.org/licenses/by-sa/4.0/</dc:license>
+        <toco:license rdf:datatype="&xsd;anyURI">https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document</toco:license>
         <rdfs:comment>Toucan Ontology (ToCo)
 
 A ontology developed for telecommunciation network systems with hybrid technologies, e.g., WiFi, LiFi, LTE, 2G/3G, optical, etc.</rdfs:comment>
-        <versionIRI rdf:resource="https://w3id.org/toco/"/>
+        <versionIRI rdf:resource="http://purl.org/toco/"/>
     </Ontology>
     
 
@@ -50,15 +50,15 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
-    <!-- http://purl.org/dc/terms/license -->
+    <!-- http://purl.org/toco/contributor -->
 
-    <AnnotationProperty rdf:about="&dc;license"/>
+    <AnnotationProperty rdf:about="&NetworkResource;contributor"/>
     
 
 
-    <!-- https://w3id.org/toco/contributor -->
+    <!-- http://purl.org/toco/license -->
 
-    <AnnotationProperty rdf:about="&NetworkResource;contributor"/>
+    <AnnotationProperty rdf:about="&NetworkResource;license"/>
     
 
 
@@ -83,50 +83,41 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
-    <!-- https://w3id.org/toco/associatedStations -->
+    <!-- http://purl.org/toco/associatedStations -->
 
     <ObjectProperty rdf:about="&NetworkResource;associatedStations">
         <rdfs:comment rdf:datatype="&xsd;string">in wireless networks, the user equipments (mobile stations in another term, e.g., phones, laptops, tablets, etc.) that are associated to the access point.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
         <rdfs:domain rdf:resource="&NetworkResource;AccessPoint"/>
         <rdfs:range rdf:resource="&NetworkResource;UserDevice"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </ObjectProperty>
     
 
 
-    <!-- https://w3id.org/toco/from -->
+    <!-- http://purl.org/toco/from -->
 
     <ObjectProperty rdf:about="&NetworkResource;from">
         <rdfs:comment rdf:datatype="&xsd;string">the source node that the link is transmit from.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
         <rdfs:range rdf:resource="&NetworkResource;Device"/>
         <rdfs:domain rdf:resource="&NetworkResource;Link"/>
+        <inverseOf rdf:resource="&NetworkResource;to"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </ObjectProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasBandwidth -->
+    <!-- http://purl.org/toco/hasBandwidth -->
 
     <ObjectProperty rdf:about="&NetworkResource;hasBandwidth">
         <rdfs:comment rdf:datatype="&xsd;string">the bandwidth of the link</rdfs:comment>
         <rdfs:range rdf:resource="&om;ObervationAndMeasurement"/>
-        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
         <rdfs:domain rdf:resource="&NetworkResource;Link"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </ObjectProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasCablePort -->
-
-    <ObjectProperty rdf:about="&NetworkResource;hasCablePort">
-        <rdfs:domain rdf:resource="&NetworkResource;Device"/>
-        <rdfs:range rdf:resource="&NetworkResource;RJ45Port"/>
-        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasPort"/>
-    </ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/toco/hasDevice -->
+    <!-- http://purl.org/toco/hasDevice -->
 
     <ObjectProperty rdf:about="&NetworkResource;hasDevice">
         <rdfs:domain rdf:resource="&NetworkResource;User"/>
@@ -135,7 +126,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
-    <!-- https://w3id.org/toco/hasInterface -->
+    <!-- http://purl.org/toco/hasInterface -->
 
     <ObjectProperty rdf:about="&NetworkResource;hasInterface">
         <rdfs:domain rdf:resource="&NetworkResource;Device"/>
@@ -144,7 +135,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
-    <!-- https://w3id.org/toco/hasLTEAssociation -->
+    <!-- http://purl.org/toco/hasLTEAssociation -->
 
     <ObjectProperty rdf:about="&NetworkResource;hasLTEAssociation">
         <rdfs:range rdf:resource="&NetworkResource;LTEAssociation"/>
@@ -154,7 +145,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
-    <!-- https://w3id.org/toco/hasLiFiAssociation -->
+    <!-- http://purl.org/toco/hasLiFiAssociation -->
 
     <ObjectProperty rdf:about="&NetworkResource;hasLiFiAssociation">
         <rdfs:range rdf:resource="&NetworkResource;LiFiAssociation"/>
@@ -164,7 +155,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
-    <!-- https://w3id.org/toco/hasLiFiWLAN -->
+    <!-- http://purl.org/toco/hasLiFiWLAN -->
 
     <ObjectProperty rdf:about="&NetworkResource;hasLiFiWLAN">
         <rdfs:domain rdf:resource="&NetworkResource;Device"/>
@@ -174,7 +165,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
-    <!-- https://w3id.org/toco/hasLink -->
+    <!-- http://purl.org/toco/hasLink -->
 
     <ObjectProperty rdf:about="&NetworkResource;hasLink">
         <rdfs:domain rdf:resource="&NetworkResource;Interface"/>
@@ -183,27 +174,16 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
-    <!-- https://w3id.org/toco/hasOpticalFiberPort -->
-
-    <ObjectProperty rdf:about="&NetworkResource;hasOpticalFiberPort">
-        <rdfs:domain rdf:resource="&NetworkResource;Device"/>
-        <rdfs:range rdf:resource="&NetworkResource;FiberOpticalPort"/>
-        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasPort"/>
-    </ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/toco/hasPort -->
+    <!-- http://purl.org/toco/hasPort -->
 
     <ObjectProperty rdf:about="&NetworkResource;hasPort">
         <rdfs:domain rdf:resource="&NetworkResource;Device"/>
-        <rdfs:range rdf:resource="&NetworkResource;WiredPort"/>
         <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasInterface"/>
     </ObjectProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasSatelliteAssociation -->
+    <!-- http://purl.org/toco/hasSatelliteAssociation -->
 
     <ObjectProperty rdf:about="&NetworkResource;hasSatelliteAssociation">
         <rdfs:domain rdf:resource="&NetworkResource;Device"/>
@@ -213,7 +193,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
-    <!-- https://w3id.org/toco/hasService -->
+    <!-- http://purl.org/toco/hasService -->
 
     <ObjectProperty rdf:about="&NetworkResource;hasService">
         <rdfs:range rdf:resource="&NetworkResource;Service"/>
@@ -222,7 +202,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
-    <!-- https://w3id.org/toco/hasWLAN -->
+    <!-- http://purl.org/toco/hasWLAN -->
 
     <ObjectProperty rdf:about="&NetworkResource;hasWLAN">
         <rdfs:domain rdf:resource="&NetworkResource;Device"/>
@@ -232,7 +212,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
-    <!-- https://w3id.org/toco/hasWiFiAssociation -->
+    <!-- http://purl.org/toco/hasWiFiAssociation -->
 
     <ObjectProperty rdf:about="&NetworkResource;hasWiFiAssociation">
         <rdfs:range rdf:resource="&NetworkResource;WiFiAssociation"/>
@@ -242,7 +222,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
-    <!-- https://w3id.org/toco/hasWiFiWLAN -->
+    <!-- http://purl.org/toco/hasWiFiWLAN -->
 
     <ObjectProperty rdf:about="&NetworkResource;hasWiFiWLAN">
         <rdfs:domain rdf:resource="&NetworkResource;Device"/>
@@ -252,7 +232,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
-    <!-- https://w3id.org/toco/hasWiredLink -->
+    <!-- http://purl.org/toco/hasWiredLink -->
 
     <ObjectProperty rdf:about="&NetworkResource;hasWiredLink">
         <rdfs:domain rdf:resource="&NetworkResource;Interface"/>
@@ -263,7 +243,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
-    <!-- https://w3id.org/toco/hasWirelessAssociation -->
+    <!-- http://purl.org/toco/hasWirelessAssociation -->
 
     <ObjectProperty rdf:about="&NetworkResource;hasWirelessAssociation">
         <rdfs:domain rdf:resource="&NetworkResource;WLAN"/>
@@ -273,13 +253,13 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
-    <!-- https://w3id.org/toco/to -->
+    <!-- http://purl.org/toco/to -->
 
     <ObjectProperty rdf:about="&NetworkResource;to">
         <rdfs:comment rdf:datatype="&xsd;string">the destination node of the link.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
         <rdfs:range rdf:resource="&NetworkResource;Device"/>
         <rdfs:domain rdf:resource="&NetworkResource;Link"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </ObjectProperty>
     
 
@@ -315,109 +295,115 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
-    <!-- https://w3id.org/toco/hasAntennaGain -->
+    <!-- http://purl.org/toco/hasAntennaGain -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasAntennaGain">
-        <rdfs:range rdf:resource="&xsd;float"/>
         <rdfs:domain rdf:resource="&NetworkResource;WLAN"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasInterfaceProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasAntennaHeight -->
+    <!-- http://purl.org/toco/hasAntennaHeight -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasAntennaHeight">
-        <rdfs:range rdf:resource="&xsd;float"/>
         <rdfs:domain rdf:resource="&NetworkResource;WLAN"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasInterfaceProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasConnectionEndTime -->
+    <!-- http://purl.org/toco/hasConnectionEndTime -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasConnectionEndTime">
-        <rdfs:range rdf:resource="&xsd;dateTime"/>
         <rdfs:domain rdf:resource="&NetworkResource;Service"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasServiceProperty"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasConnectionStartTime -->
+    <!-- http://purl.org/toco/hasConnectionStartTime -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasConnectionStartTime">
-        <rdfs:range rdf:resource="&xsd;dateTime"/>
         <rdfs:domain rdf:resource="&NetworkResource;Service"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasServiceProperty"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasDistance -->
+    <!-- http://purl.org/toco/hasDistance -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasDistance">
         <rdfs:comment rdf:datatype="&xsd;string">the Euclidean distance between the LiFi user equipment and access point.</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;float"/>
         <rdfs:domain rdf:resource="&NetworkResource;LiFiAssociation"/>
         <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasLiFiAssociationProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasEndTime -->
+    <!-- http://purl.org/toco/hasEndTime -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasEndTime">
         <rdfs:comment rdf:datatype="&xsd;string">the time that a service ends.</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;dateTime"/>
         <rdfs:domain rdf:resource="&NetworkResource;Service"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasServiceProperty"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasErrorCode -->
+    <!-- http://purl.org/toco/hasErrorCode -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasErrorCode">
         <rdfs:comment rdf:datatype="&xsd;string">the error code of a service.</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:domain rdf:resource="&NetworkResource;Service"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasServiceProperty"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasFieldOfView -->
+    <!-- http://purl.org/toco/hasFieldOfView -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasFieldOfView">
         <rdfs:comment rdf:datatype="&xsd;string">Field of view (FOV) is the open observable area where a LiFi user equipment could receive visiable light signal. It is defined by let the incident angle of the LiFi user equipment equals to Pi/2.
 
 If the incident angle larger than Pi/2, the light ray is out of the FOV, thus cannot be received by the LiFi user equipment.</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;float"/>
         <rdfs:domain rdf:resource="&NetworkResource;LiFiUserEuipment"/>
         <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasLiFiUserEquipmentProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasGainOfConcentrator -->
+    <!-- http://purl.org/toco/hasGainOfConcentrator -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasGainOfConcentrator">
         <rdfs:comment rdf:datatype="&xsd;string">The gain of the concentrator on the LiFi user equipment, usually equals to 1.</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;float"/>
         <rdfs:domain rdf:resource="&NetworkResource;LiFiUserEuipment"/>
         <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasLiFiUserEquipmentProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasGainofOpticalFilter -->
+    <!-- http://purl.org/toco/hasGainofOpticalFilter -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasGainofOpticalFilter">
         <rdfs:comment rdf:datatype="&xsd;string">Gain of optical filter on LiFi access point.</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;float"/>
         <rdfs:domain rdf:resource="&NetworkResource;LiFiAccessPoint"/>
         <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasLiFiAccessPointProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasHalfIntensityAngle -->
+    <!-- http://purl.org/toco/hasHalfIntensityAngle -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasHalfIntensityAngle">
         <rdfs:comment rdf:datatype="&xsd;string">The angle of half intensity of the LED light transmiting visible light signal in a LiFi access point. 
@@ -427,171 +413,196 @@ A fixed value. It is the angle where the radiated intensity will be half as inte
 Factors that contribute to the angle of half intensity include the amount of diffusing material in the epoxy, the shape of the reflector cup which surrounds the LED chip, the shape of the LED lens, the distance from the LED to the tip of the lens, and the type of emitter chip.
 
 The most common value is Pi/3.</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;float"/>
         <rdfs:domain rdf:resource="&NetworkResource;LiFiAccessPoint"/>
         <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasLiFiAccessPointProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasIP -->
+    <!-- http://purl.org/toco/hasIP -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasIP">
         <rdfs:comment rdf:datatype="&xsd;string">the IP address of the interface.</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:domain rdf:resource="&NetworkResource;Interface"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasInterfaceProperty"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasIncidentAngle -->
+    <!-- http://purl.org/toco/hasIncidentAngle -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasIncidentAngle">
         <rdfs:comment rdf:datatype="&xsd;string">The angle of incidence of the LED receiver on LiFi user equipment, which is the angle between the visiable light ray incident on a surface and the line perpendicular to the surface at the point of incidence, called the normal.</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;float"/>
         <rdfs:domain rdf:resource="&NetworkResource;LiFiAssociation"/>
         <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasLiFiAssociationProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasLiFiAccessPointProperty -->
+    <!-- http://purl.org/toco/hasInterfaceProperty -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasInterfaceProperty">
+        <rdfs:domain rdf:resource="&NetworkResource;Interface"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/toco/hasLiFiAccessPointProperty -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasLiFiAccessPointProperty">
         <rdfs:comment rdf:datatype="&xsd;string">datatype properties dedicated for LiFi access points</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;float"/>
         <rdfs:domain rdf:resource="&NetworkResource;LiFiAccessPoint"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasLiFiAssociationProperty -->
+    <!-- http://purl.org/toco/hasLiFiAssociationProperty -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasLiFiAssociationProperty">
         <rdfs:comment rdf:datatype="&xsd;string">The properties of the visiable light association between the LED on LiFi access point and LiFi user equipment.</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;float"/>
         <rdfs:domain rdf:resource="&NetworkResource;LiFiAssociation"/>
         <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasWirelessLinkProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasLiFiUserEquipmentProperty -->
+    <!-- http://purl.org/toco/hasLiFiUserEquipmentProperty -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasLiFiUserEquipmentProperty">
         <rdfs:comment rdf:datatype="&xsd;string">properties of LiFi user equipments.</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;float"/>
         <rdfs:domain rdf:resource="&NetworkResource;LiFiUserEuipment"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasLinkProperty -->
+    <!-- http://purl.org/toco/hasLinkProperty -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasLinkProperty">
-        <rdfs:range rdf:resource="&xsd;float"/>
         <rdfs:domain rdf:resource="&NetworkResource;Link"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasMAC -->
+    <!-- http://purl.org/toco/hasMAC -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasMAC">
         <rdfs:comment rdf:datatype="&xsd;string">the MAC address of the interface.</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:domain rdf:resource="&NetworkResource;Interface"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasInterfaceProperty"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasName -->
+    <!-- http://purl.org/toco/hasName -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasName">
-        <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:domain rdf:resource="&NetworkResource;Interface"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasInterfaceProperty"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasOpticalTransmittedPower -->
+    <!-- http://purl.org/toco/hasOpticalTransmittedPower -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasOpticalTransmittedPower">
         <rdfs:comment rdf:datatype="&xsd;string">the transmitted power of the LED on the LiFi access point</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;float"/>
         <rdfs:domain rdf:resource="&NetworkResource;LiFiAccessPoint"/>
         <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasLiFiAccessPointProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasRadianceAngle -->
+    <!-- http://purl.org/toco/hasRadianceAngle -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasRadianceAngle">
         <rdfs:comment rdf:datatype="&xsd;string">the radiance angle of the light ray transmitted from LED on LiFi access point.</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;float"/>
         <rdfs:domain rdf:resource="&NetworkResource;LiFiAssociation"/>
         <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasLiFiAssociationProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasRespansivity -->
+    <!-- http://purl.org/toco/hasRespansivity -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasRespansivity">
-        <rdfs:range rdf:resource="&xsd;float"/>
         <rdfs:domain rdf:resource="&NetworkResource;LiFiAccessPoint"/>
         <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasLiFiAccessPointProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasServiceStatus -->
+    <!-- http://purl.org/toco/hasServiceProperty -->
+
+    <DatatypeProperty rdf:about="&NetworkResource;hasServiceProperty">
+        <rdfs:domain rdf:resource="&NetworkResource;Service"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/toco/hasServiceStatus -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasServiceStatus">
         <rdfs:comment rdf:datatype="&xsd;string">the status of the service.</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:domain rdf:resource="&NetworkResource;Service"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasServiceProperty"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasServiceType -->
+    <!-- http://purl.org/toco/hasServiceType -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasServiceType">
         <rdfs:comment rdf:datatype="&xsd;string">the type of communication services, e.g., video, audio, file transmit, text transmiting, etc.</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:domain rdf:resource="&NetworkResource;Service"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasServiceProperty"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasStartTime -->
+    <!-- http://purl.org/toco/hasStartTime -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasStartTime">
         <rdfs:comment rdf:datatype="&xsd;string">the start time of a service.</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;dateTime"/>
         <rdfs:domain rdf:resource="&NetworkResource;Service"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasServiceProperty"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasTransmitPower -->
+    <!-- http://purl.org/toco/hasTransmitPower -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasTransmitPower">
         <rdfs:comment rdf:datatype="&xsd;string">the power of the transmitter on the interface.</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;float"/>
         <rdfs:domain rdf:resource="&NetworkResource;Interface"/>
+        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasInterfaceProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/toco/hasWirelessLinkProperty -->
+    <!-- http://purl.org/toco/hasWirelessLinkProperty -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasWirelessLinkProperty">
-        <rdfs:range rdf:resource="&xsd;float"/>
         <rdfs:domain rdf:resource="&NetworkResource;WirelessAssociation"/>
         <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasLinkProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
     
 
@@ -616,16 +627,7 @@ The most common value is Pi/3.</rdfs:comment>
     
 
 
-    <!-- https://sweet.jpl.nasa.gov/Units -->
-
-    <Class rdf:about="&units;Units">
-        <rdfs:subClassOf rdf:resource="&NetworkResource;ConceptEntities"/>
-        <rdfs:comment rdf:datatype="&xsd;string">reused from NASA SWEET (semantic web for earth and environmental terminology) Ontology</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/toco/AccessPoint -->
+    <!-- http://purl.org/toco/AccessPoint -->
 
     <Class rdf:about="&NetworkResource;AccessPoint">
         <rdfs:subClassOf rdf:resource="&NetworkResource;SystemDevice"/>
@@ -634,7 +636,7 @@ The most common value is Pi/3.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/toco/AudioSession -->
+    <!-- http://purl.org/toco/AudioSession -->
 
     <Class rdf:about="&NetworkResource;AudioSession">
         <rdfs:subClassOf rdf:resource="&NetworkResource;Session"/>
@@ -642,7 +644,7 @@ The most common value is Pi/3.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/toco/BaseStation -->
+    <!-- http://purl.org/toco/BaseStation -->
 
     <Class rdf:about="&NetworkResource;BaseStation">
         <rdfs:subClassOf rdf:resource="&NetworkResource;SystemDevice"/>
@@ -653,7 +655,7 @@ it is a transceiver connecting a number of other devices to one another and/or t
     
 
 
-    <!-- https://w3id.org/toco/ConceptEntities -->
+    <!-- http://purl.org/toco/ConceptEntities -->
 
     <Class rdf:about="&NetworkResource;ConceptEntities">
         <disjointWith rdf:resource="&NetworkResource;PhysicalInfrastructure"/>
@@ -661,7 +663,7 @@ it is a transceiver connecting a number of other devices to one another and/or t
     
 
 
-    <!-- https://w3id.org/toco/Device -->
+    <!-- http://purl.org/toco/Device -->
 
     <Class rdf:about="&NetworkResource;Device">
         <rdfs:subClassOf rdf:resource="&NetworkResource;PhysicalInfrastructure"/>
@@ -672,25 +674,7 @@ According to its user, could be divided into UserDevice and SystemDevice.</rdfs:
     
 
 
-    <!-- https://w3id.org/toco/FerruleConnector -->
-
-    <Class rdf:about="&NetworkResource;FerruleConnector">
-        <rdfs:subClassOf rdf:resource="&NetworkResource;FiberOpticalPort"/>
-        <rdfs:comment rdf:datatype="&xsd;string">optical fiber port with metal coat.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/toco/FiberOpticalPort -->
-
-    <Class rdf:about="&NetworkResource;FiberOpticalPort">
-        <rdfs:subClassOf rdf:resource="&NetworkResource;WiredPort"/>
-        <rdfs:comment rdf:datatype="&xsd;string">Port for optical fibers</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/toco/File -->
+    <!-- http://purl.org/toco/File -->
 
     <Class rdf:about="&NetworkResource;File">
         <rdfs:subClassOf rdf:resource="&NetworkResource;Service"/>
@@ -698,7 +682,7 @@ According to its user, could be divided into UserDevice and SystemDevice.</rdfs:
     
 
 
-    <!-- https://w3id.org/toco/Host -->
+    <!-- http://purl.org/toco/Host -->
 
     <Class rdf:about="&NetworkResource;Host">
         <rdfs:subClassOf rdf:resource="&NetworkResource;UserDevice"/>
@@ -707,16 +691,15 @@ According to its user, could be divided into UserDevice and SystemDevice.</rdfs:
     
 
 
-    <!-- https://w3id.org/toco/Interface -->
+    <!-- http://purl.org/toco/Interface -->
 
     <Class rdf:about="&NetworkResource;Interface">
         <rdfs:subClassOf rdf:resource="&NetworkResource;PhysicalInfrastructure"/>
-        <rdfs:comment rdf:datatype="&xsd;string">interface on devices through with links are established.</rdfs:comment>
     </Class>
     
 
 
-    <!-- https://w3id.org/toco/LTEAssociation -->
+    <!-- http://purl.org/toco/LTEAssociation -->
 
     <Class rdf:about="&NetworkResource;LTEAssociation">
         <rdfs:subClassOf rdf:resource="&NetworkResource;WirelessAssociation"/>
@@ -725,7 +708,7 @@ According to its user, could be divided into UserDevice and SystemDevice.</rdfs:
     
 
 
-    <!-- https://w3id.org/toco/LiFiAccessPoint -->
+    <!-- http://purl.org/toco/LiFiAccessPoint -->
 
     <Class rdf:about="&NetworkResource;LiFiAccessPoint">
         <rdfs:subClassOf rdf:resource="&NetworkResource;AccessPoint"/>
@@ -734,7 +717,7 @@ According to its user, could be divided into UserDevice and SystemDevice.</rdfs:
     
 
 
-    <!-- https://w3id.org/toco/LiFiAssociation -->
+    <!-- http://purl.org/toco/LiFiAssociation -->
 
     <Class rdf:about="&NetworkResource;LiFiAssociation">
         <rdfs:subClassOf rdf:resource="&NetworkResource;WirelessAssociation"/>
@@ -743,7 +726,7 @@ According to its user, could be divided into UserDevice and SystemDevice.</rdfs:
     
 
 
-    <!-- https://w3id.org/toco/LiFiUserEuipment -->
+    <!-- http://purl.org/toco/LiFiUserEuipment -->
 
     <Class rdf:about="&NetworkResource;LiFiUserEuipment">
         <rdfs:subClassOf rdf:resource="&NetworkResource;WirelessUserEquipment"/>
@@ -752,7 +735,7 @@ According to its user, could be divided into UserDevice and SystemDevice.</rdfs:
     
 
 
-    <!-- https://w3id.org/toco/LiFiWLAN -->
+    <!-- http://purl.org/toco/LiFiWLAN -->
 
     <Class rdf:about="&NetworkResource;LiFiWLAN">
         <rdfs:subClassOf rdf:resource="&NetworkResource;WLAN"/>
@@ -761,7 +744,7 @@ According to its user, could be divided into UserDevice and SystemDevice.</rdfs:
     
 
 
-    <!-- https://w3id.org/toco/Link -->
+    <!-- http://purl.org/toco/Link -->
 
     <Class rdf:about="&NetworkResource;Link">
         <rdfs:subClassOf rdf:resource="&NetworkResource;PhysicalInfrastructure"/>
@@ -769,16 +752,7 @@ According to its user, could be divided into UserDevice and SystemDevice.</rdfs:
     
 
 
-    <!-- https://w3id.org/toco/LucentConnector -->
-
-    <Class rdf:about="&NetworkResource;LucentConnector">
-        <rdfs:subClassOf rdf:resource="&NetworkResource;FiberOpticalPort"/>
-        <rdfs:comment rdf:datatype="&xsd;string">Fiber optical port for fibers with the bandwidth of 2GB.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/toco/PhysicalInfrastructure -->
+    <!-- http://purl.org/toco/PhysicalInfrastructure -->
 
     <Class rdf:about="&NetworkResource;PhysicalInfrastructure">
         <rdfs:comment rdf:datatype="&xsd;string">Describe all the physical resources in a telecommunication network system, which is divided into three main modules, namely, device, interface, link. 
@@ -788,16 +762,7 @@ Please be reminded the electromagnetic wave (which is the links of all wireless 
     
 
 
-    <!-- https://w3id.org/toco/RJ45Port -->
-
-    <Class rdf:about="&NetworkResource;RJ45Port">
-        <rdfs:subClassOf rdf:resource="&NetworkResource;WiredPort"/>
-        <rdfs:comment rdf:datatype="&xsd;string">The RJ-45 port for twisted cables 10BASE-T, 100BASE-TX, and 1000BASE-T.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/toco/SatelliteAssociation -->
+    <!-- http://purl.org/toco/SatelliteAssociation -->
 
     <Class rdf:about="&NetworkResource;SatelliteAssociation">
         <rdfs:subClassOf rdf:resource="&NetworkResource;WirelessAssociation"/>
@@ -806,7 +771,7 @@ Please be reminded the electromagnetic wave (which is the links of all wireless 
     
 
 
-    <!-- https://w3id.org/toco/SatelliteGroundStation -->
+    <!-- http://purl.org/toco/SatelliteGroundStation -->
 
     <Class rdf:about="&NetworkResource;SatelliteGroundStation">
         <rdfs:subClassOf rdf:resource="&NetworkResource;WirelessUserEquipment"/>
@@ -815,7 +780,7 @@ Please be reminded the electromagnetic wave (which is the links of all wireless 
     
 
 
-    <!-- https://w3id.org/toco/SatelliteRelayStation -->
+    <!-- http://purl.org/toco/SatelliteRelayStation -->
 
     <Class rdf:about="&NetworkResource;SatelliteRelayStation">
         <rdfs:subClassOf rdf:resource="&NetworkResource;SystemDevice"/>
@@ -824,7 +789,7 @@ Please be reminded the electromagnetic wave (which is the links of all wireless 
     
 
 
-    <!-- https://w3id.org/toco/Service -->
+    <!-- http://purl.org/toco/Service -->
 
     <Class rdf:about="&NetworkResource;Service">
         <rdfs:subClassOf rdf:resource="&NetworkResource;ConceptEntities"/>
@@ -833,7 +798,7 @@ Please be reminded the electromagnetic wave (which is the links of all wireless 
     
 
 
-    <!-- https://w3id.org/toco/Session -->
+    <!-- http://purl.org/toco/Session -->
 
     <Class rdf:about="&NetworkResource;Session">
         <rdfs:subClassOf rdf:resource="&NetworkResource;Service"/>
@@ -841,16 +806,7 @@ Please be reminded the electromagnetic wave (which is the links of all wireless 
     
 
 
-    <!-- https://w3id.org/toco/SmartCard -->
-
-    <Class rdf:about="&NetworkResource;SmartCard">
-        <rdfs:subClassOf rdf:resource="&NetworkResource;FiberOpticalPort"/>
-        <rdfs:comment rdf:datatype="&xsd;string">Smart Card port for optical fiber with the bandwidth of 1GB.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/toco/Switch -->
+    <!-- http://purl.org/toco/Switch -->
 
     <Class rdf:about="&NetworkResource;Switch">
         <rdfs:subClassOf rdf:resource="&NetworkResource;SystemDevice"/>
@@ -859,7 +815,7 @@ Please be reminded the electromagnetic wave (which is the links of all wireless 
     
 
 
-    <!-- https://w3id.org/toco/SystemDevice -->
+    <!-- http://purl.org/toco/SystemDevice -->
 
     <Class rdf:about="&NetworkResource;SystemDevice">
         <rdfs:subClassOf rdf:resource="&NetworkResource;Device"/>
@@ -868,7 +824,7 @@ Please be reminded the electromagnetic wave (which is the links of all wireless 
     
 
 
-    <!-- https://w3id.org/toco/Text -->
+    <!-- http://purl.org/toco/Text -->
 
     <Class rdf:about="&NetworkResource;Text">
         <rdfs:subClassOf rdf:resource="&NetworkResource;Service"/>
@@ -876,7 +832,7 @@ Please be reminded the electromagnetic wave (which is the links of all wireless 
     
 
 
-    <!-- https://w3id.org/toco/User -->
+    <!-- http://purl.org/toco/User -->
 
     <Class rdf:about="&NetworkResource;User">
         <rdfs:subClassOf rdf:resource="&NetworkResource;ConceptEntities"/>
@@ -885,7 +841,7 @@ Please be reminded the electromagnetic wave (which is the links of all wireless 
     
 
 
-    <!-- https://w3id.org/toco/UserDevice -->
+    <!-- http://purl.org/toco/UserDevice -->
 
     <Class rdf:about="&NetworkResource;UserDevice">
         <rdfs:subClassOf rdf:resource="&NetworkResource;Device"/>
@@ -894,7 +850,7 @@ Please be reminded the electromagnetic wave (which is the links of all wireless 
     
 
 
-    <!-- https://w3id.org/toco/UserEquipment -->
+    <!-- http://purl.org/toco/UserEquipment -->
 
     <Class rdf:about="&NetworkResource;UserEquipment">
         <rdfs:subClassOf rdf:resource="&NetworkResource;WirelessUserEquipment"/>
@@ -905,7 +861,7 @@ The radio interface between the UE and the Node B is called Uu. The radio interf
     
 
 
-    <!-- https://w3id.org/toco/VideoSession -->
+    <!-- http://purl.org/toco/VideoSession -->
 
     <Class rdf:about="&NetworkResource;VideoSession">
         <rdfs:subClassOf rdf:resource="&NetworkResource;Session"/>
@@ -913,17 +869,16 @@ The radio interface between the UE and the Node B is called Uu. The radio interf
     
 
 
-    <!-- https://w3id.org/toco/WLAN -->
+    <!-- http://purl.org/toco/WLAN -->
 
     <Class rdf:about="&NetworkResource;WLAN">
         <rdfs:subClassOf rdf:resource="&NetworkResource;Interface"/>
-        <disjointWith rdf:resource="&NetworkResource;WiredPort"/>
         <rdfs:comment>A wireless local area network (WLAN) interface, also known as WLAN, is the interface of a wireless computer network that links two or more devices using wireless communication within a limited area such as a home, school, computer laboratory, or office building.</rdfs:comment>
     </Class>
     
 
 
-    <!-- https://w3id.org/toco/WiFiAccessPoint -->
+    <!-- http://purl.org/toco/WiFiAccessPoint -->
 
     <Class rdf:about="&NetworkResource;WiFiAccessPoint">
         <rdfs:subClassOf rdf:resource="&NetworkResource;AccessPoint"/>
@@ -932,7 +887,7 @@ The radio interface between the UE and the Node B is called Uu. The radio interf
     
 
 
-    <!-- https://w3id.org/toco/WiFiAssociation -->
+    <!-- http://purl.org/toco/WiFiAssociation -->
 
     <Class rdf:about="&NetworkResource;WiFiAssociation">
         <rdfs:subClassOf rdf:resource="&NetworkResource;WirelessAssociation"/>
@@ -941,7 +896,7 @@ The radio interface between the UE and the Node B is called Uu. The radio interf
     
 
 
-    <!-- https://w3id.org/toco/WiFiUserEuipment -->
+    <!-- http://purl.org/toco/WiFiUserEuipment -->
 
     <Class rdf:about="&NetworkResource;WiFiUserEuipment">
         <rdfs:subClassOf rdf:resource="&NetworkResource;WirelessUserEquipment"/>
@@ -950,7 +905,7 @@ The radio interface between the UE and the Node B is called Uu. The radio interf
     
 
 
-    <!-- https://w3id.org/toco/WiFiWLAN -->
+    <!-- http://purl.org/toco/WiFiWLAN -->
 
     <Class rdf:about="&NetworkResource;WiFiWLAN">
         <rdfs:subClassOf rdf:resource="&NetworkResource;WLAN"/>
@@ -959,7 +914,7 @@ The radio interface between the UE and the Node B is called Uu. The radio interf
     
 
 
-    <!-- https://w3id.org/toco/WiredLink -->
+    <!-- http://purl.org/toco/WiredLink -->
 
     <Class rdf:about="&NetworkResource;WiredLink">
         <rdfs:subClassOf rdf:resource="&NetworkResource;Link"/>
@@ -968,16 +923,7 @@ The radio interface between the UE and the Node B is called Uu. The radio interf
     
 
 
-    <!-- https://w3id.org/toco/WiredPort -->
-
-    <Class rdf:about="&NetworkResource;WiredPort">
-        <rdfs:subClassOf rdf:resource="&NetworkResource;Interface"/>
-        <rdfs:comment rdf:datatype="&xsd;string">the port on devices in wired networks, into which a wired cable, e.g., twisted cable, optical fiber, can be inserted.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/toco/WirelessAssociation -->
+    <!-- http://purl.org/toco/WirelessAssociation -->
 
     <Class rdf:about="&NetworkResource;WirelessAssociation">
         <rdfs:subClassOf rdf:resource="&NetworkResource;Link"/>
@@ -986,11 +932,20 @@ The radio interface between the UE and the Node B is called Uu. The radio interf
     
 
 
-    <!-- https://w3id.org/toco/WirelessUserEquipment -->
+    <!-- http://purl.org/toco/WirelessUserEquipment -->
 
     <Class rdf:about="&NetworkResource;WirelessUserEquipment">
         <rdfs:subClassOf rdf:resource="&NetworkResource;UserDevice"/>
         <rdfs:comment rdf:datatype="&xsd;string">any device used directly by an end-user to communicate. It can be a hand-held telephone, a laptop computer equipped with a mobile broadband adapter, or any other device.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://sweet.jpl.nasa.gov/Units -->
+
+    <Class rdf:about="&units;Units">
+        <rdfs:subClassOf rdf:resource="&NetworkResource;ConceptEntities"/>
+        <rdfs:comment rdf:datatype="&xsd;string">reused from NASA SWEET (semantic web for earth and environmental terminology) Ontology</rdfs:comment>
     </Class>
 </rdf:RDF>
 
