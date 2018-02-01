@@ -289,9 +289,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <DataProperty IRI="hasRespansivity"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="hasServiceProperty"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="hasServiceStatus"/>
     </Declaration>
     <Declaration>
@@ -512,10 +509,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty IRI="to"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="from"/>
-        <ObjectProperty IRI="to"/>
-    </InverseObjectProperties>
     <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="om:hasUnits"/>
         <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
@@ -633,6 +626,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Link"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="hasPort"/>
+        <Class IRI="Interface"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="hasSatelliteAssociation"/>
         <Class IRI="SatelliteAssociation"/>
     </ObjectPropertyRange>
@@ -677,24 +674,8 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <DataProperty IRI="hasInterfaceProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="hasConnectionEndTime"/>
-        <DataProperty IRI="hasServiceProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="hasConnectionStartTime"/>
-        <DataProperty IRI="hasServiceProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
         <DataProperty IRI="hasDistance"/>
         <DataProperty IRI="hasLiFiAssociationProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="hasEndTime"/>
-        <DataProperty IRI="hasServiceProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="hasErrorCode"/>
-        <DataProperty IRI="hasServiceProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="hasFieldOfView"/>
@@ -743,18 +724,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <SubDataPropertyOf>
         <DataProperty IRI="hasRespansivity"/>
         <DataProperty IRI="hasLiFiAccessPointProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="hasServiceStatus"/>
-        <DataProperty IRI="hasServiceProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="hasServiceType"/>
-        <DataProperty IRI="hasServiceProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="hasStartTime"/>
-        <DataProperty IRI="hasServiceProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="hasTransmitPower"/>
@@ -863,10 +832,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <DataPropertyDomain>
         <DataProperty IRI="hasRespansivity"/>
         <Class IRI="LiFiAccessPoint"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="hasServiceProperty"/>
-        <Class IRI="Service"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="hasServiceStatus"/>

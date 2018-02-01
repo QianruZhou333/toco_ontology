@@ -100,7 +100,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <rdfs:comment rdf:datatype="&xsd;string">the source node that the link is transmit from.</rdfs:comment>
         <rdfs:range rdf:resource="&NetworkResource;Device"/>
         <rdfs:domain rdf:resource="&NetworkResource;Link"/>
-        <inverseOf rdf:resource="&NetworkResource;to"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </ObjectProperty>
     
@@ -178,6 +177,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
 
     <ObjectProperty rdf:about="&NetworkResource;hasPort">
         <rdfs:domain rdf:resource="&NetworkResource;Device"/>
+        <rdfs:range rdf:resource="&NetworkResource;Interface"/>
         <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasInterface"/>
     </ObjectProperty>
     
@@ -319,7 +319,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
 
     <DatatypeProperty rdf:about="&NetworkResource;hasConnectionEndTime">
         <rdfs:domain rdf:resource="&NetworkResource;Service"/>
-        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasServiceProperty"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
     </DatatypeProperty>
     
@@ -329,7 +328,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
 
     <DatatypeProperty rdf:about="&NetworkResource;hasConnectionStartTime">
         <rdfs:domain rdf:resource="&NetworkResource;Service"/>
-        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasServiceProperty"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
     </DatatypeProperty>
     
@@ -351,7 +349,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <DatatypeProperty rdf:about="&NetworkResource;hasEndTime">
         <rdfs:comment rdf:datatype="&xsd;string">the time that a service ends.</rdfs:comment>
         <rdfs:domain rdf:resource="&NetworkResource;Service"/>
-        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasServiceProperty"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
     </DatatypeProperty>
     
@@ -362,7 +359,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <DatatypeProperty rdf:about="&NetworkResource;hasErrorCode">
         <rdfs:comment rdf:datatype="&xsd;string">the error code of a service.</rdfs:comment>
         <rdfs:domain rdf:resource="&NetworkResource;Service"/>
-        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasServiceProperty"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </DatatypeProperty>
     
@@ -545,20 +541,11 @@ The most common value is Pi/3.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/toco/hasServiceProperty -->
-
-    <DatatypeProperty rdf:about="&NetworkResource;hasServiceProperty">
-        <rdfs:domain rdf:resource="&NetworkResource;Service"/>
-    </DatatypeProperty>
-    
-
-
     <!-- http://purl.org/toco/hasServiceStatus -->
 
     <DatatypeProperty rdf:about="&NetworkResource;hasServiceStatus">
         <rdfs:comment rdf:datatype="&xsd;string">the status of the service.</rdfs:comment>
         <rdfs:domain rdf:resource="&NetworkResource;Service"/>
-        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasServiceProperty"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </DatatypeProperty>
     
@@ -569,7 +556,6 @@ The most common value is Pi/3.</rdfs:comment>
     <DatatypeProperty rdf:about="&NetworkResource;hasServiceType">
         <rdfs:comment rdf:datatype="&xsd;string">the type of communication services, e.g., video, audio, file transmit, text transmiting, etc.</rdfs:comment>
         <rdfs:domain rdf:resource="&NetworkResource;Service"/>
-        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasServiceProperty"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </DatatypeProperty>
     
@@ -580,7 +566,6 @@ The most common value is Pi/3.</rdfs:comment>
     <DatatypeProperty rdf:about="&NetworkResource;hasStartTime">
         <rdfs:comment rdf:datatype="&xsd;string">the start time of a service.</rdfs:comment>
         <rdfs:domain rdf:resource="&NetworkResource;Service"/>
-        <rdfs:subPropertyOf rdf:resource="&NetworkResource;hasServiceProperty"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
     </DatatypeProperty>
     
