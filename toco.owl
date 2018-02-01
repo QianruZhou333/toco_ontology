@@ -25,8 +25,8 @@
     <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
+    <Prefix name="toco" IRI="http://purl.org/toco/"/>
     <Prefix name="units" IRI="https://sweet.jpl.nasa.gov/"/>
-    <Prefix name="NetworkResource" IRI="http://purl.org/toco/"/>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">Toucan Ontology (ToCo)
@@ -257,9 +257,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasIncidentAngle"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="hasInterfaceProperty"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasLiFiAccessPointProperty"/>
@@ -666,14 +663,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty IRI="hasWirelessAssociation"/>
     </DisjointObjectProperties>
     <SubDataPropertyOf>
-        <DataProperty IRI="hasAntennaGain"/>
-        <DataProperty IRI="hasInterfaceProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="hasAntennaHeight"/>
-        <DataProperty IRI="hasInterfaceProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
         <DataProperty IRI="hasDistance"/>
         <DataProperty IRI="hasLiFiAssociationProperty"/>
     </SubDataPropertyOf>
@@ -694,24 +683,12 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <DataProperty IRI="hasLiFiAccessPointProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="hasIP"/>
-        <DataProperty IRI="hasInterfaceProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
         <DataProperty IRI="hasIncidentAngle"/>
         <DataProperty IRI="hasLiFiAssociationProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="hasLiFiAssociationProperty"/>
         <DataProperty IRI="hasWirelessLinkProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="hasMAC"/>
-        <DataProperty IRI="hasInterfaceProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="hasName"/>
-        <DataProperty IRI="hasInterfaceProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="hasOpticalTransmittedPower"/>
@@ -724,10 +701,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <SubDataPropertyOf>
         <DataProperty IRI="hasRespansivity"/>
         <DataProperty IRI="hasLiFiAccessPointProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="hasTransmitPower"/>
-        <DataProperty IRI="hasInterfaceProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="hasWirelessLinkProperty"/>
@@ -792,10 +765,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <DataPropertyDomain>
         <DataProperty IRI="hasIncidentAngle"/>
         <Class IRI="LiFiAssociation"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="hasInterfaceProperty"/>
-        <Class IRI="Interface"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="hasLiFiAccessPointProperty"/>
@@ -912,14 +881,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <DataPropertyRange>
         <DataProperty IRI="hasIncidentAngle"/>
         <Datatype abbreviatedIRI="xsd:float"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="hasInterfaceProperty"/>
-        <Datatype abbreviatedIRI="xsd:float"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="hasInterfaceProperty"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="hasLiFiAccessPointProperty"/>
@@ -1152,8 +1113,28 @@ The radio interface between the UE and the Node B is called Uu. The radio interf
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasAntennaGain</IRI>
+        <Literal datatypeIRI="&xsd;string">the gain of an antenna on the wireless interface.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasAntennaHeight</IRI>
+        <Literal datatypeIRI="&xsd;string">the height of the antenna of a wireless interface</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasBandwidth</IRI>
         <Literal datatypeIRI="&xsd;string">the bandwidth of the link</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasConnectionEndTime</IRI>
+        <Literal datatypeIRI="&xsd;string">the time that a connection service ends</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasConnectionStartTime</IRI>
+        <Literal datatypeIRI="&xsd;string">the time that a connection of a service starts</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1227,6 +1208,11 @@ The most common value is Pi/3.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasMAC</IRI>
         <Literal datatypeIRI="&xsd;string">the MAC address of the interface.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasName</IRI>
+        <Literal datatypeIRI="&xsd;string">the name of an interface</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
