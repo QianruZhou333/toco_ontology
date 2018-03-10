@@ -19,6 +19,7 @@
      versionIRI="http://purl.org/toco/">
     <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="om" IRI="http://purl.oclc.org/net/unis/ontology/sensordata.owl/"/>
+    <Prefix name="geo" IRI="http://www.w3.org/2003/01/geo/wgs84_pos/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
@@ -211,6 +212,12 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty IRI="hasWirelessAssociation"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="range"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="stationsInRange"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="to"/>
     </Declaration>
     <Declaration>
@@ -299,6 +306,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasWirelessLinkProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="ssid"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="contributor"/>
@@ -579,6 +589,14 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="WLAN"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="range"/>
+        <Class IRI="Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="stationsInRange"/>
+        <Class IRI="AccessPoint"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="to"/>
         <Class IRI="Link"/>
     </ObjectPropertyDomain>
@@ -653,6 +671,14 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasWirelessAssociation"/>
         <Class IRI="WirelessAssociation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="range"/>
+        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="stationsInRange"/>
+        <Class IRI="WirelessUserEquipment"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="to"/>
@@ -822,6 +848,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <DataProperty IRI="hasWirelessLinkProperty"/>
         <Class IRI="WirelessAssociation"/>
     </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="ssid"/>
+        <Class IRI="Device"/>
+    </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI="om:hasUnit"/>
         <Datatype abbreviatedIRI="xsd:string"/>
@@ -937,6 +967,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <DataPropertyRange>
         <DataProperty IRI="hasWirelessLinkProperty"/>
         <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="ssid"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1243,6 +1277,21 @@ The most common value is Pi/3.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasTransmitPower</IRI>
         <Literal datatypeIRI="&xsd;string">the power of the transmitter on the interface.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>range</IRI>
+        <Literal datatypeIRI="&xsd;string">the signal range of wireless devices, such as WiFi access point, LiFi access point, WiFi mobile station, and LiFi mobile station.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ssid</IRI>
+        <Literal datatypeIRI="&xsd;string">in wireless networks, the ssid of the network this device belongs to.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>stationsInRange</IRI>
+        <Literal datatypeIRI="&xsd;string">in wireless networks (WiFi/LiFi), the mobile stations in the range of the access points.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

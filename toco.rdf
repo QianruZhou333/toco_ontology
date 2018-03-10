@@ -10,6 +10,7 @@
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY geo "http://www.w3.org/2003/01/geo/wgs84_pos/" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY om "http://purl.oclc.org/net/unis/ontology/sensordata.owl/" >
 ]>
@@ -17,6 +18,7 @@
 
 <rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos/"
      xmlns:toco="http://purl.org/toco/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -249,6 +251,26 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <rdfs:domain rdf:resource="&toco;WLAN"/>
         <rdfs:range rdf:resource="&toco;WirelessAssociation"/>
         <rdfs:subPropertyOf rdf:resource="&toco;hasLink"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.org/toco/range -->
+
+    <ObjectProperty rdf:about="&toco;range">
+        <rdfs:comment rdf:datatype="&xsd;string">the signal range of wireless devices, such as WiFi access point, LiFi access point, WiFi mobile station, and LiFi mobile station.</rdfs:comment>
+        <rdfs:range rdf:resource="&om;ObervationAndMeasurement"/>
+        <rdfs:domain rdf:resource="&toco;Device"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.org/toco/stationsInRange -->
+
+    <ObjectProperty rdf:about="&toco;stationsInRange">
+        <rdfs:comment rdf:datatype="&xsd;string">in wireless networks (WiFi/LiFi), the mobile stations in the range of the access points.</rdfs:comment>
+        <rdfs:domain rdf:resource="&toco;AccessPoint"/>
+        <rdfs:range rdf:resource="&toco;WirelessUserEquipment"/>
     </ObjectProperty>
     
 
@@ -577,6 +599,16 @@ The most common value is Pi/3.</rdfs:comment>
         <rdfs:domain rdf:resource="&toco;WirelessAssociation"/>
         <rdfs:subPropertyOf rdf:resource="&toco;hasLinkProperty"/>
         <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/toco/ssid -->
+
+    <DatatypeProperty rdf:about="&toco;ssid">
+        <rdfs:comment rdf:datatype="&xsd;string">in wireless networks, the ssid of the network this device belongs to.</rdfs:comment>
+        <rdfs:domain rdf:resource="&toco;Device"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </DatatypeProperty>
     
 
