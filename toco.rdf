@@ -461,6 +461,16 @@ The most common value is Pi/3.</rdfs:comment>
     
 
 
+    <!-- http://purl.org/toco/hasJoinDate -->
+
+    <DatatypeProperty rdf:about="&toco;hasJoinDate">
+        <rdfs:comment>the join date of the user device</rdfs:comment>
+        <rdfs:domain rdf:resource="&toco;UserDevice"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </DatatypeProperty>
+    
+
+
     <!-- http://purl.org/toco/hasLiFiAccessPointProperty -->
 
     <DatatypeProperty rdf:about="&toco;hasLiFiAccessPointProperty">
@@ -589,6 +599,16 @@ The most common value is Pi/3.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">the power of the transmitter on the interface.</rdfs:comment>
         <rdfs:domain rdf:resource="&toco;Interface"/>
         <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/toco/hasUserID -->
+
+    <DatatypeProperty rdf:about="&toco;hasUserID">
+        <rdfs:comment>the user ID of the user</rdfs:comment>
+        <rdfs:domain rdf:resource="&toco;User"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </DatatypeProperty>
     
 

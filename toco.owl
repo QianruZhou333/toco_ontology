@@ -266,6 +266,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <DataProperty IRI="hasIncidentAngle"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="hasJoinDate"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="hasLiFiAccessPointProperty"/>
     </Declaration>
     <Declaration>
@@ -303,6 +306,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasTransmitPower"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasUserID"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasWirelessLinkProperty"/>
@@ -793,6 +799,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="LiFiAssociation"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="hasJoinDate"/>
+        <Class IRI="UserDevice"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="hasLiFiAccessPointProperty"/>
         <Class IRI="LiFiAccessPoint"/>
     </DataPropertyDomain>
@@ -843,6 +853,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <DataPropertyDomain>
         <DataProperty IRI="hasTransmitPower"/>
         <Class IRI="Interface"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasUserID"/>
+        <Class IRI="User"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="hasWirelessLinkProperty"/>
@@ -913,6 +927,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="hasJoinDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="hasLiFiAccessPointProperty"/>
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
@@ -963,6 +981,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <DataPropertyRange>
         <DataProperty IRI="hasTransmitPower"/>
         <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasUserID"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="hasWirelessLinkProperty"/>
@@ -1225,6 +1247,11 @@ The most common value is Pi/3.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasJoinDate</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the join date of the user device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasLiFiAccessPointProperty</IRI>
         <Literal datatypeIRI="&xsd;string">datatype properties dedicated for LiFi access points</Literal>
     </AnnotationAssertion>
@@ -1277,6 +1304,11 @@ The most common value is Pi/3.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasTransmitPower</IRI>
         <Literal datatypeIRI="&xsd;string">the power of the transmitter on the interface.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasUserID</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the user ID of the user</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
