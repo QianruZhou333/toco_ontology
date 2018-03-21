@@ -53,6 +53,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="AccessPoint"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Action"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="AudioSession"/>
     </Declaration>
     <Declaration>
@@ -65,7 +68,16 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Device"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Drop"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="File"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Flow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Forward"/>
     </Declaration>
     <Declaration>
         <Class IRI="Host"/>
@@ -90,6 +102,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </Declaration>
     <Declaration>
         <Class IRI="Link"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Output"/>
     </Declaration>
     <Declaration>
         <Class IRI="PhysicalInfrastructure"/>
@@ -173,6 +188,12 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty IRI="hasDevice"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="hasFlow"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasFlowAction"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="hasInterface"/>
     </Declaration>
     <Declaration>
@@ -221,10 +242,22 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty IRI="to"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="toPort"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="om:hasUnit"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="om:hasValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="cookie"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="flags"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hard_timeout"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasAntennaGain"/>
@@ -249,6 +282,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasFieldOfView"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasFlowProperty"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasGainOfConcentrator"/>
@@ -314,7 +350,16 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <DataProperty IRI="hasWirelessLinkProperty"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="idle_timeout"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="priority"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="ssid"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="table_id"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="contributor"/>
@@ -331,6 +376,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="SystemDevice"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="Action"/>
+        <Class IRI="ConceptEntities"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="AudioSession"/>
         <Class IRI="Session"/>
     </SubClassOf>
@@ -343,8 +392,20 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="PhysicalInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="Drop"/>
+        <Class IRI="Action"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="File"/>
         <Class IRI="Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Flow"/>
+        <Class IRI="ConceptEntities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Forward"/>
+        <Class IRI="Action"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Host"/>
@@ -377,6 +438,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <SubClassOf>
         <Class IRI="Link"/>
         <Class IRI="PhysicalInfrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Output"/>
+        <Class IRI="Action"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="SatelliteAssociation"/>
@@ -543,6 +608,14 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="User"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasFlow"/>
+        <Class IRI="SystemDevice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasFlowAction"/>
+        <Class IRI="Flow"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="hasInterface"/>
         <Class IRI="Device"/>
     </ObjectPropertyDomain>
@@ -606,6 +679,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty IRI="to"/>
         <Class IRI="Link"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="toPort"/>
+        <Class IRI="Action"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="om:hasUnits"/>
         <Class abbreviatedIRI="units:Units"/>
@@ -625,6 +702,14 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasDevice"/>
         <Class IRI="UserDevice"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasFlow"/>
+        <Class IRI="Flow"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasFlowAction"/>
+        <Class IRI="Action"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasInterface"/>
@@ -690,10 +775,26 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty IRI="to"/>
         <Class IRI="Device"/>
     </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="toPort"/>
+        <Class IRI="Interface"/>
+    </ObjectPropertyRange>
     <DisjointObjectProperties>
         <ObjectProperty IRI="hasWiredLink"/>
         <ObjectProperty IRI="hasWirelessAssociation"/>
     </DisjointObjectProperties>
+    <SubDataPropertyOf>
+        <DataProperty IRI="cookie"/>
+        <DataProperty IRI="hasFlowProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="flags"/>
+        <DataProperty IRI="hasFlowProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hard_timeout"/>
+        <DataProperty IRI="hasFlowProperty"/>
+    </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="hasDistance"/>
         <DataProperty IRI="hasLiFiAssociationProperty"/>
@@ -737,6 +838,18 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <SubDataPropertyOf>
         <DataProperty IRI="hasWirelessLinkProperty"/>
         <DataProperty IRI="hasLinkProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="idle_timeout"/>
+        <DataProperty IRI="hasFlowProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="priority"/>
+        <DataProperty IRI="hasFlowProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="table_id"/>
+        <DataProperty IRI="hasFlowProperty"/>
     </SubDataPropertyOf>
     <DataPropertyDomain>
         <DataProperty abbreviatedIRI="om:hasUnit"/>
@@ -1021,6 +1134,11 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Action</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the action of a flow defined in OpenFlow protocol</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>BaseStation</IRI>
         <Literal datatypeIRI="&xsd;string">a &quot;land station in the land mobile service.&quot; -- according to the International Telecommunication Union&apos;s (ITU) Radio Regulations (RR).
 
@@ -1032,6 +1150,11 @@ it is a transceiver connecting a number of other devices to one another and/or t
         <Literal datatypeIRI="&xsd;string">represent all the devices in the physical infrastructure of telecommunciation system. 
 
 According to its user, could be divided into UserDevice and SystemDevice.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Flow</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the flow entry in a flow table inside a switch or route. Defined by OpenFlow protocol.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1329,6 +1452,11 @@ The most common value is Pi/3.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>to</IRI>
         <Literal datatypeIRI="&xsd;string">the destination node of the link.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>toPort</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the port to send to, defined in an flow action &quot;Output&quot; and &quot;Forward&quot;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

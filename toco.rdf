@@ -127,6 +127,24 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
+    <!-- http://purl.org/toco/hasFlow -->
+
+    <ObjectProperty rdf:about="&toco;hasFlow">
+        <rdfs:range rdf:resource="&toco;Flow"/>
+        <rdfs:domain rdf:resource="&toco;SystemDevice"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.org/toco/hasFlowAction -->
+
+    <ObjectProperty rdf:about="&toco;hasFlowAction">
+        <rdfs:range rdf:resource="&toco;Action"/>
+        <rdfs:domain rdf:resource="&toco;Flow"/>
+    </ObjectProperty>
+    
+
+
     <!-- http://purl.org/toco/hasInterface -->
 
     <ObjectProperty rdf:about="&toco;hasInterface">
@@ -286,6 +304,16 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
+    <!-- http://purl.org/toco/toPort -->
+
+    <ObjectProperty rdf:about="&toco;toPort">
+        <rdfs:comment>the port to send to, defined in an flow action &quot;Output&quot; and &quot;Forward&quot;</rdfs:comment>
+        <rdfs:domain rdf:resource="&toco;Action"/>
+        <rdfs:range rdf:resource="&toco;Interface"/>
+    </ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -313,6 +341,30 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <rdfs:comment rdf:datatype="&xsd;string">reused from SENSEI observation and measurement ontology.</rdfs:comment>
         <rdfs:domain rdf:resource="&om;ObervationAndMeasurement"/>
         <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/toco/cookie -->
+
+    <DatatypeProperty rdf:about="&toco;cookie">
+        <rdfs:subPropertyOf rdf:resource="&toco;hasFlowProperty"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/toco/flags -->
+
+    <DatatypeProperty rdf:about="&toco;flags">
+        <rdfs:subPropertyOf rdf:resource="&toco;hasFlowProperty"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/toco/hard_timeout -->
+
+    <DatatypeProperty rdf:about="&toco;hard_timeout">
+        <rdfs:subPropertyOf rdf:resource="&toco;hasFlowProperty"/>
     </DatatypeProperty>
     
 
@@ -398,6 +450,12 @@ If the incident angle larger than Pi/2, the light ray is out of the FOV, thus ca
         <rdfs:subPropertyOf rdf:resource="&toco;hasLiFiUserEquipmentProperty"/>
         <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/toco/hasFlowProperty -->
+
+    <DatatypeProperty rdf:about="&toco;hasFlowProperty"/>
     
 
 
@@ -623,12 +681,36 @@ The most common value is Pi/3.</rdfs:comment>
     
 
 
+    <!-- http://purl.org/toco/idle_timeout -->
+
+    <DatatypeProperty rdf:about="&toco;idle_timeout">
+        <rdfs:subPropertyOf rdf:resource="&toco;hasFlowProperty"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/toco/priority -->
+
+    <DatatypeProperty rdf:about="&toco;priority">
+        <rdfs:subPropertyOf rdf:resource="&toco;hasFlowProperty"/>
+    </DatatypeProperty>
+    
+
+
     <!-- http://purl.org/toco/ssid -->
 
     <DatatypeProperty rdf:about="&toco;ssid">
         <rdfs:comment rdf:datatype="&xsd;string">in wireless networks, the ssid of the network this device belongs to.</rdfs:comment>
         <rdfs:domain rdf:resource="&toco;Device"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/toco/table_id -->
+
+    <DatatypeProperty rdf:about="&toco;table_id">
+        <rdfs:subPropertyOf rdf:resource="&toco;hasFlowProperty"/>
     </DatatypeProperty>
     
 
@@ -658,6 +740,15 @@ The most common value is Pi/3.</rdfs:comment>
     <Class rdf:about="&toco;AccessPoint">
         <rdfs:subClassOf rdf:resource="&toco;SystemDevice"/>
         <rdfs:comment rdf:datatype="&xsd;string">a wireless access point, or more generally just access point (AP), is a networking hardware device that allows a Wi-Fi/Li-Fi device to connect to a wired network. The AP usually connects to a router (via a wired network) as a standalone device, but it can also be an integral component of the router itself. An AP is differentiated from a hotspot, which is the physical location where Wi-Fi access to a WLAN is available.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://purl.org/toco/Action -->
+
+    <Class rdf:about="&toco;Action">
+        <rdfs:subClassOf rdf:resource="&toco;ConceptEntities"/>
+        <rdfs:comment>the action of a flow defined in OpenFlow protocol</rdfs:comment>
     </Class>
     
 
@@ -700,10 +791,35 @@ According to its user, could be divided into UserDevice and SystemDevice.</rdfs:
     
 
 
+    <!-- http://purl.org/toco/Drop -->
+
+    <Class rdf:about="&toco;Drop">
+        <rdfs:subClassOf rdf:resource="&toco;Action"/>
+    </Class>
+    
+
+
     <!-- http://purl.org/toco/File -->
 
     <Class rdf:about="&toco;File">
         <rdfs:subClassOf rdf:resource="&toco;Service"/>
+    </Class>
+    
+
+
+    <!-- http://purl.org/toco/Flow -->
+
+    <Class rdf:about="&toco;Flow">
+        <rdfs:subClassOf rdf:resource="&toco;ConceptEntities"/>
+        <rdfs:comment>the flow entry in a flow table inside a switch or route. Defined by OpenFlow protocol.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://purl.org/toco/Forward -->
+
+    <Class rdf:about="&toco;Forward">
+        <rdfs:subClassOf rdf:resource="&toco;Action"/>
     </Class>
     
 
@@ -774,6 +890,14 @@ According to its user, could be divided into UserDevice and SystemDevice.</rdfs:
 
     <Class rdf:about="&toco;Link">
         <rdfs:subClassOf rdf:resource="&toco;PhysicalInfrastructure"/>
+    </Class>
+    
+
+
+    <!-- http://purl.org/toco/Output -->
+
+    <Class rdf:about="&toco;Output">
+        <rdfs:subClassOf rdf:resource="&toco;Action"/>
     </Class>
     
 
