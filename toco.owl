@@ -17,7 +17,6 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://purl.org/toco/"
      versionIRI="http://purl.org/toco/">
-    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="om" IRI="http://purl.oclc.org/net/unis/ontology/sensordata.owl/"/>
     <Prefix name="geo" IRI="http://www.w3.org/2003/01/geo/wgs84_pos/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
@@ -56,10 +55,16 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Action"/>
     </Declaration>
     <Declaration>
+        <Class IRI="AudioService"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="AudioSession"/>
     </Declaration>
     <Declaration>
         <Class IRI="BaseStation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CellularUserEquipment"/>
     </Declaration>
     <Declaration>
         <Class IRI="ConceptEntities"/>
@@ -71,7 +76,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Drop"/>
     </Declaration>
     <Declaration>
-        <Class IRI="File"/>
+        <Class IRI="FileTransferService"/>
     </Declaration>
     <Declaration>
         <Class IRI="Flow"/>
@@ -95,7 +100,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="LiFiAssociation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="LiFiUserEuipment"/>
+        <Class IRI="LiFiUserEquipment"/>
     </Declaration>
     <Declaration>
         <Class IRI="LiFiWLAN"/>
@@ -143,6 +148,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="UserEquipment"/>
     </Declaration>
     <Declaration>
+        <Class IRI="VideoService"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="VideoSession"/>
     </Declaration>
     <Declaration>
@@ -155,7 +163,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="WiFiAssociation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="WiFiUserEuipment"/>
+        <Class IRI="WiFiUserEquipment"/>
     </Declaration>
     <Declaration>
         <Class IRI="WiFiWLAN"/>
@@ -167,7 +175,13 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="WirelessAssociation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="WirelessUserEquipment"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Person"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="units:Units"/>
@@ -176,10 +190,19 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty abbreviatedIRI="om:hasUnits"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="associatedStations"/>
+        <ObjectProperty IRI="APsInRange"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="from"/>
+        <ObjectProperty IRI="BelongsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="From"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="To"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasAssociatedStations"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasBandwidth"/>
@@ -209,13 +232,28 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty IRI="hasLink"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="hasLinkProperty"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="hasPort"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasRoundTripTime"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasSatelliteAssociation"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasService"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasStandardDeviation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasThroughPut"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasTransmitPower"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasWLAN"/>
@@ -233,22 +271,31 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty IRI="hasWirelessAssociation"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="isIn"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="range"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="stationsInRange"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="to"/>
+        <ObjectProperty IRI="toPort"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="toPort"/>
+        <ObjectProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="om:hasUnit"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="om:hasValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="Channel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="Frequency"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="cookie"/>
@@ -266,16 +313,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <DataProperty IRI="hasAntennaHeight"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="hasConnectionEndTime"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="hasConnectionStartTime"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="hasDistance"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="hasEndTime"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasErrorCode"/>
@@ -302,6 +340,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <DataProperty IRI="hasIncidentAngle"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="hasInterfaceName"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="hasJoinDate"/>
     </Declaration>
     <Declaration>
@@ -320,10 +361,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <DataProperty IRI="hasMAC"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="hasName"/>
+        <DataProperty IRI="hasOpticalTransmittedPower"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="hasOpticalTransmittedPower"/>
+        <DataProperty IRI="hasPacketLoss"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasRadianceAngle"/>
@@ -332,16 +373,16 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <DataProperty IRI="hasRespansivity"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="hasServiceEndTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasServiceStartTime"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="hasServiceStatus"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasServiceType"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="hasStartTime"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="hasTransmitPower"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasUserID"/>
@@ -362,6 +403,15 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <DataProperty IRI="table_id"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="foaf:firstName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="foaf:gender"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="foaf:lastName"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty IRI="contributor"/>
     </Declaration>
     <Declaration>
@@ -380,12 +430,20 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="ConceptEntities"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="AudioService"/>
+        <Class IRI="Service"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="AudioSession"/>
         <Class IRI="Session"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="BaseStation"/>
         <Class IRI="SystemDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CellularUserEquipment"/>
+        <Class IRI="UserEquipment"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Device"/>
@@ -396,7 +454,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Action"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="File"/>
+        <Class IRI="FileTransferService"/>
         <Class IRI="Service"/>
     </SubClassOf>
     <SubClassOf>
@@ -428,8 +486,8 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="WirelessAssociation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="LiFiUserEuipment"/>
-        <Class IRI="WirelessUserEquipment"/>
+        <Class IRI="LiFiUserEquipment"/>
+        <Class IRI="UserEquipment"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="LiFiWLAN"/>
@@ -449,7 +507,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </SubClassOf>
     <SubClassOf>
         <Class IRI="SatelliteGroundStation"/>
-        <Class IRI="WirelessUserEquipment"/>
+        <Class IRI="UserEquipment"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="SatelliteRelayStation"/>
@@ -461,7 +519,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Session"/>
-        <Class IRI="Service"/>
+        <Class IRI="ConceptEntities"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Switch"/>
@@ -477,7 +535,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </SubClassOf>
     <SubClassOf>
         <Class IRI="User"/>
-        <Class IRI="ConceptEntities"/>
+        <Class abbreviatedIRI="foaf:Person"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="UserDevice"/>
@@ -485,7 +543,11 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </SubClassOf>
     <SubClassOf>
         <Class IRI="UserEquipment"/>
-        <Class IRI="WirelessUserEquipment"/>
+        <Class IRI="UserDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="VideoService"/>
+        <Class IRI="Service"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="VideoSession"/>
@@ -504,8 +566,8 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="WirelessAssociation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="WiFiUserEuipment"/>
-        <Class IRI="WirelessUserEquipment"/>
+        <Class IRI="WiFiUserEquipment"/>
+        <Class IRI="UserEquipment"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="WiFiWLAN"/>
@@ -520,8 +582,16 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Link"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="WirelessUserEquipment"/>
-        <Class IRI="UserDevice"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+        <Class IRI="ConceptEntities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <Class IRI="ConceptEntities"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="units:Units"/>
@@ -532,16 +602,20 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="PhysicalInfrastructure"/>
     </DisjointClasses>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="associatedStations"/>
+        <ObjectProperty IRI="From"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="from"/>
+        <ObjectProperty IRI="To"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasAssociatedStations"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="hasBandwidth"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty IRI="hasLinkProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="hasLTEAssociation"/>
@@ -560,8 +634,24 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty IRI="hasInterface"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasRoundTripTime"/>
+        <ObjectProperty IRI="hasLinkProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="hasSatelliteAssociation"/>
         <ObjectProperty IRI="hasWirelessAssociation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasStandardDeviation"/>
+        <ObjectProperty IRI="hasLinkProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasThroughPut"/>
+        <ObjectProperty IRI="hasLinkProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasTransmitPower"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="hasWLAN"/>
@@ -583,21 +673,37 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty IRI="hasWirelessAssociation"/>
         <ObjectProperty IRI="hasLink"/>
     </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="to"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="BelongsTo"/>
+        <ObjectProperty IRI="hasDevice"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="isIn"/>
+        <ObjectProperty IRI="hasInterface"/>
+    </InverseObjectProperties>
     <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="om:hasUnits"/>
         <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="associatedStations"/>
-        <Class IRI="AccessPoint"/>
+        <ObjectProperty IRI="APsInRange"/>
+        <Class IRI="UserDevice"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="from"/>
+        <ObjectProperty IRI="BelongsTo"/>
+        <Class IRI="UserDevice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="From"/>
         <Class IRI="Link"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="To"/>
+        <Class IRI="Link"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasAssociatedStations"/>
+        <Class IRI="AccessPoint"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasBandwidth"/>
@@ -620,10 +726,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Device"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasLTEAssociation"/>
-        <Class IRI="UserEquipment"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="hasLiFiAssociation"/>
         <Class IRI="LiFiWLAN"/>
     </ObjectPropertyDomain>
@@ -640,12 +742,28 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Device"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasRoundTripTime"/>
+        <Class IRI="Link"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="hasSatelliteAssociation"/>
         <Class IRI="Device"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasService"/>
         <Class IRI="UserDevice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasStandardDeviation"/>
+        <Class IRI="Link"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasThroughPut"/>
+        <Class IRI="Link"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasTransmitPower"/>
+        <Class IRI="Interface"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasWLAN"/>
@@ -668,6 +786,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="WLAN"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="isIn"/>
+        <Class IRI="Interface"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="range"/>
         <Class IRI="Device"/>
     </ObjectPropertyDomain>
@@ -676,24 +798,36 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="AccessPoint"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="to"/>
-        <Class IRI="Link"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="toPort"/>
         <Class IRI="Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+        <Class IRI="Device"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="om:hasUnits"/>
         <Class abbreviatedIRI="units:Units"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="associatedStations"/>
-        <Class IRI="UserDevice"/>
+        <ObjectProperty IRI="APsInRange"/>
+        <Class IRI="AccessPoint"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="from"/>
-        <Class IRI="Device"/>
+        <ObjectProperty IRI="BelongsTo"/>
+        <Class IRI="User"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="From"/>
+        <Class IRI="Interface"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="To"/>
+        <Class IRI="Interface"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasAssociatedStations"/>
+        <Class IRI="UserDevice"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasBandwidth"/>
@@ -736,12 +870,28 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Interface"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="hasRoundTripTime"/>
+        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="hasSatelliteAssociation"/>
         <Class IRI="SatelliteAssociation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasService"/>
         <Class IRI="Service"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasStandardDeviation"/>
+        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasThroughPut"/>
+        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasTransmitPower"/>
+        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasWLAN"/>
@@ -764,20 +914,24 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="WirelessAssociation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="isIn"/>
+        <Class IRI="Device"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="range"/>
         <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="stationsInRange"/>
-        <Class IRI="WirelessUserEquipment"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="to"/>
-        <Class IRI="Device"/>
+        <Class IRI="UserEquipment"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="toPort"/>
         <Class IRI="Interface"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
     </ObjectPropertyRange>
     <DisjointObjectProperties>
         <ObjectProperty IRI="hasWiredLink"/>
@@ -860,6 +1014,26 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="Channel"/>
+        <Class IRI="Interface"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="Frequency"/>
+        <Class IRI="Interface"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="cookie"/>
+        <Class IRI="Flow"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="flags"/>
+        <Class IRI="Flow"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hard_timeout"/>
+        <Class IRI="Flow"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="hasAntennaGain"/>
         <Class IRI="WLAN"/>
     </DataPropertyDomain>
@@ -868,20 +1042,8 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="WLAN"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="hasConnectionEndTime"/>
-        <Class IRI="Service"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="hasConnectionStartTime"/>
-        <Class IRI="Service"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="hasDistance"/>
         <Class IRI="LiFiAssociation"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="hasEndTime"/>
-        <Class IRI="Service"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="hasErrorCode"/>
@@ -889,11 +1051,11 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="hasFieldOfView"/>
-        <Class IRI="LiFiUserEuipment"/>
+        <Class IRI="LiFiUserEquipment"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="hasGainOfConcentrator"/>
-        <Class IRI="LiFiUserEuipment"/>
+        <Class IRI="LiFiUserEquipment"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="hasGainofOpticalFilter"/>
@@ -910,6 +1072,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <DataPropertyDomain>
         <DataProperty IRI="hasIncidentAngle"/>
         <Class IRI="LiFiAssociation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasInterfaceName"/>
+        <Class IRI="Interface"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="hasJoinDate"/>
@@ -925,7 +1091,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="hasLiFiUserEquipmentProperty"/>
-        <Class IRI="LiFiUserEuipment"/>
+        <Class IRI="LiFiUserEquipment"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="hasLinkProperty"/>
@@ -936,12 +1102,12 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Interface"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="hasName"/>
-        <Class IRI="Interface"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="hasOpticalTransmittedPower"/>
         <Class IRI="LiFiAccessPoint"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasPacketLoss"/>
+        <Class IRI="Link"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="hasRadianceAngle"/>
@@ -952,20 +1118,20 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="LiFiAccessPoint"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="hasServiceEndTime"/>
+        <Class IRI="Service"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasServiceStartTime"/>
+        <Class IRI="Service"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="hasServiceStatus"/>
         <Class IRI="Service"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="hasServiceType"/>
         <Class IRI="Service"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="hasStartTime"/>
-        <Class IRI="Service"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="hasTransmitPower"/>
-        <Class IRI="Interface"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="hasUserID"/>
@@ -976,8 +1142,32 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="WirelessAssociation"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="idle_timeout"/>
+        <Class IRI="Flow"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="priority"/>
+        <Class IRI="Flow"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="ssid"/>
         <Class IRI="Device"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="table_id"/>
+        <Class IRI="Flow"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="foaf:firstName"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="foaf:gender"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="foaf:lastName"/>
+        <Class abbreviatedIRI="foaf:Person"/>
     </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI="om:hasUnit"/>
@@ -988,28 +1178,36 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="hasAntennaGain"/>
+        <DataProperty IRI="Channel"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="Frequency"/>
         <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="cookie"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="flags"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hard_timeout"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasAntennaGain"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="hasAntennaHeight"/>
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="hasConnectionEndTime"/>
-        <Datatype abbreviatedIRI="xsd:dateTime"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="hasConnectionStartTime"/>
-        <Datatype abbreviatedIRI="xsd:dateTime"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty IRI="hasDistance"/>
         <Datatype abbreviatedIRI="xsd:float"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="hasEndTime"/>
-        <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="hasErrorCode"/>
@@ -1040,6 +1238,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="hasInterfaceName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="hasJoinDate"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
@@ -1064,11 +1266,11 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="hasName"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
+        <DataProperty IRI="hasOpticalTransmittedPower"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="hasOpticalTransmittedPower"/>
+        <DataProperty IRI="hasPacketLoss"/>
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -1080,20 +1282,20 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="hasServiceEndTime"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasServiceStartTime"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="hasServiceStatus"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="hasServiceType"/>
         <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="hasStartTime"/>
-        <Datatype abbreviatedIRI="xsd:dateTime"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="hasTransmitPower"/>
-        <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="hasUserID"/>
@@ -1104,8 +1306,32 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="idle_timeout"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="priority"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="ssid"/>
         <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="table_id"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="foaf:firstName"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="foaf:gender"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="foaf:lastName"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1118,14 +1344,34 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Literal datatypeIRI="&xsd;string">reused from SENSEI Observation and Measurement Ontology.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>om:hasUnit</AbbreviatedIRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>om:hasUnits</AbbreviatedIRI>
         <Literal datatypeIRI="&xsd;string">reused from SenSei Observation and Measurement Ontology (http://purl.oclc.org/net/unis/ontology/sensordata.owl/).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>om:hasUnits</AbbreviatedIRI>
+        <AbbreviatedIRI>om:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>om:hasValue</AbbreviatedIRI>
         <Literal datatypeIRI="&xsd;string">reused from SENSEI observation and measurement ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>om:hasValue</AbbreviatedIRI>
+        <AbbreviatedIRI>om:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>APsInRange</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1145,6 +1391,26 @@ A ontology developed for telecommunciation network systems with hybrid technolog
 it is a transceiver connecting a number of other devices to one another and/or to a wider area. In LTE, it is also known as eNodeB.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>BelongsTo</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>CellularUserEquipment</IRI>
+        <Literal datatypeIRI="&xsd;string">User deivce in a Cellular network.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Channel</IRI>
+        <Literal datatypeIRI="&xsd;string">the channel id of a interface.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Channel</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Device</IRI>
         <Literal datatypeIRI="&xsd;string">represent all the devices in the physical infrastructure of telecommunciation system. 
@@ -1155,6 +1421,21 @@ According to its user, could be divided into UserDevice and SystemDevice.</Liter
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Flow</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">the flow entry in a flow table inside a switch or route. Defined by OpenFlow protocol.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Frequency</IRI>
+        <Literal datatypeIRI="&xsd;string">the frequency of the radio wave transmitted by a wireless interface (WLAN).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>From</IRI>
+        <Literal datatypeIRI="&xsd;string">the source node that the link is transmit from.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>From</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1178,7 +1459,7 @@ According to its user, could be divided into UserDevice and SystemDevice.</Liter
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>LiFiUserEuipment</IRI>
+        <IRI>LiFiUserEquipment</IRI>
         <Literal datatypeIRI="&xsd;string">any device used directly by an end-user to communicate. It can be a hand-held telephone, a laptop computer equipped with a mobile broadband adapter, or any other device.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -1225,6 +1506,16 @@ Please be reminded the electromagnetic wave (which is the links of all wireless 
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>To</IRI>
+        <Literal datatypeIRI="&xsd;string">the destination node of the link.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>To</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>User</IRI>
         <Literal datatypeIRI="&xsd;string">reused from foaf (http://xmlns.com/foaf/0.1/). Represent a user in the telecommunication system.</Literal>
     </AnnotationAssertion>
@@ -1236,9 +1527,7 @@ Please be reminded the electromagnetic wave (which is the links of all wireless 
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>UserEquipment</IRI>
-        <Literal datatypeIRI="&xsd;string">any device used directly by an end-user to communicate. It can be a hand-held telephone, a laptop computer equipped with a mobile broadband adapter, or any other device. It connects to the base station Node B/eNodeB as specified in the ETSI 125/136-series and 3GPP 25/36-series of specifications. It roughly corresponds to the mobile station (MS) in GSM systems.
-
-The radio interface between the UE and the Node B is called Uu. The radio interface between the UE and the eNodeB is called LTE-Uu.</Literal>
+        <Literal datatypeIRI="&xsd;string">any device used directly by an end-user to communicate. It can be a hand-held telephone, a laptop computer equipped with a mobile broadband adapter, or any other device.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1257,7 +1546,7 @@ The radio interface between the UE and the Node B is called Uu. The radio interf
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>WiFiUserEuipment</IRI>
+        <IRI>WiFiUserEquipment</IRI>
         <Literal datatypeIRI="&xsd;string">a user quipment in Wi-Fi network</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -1276,19 +1565,19 @@ The radio interface between the UE and the Node B is called Uu. The radio interf
         <Literal datatypeIRI="&xsd;string">the electromeganetic radio transmiting through wireless channels in wireless network, carring communication data. Depend on its frequency, it could be visiable light, micro waves, radio waves.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>WirelessUserEquipment</IRI>
-        <Literal datatypeIRI="&xsd;string">any device used directly by an end-user to communicate. It can be a hand-held telephone, a laptop computer equipped with a mobile broadband adapter, or any other device.</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>cookie</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>associatedStations</IRI>
-        <Literal datatypeIRI="&xsd;string">in wireless networks, the user equipments (mobile stations in another term, e.g., phones, laptops, tablets, etc.) that are associated to the access point.</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>flags</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>from</IRI>
-        <Literal datatypeIRI="&xsd;string">the source node that the link is transmit from.</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hard_timeout</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1296,9 +1585,29 @@ The radio interface between the UE and the Node B is called Uu. The radio interf
         <Literal datatypeIRI="&xsd;string">the gain of an antenna on the wireless interface.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasAntennaGain</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasAntennaHeight</IRI>
         <Literal datatypeIRI="&xsd;string">the height of the antenna of a wireless interface</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasAntennaHeight</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasAssociatedStations</IRI>
+        <Literal datatypeIRI="&xsd;string">in wireless networks, the user equipments (mobile stations in another term, e.g., phones, laptops, tablets, etc.) that are associated to the access point.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasAssociatedStations</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1306,14 +1615,9 @@ The radio interface between the UE and the Node B is called Uu. The radio interf
         <Literal datatypeIRI="&xsd;string">the bandwidth of the link</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasConnectionEndTime</IRI>
-        <Literal datatypeIRI="&xsd;string">the time that a connection service ends</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasConnectionStartTime</IRI>
-        <Literal datatypeIRI="&xsd;string">the time that a connection of a service starts</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasDevice</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1321,14 +1625,19 @@ The radio interface between the UE and the Node B is called Uu. The radio interf
         <Literal datatypeIRI="&xsd;string">the Euclidean distance between the LiFi user equipment and access point.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasEndTime</IRI>
-        <Literal datatypeIRI="&xsd;string">the time that a service ends.</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasDistance</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasErrorCode</IRI>
         <Literal datatypeIRI="&xsd;string">the error code of a service.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasErrorCode</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1338,14 +1647,44 @@ The radio interface between the UE and the Node B is called Uu. The radio interf
 If the incident angle larger than Pi/2, the light ray is out of the FOV, thus cannot be received by the LiFi user equipment.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasFieldOfView</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasFlow</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasFlowAction</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasFlowProperty</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasGainOfConcentrator</IRI>
         <Literal datatypeIRI="&xsd;string">The gain of the concentrator on the LiFi user equipment, usually equals to 1.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasGainOfConcentrator</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasGainofOpticalFilter</IRI>
         <Literal datatypeIRI="&xsd;string">Gain of optical filter on LiFi access point.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasGainofOpticalFilter</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1359,9 +1698,19 @@ Factors that contribute to the angle of half intensity include the amount of dif
 The most common value is Pi/3.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasHalfIntensityAngle</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasIP</IRI>
         <Literal datatypeIRI="&xsd;string">the IP address of the interface.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasIP</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1369,14 +1718,49 @@ The most common value is Pi/3.</Literal>
         <Literal datatypeIRI="&xsd;string">The angle of incidence of the LED receiver on LiFi user equipment, which is the angle between the visiable light ray incident on a surface and the line perpendicular to the surface at the point of incidence, called the normal.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasIncidentAngle</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasInterface</IRI>
+        <Literal datatypeIRI="&xsd;string">the fact that a device has a interface.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasInterface</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasInterfaceName</IRI>
+        <Literal datatypeIRI="&xsd;string">the name of an interface</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasInterfaceName</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasJoinDate</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">the join date of the user device</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasJoinDate</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasLiFiAccessPointProperty</IRI>
         <Literal datatypeIRI="&xsd;string">datatype properties dedicated for LiFi access points</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasLiFiAccessPointProperty</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1389,14 +1773,29 @@ The most common value is Pi/3.</Literal>
         <Literal datatypeIRI="&xsd;string">properties of LiFi user equipments.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasLiFiUserEquipmentProperty</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasLink</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasLinkProperty</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasMAC</IRI>
         <Literal datatypeIRI="&xsd;string">the MAC address of the interface.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasName</IRI>
-        <Literal datatypeIRI="&xsd;string">the name of an interface</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasMAC</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1404,9 +1803,64 @@ The most common value is Pi/3.</Literal>
         <Literal datatypeIRI="&xsd;string">the transmitted power of the LED on the LiFi access point</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasOpticalTransmittedPower</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasPacketLoss</IRI>
+        <Literal datatypeIRI="&xsd;string">the packet loss rate of a link, usually in percentage.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasPacketLoss</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasRadianceAngle</IRI>
         <Literal datatypeIRI="&xsd;string">the radiance angle of the light ray transmitted from LED on LiFi access point.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasRadianceAngle</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasRespansivity</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasRoundTripTime</IRI>
+        <Literal datatypeIRI="&xsd;string">the round trip time of a link, which is the time taken for signal travel a round trip via this link.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasService</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasServiceEndTime</IRI>
+        <Literal datatypeIRI="&xsd;string">the time that a service ends.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasServiceEndTime</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasServiceStartTime</IRI>
+        <Literal datatypeIRI="&xsd;string">the start time of a service.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasServiceStartTime</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1414,19 +1868,29 @@ The most common value is Pi/3.</Literal>
         <Literal datatypeIRI="&xsd;string">the status of the service.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasServiceStatus</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasServiceType</IRI>
         <Literal datatypeIRI="&xsd;string">the type of communication services, e.g., video, audio, file transmit, text transmiting, etc.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasStartTime</IRI>
-        <Literal datatypeIRI="&xsd;string">the start time of a service.</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasServiceType</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasStandardDeviation</IRI>
+        <Literal datatypeIRI="&xsd;string">After multiple round trip time tested on a link, the deviation of these test results.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>hasTransmitPower</IRI>
-        <Literal datatypeIRI="&xsd;string">the power of the transmitter on the interface.</Literal>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1434,9 +1898,39 @@ The most common value is Pi/3.</Literal>
         <Literal datatypeIRI="&rdf;PlainLiteral">the user ID of the user</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasUserID</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>idle_timeout</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isIn</IRI>
+        <Literal datatypeIRI="&xsd;string">the relation that a interface belongs to a device. A device can have multiple interfaces, but a interface can be in one and only one device.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>isIn</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>priority</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>range</IRI>
         <Literal datatypeIRI="&xsd;string">the signal range of wireless devices, such as WiFi access point, LiFi access point, WiFi mobile station, and LiFi mobile station.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>range</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1444,19 +1938,112 @@ The most common value is Pi/3.</Literal>
         <Literal datatypeIRI="&xsd;string">in wireless networks, the ssid of the network this device belongs to.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>ssid</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>stationsInRange</IRI>
         <Literal datatypeIRI="&xsd;string">in wireless networks (WiFi/LiFi), the mobile stations in the range of the access points.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>to</IRI>
-        <Literal datatypeIRI="&xsd;string">the destination node of the link.</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>stationsInRange</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>table_id</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>toPort</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">the port to send to, defined in an flow action &quot;Output&quot; and &quot;Forward&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>toPort</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#Point</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The relation between something and the point, 
+ or other geometrical thing in space, where it is.  For example, the realtionship between
+ a radio tower and a Point with a given lat and long.
+ Or a relationship between a park and its outline as a closed arc of points, or a road and
+ its location as a arc (a sequence of points).
+ Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
+ an accuracy appropriate for the size of the object and uses such as mapping .</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#Point</IRI>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#Point</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">location</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing</IRI>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#location</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The relation between something and the point, 
+ or other geometrical thing in space, where it is.  For example, the realtionship between
+ a radio tower and a Point with a given lat and long.
+ Or a relationship between a park and its outline as a closed arc of points, or a road and
+ its location as a arc (a sequence of points).
+ Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
+ an accuracy appropriate for the size of the object and uses such as mapping .</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#location</IRI>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>foaf:Person</AbbreviatedIRI>
+        <AbbreviatedIRI>foaf:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>foaf:firstName</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the first name of a user.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>foaf:firstName</AbbreviatedIRI>
+        <AbbreviatedIRI>foaf:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>foaf:gender</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the gender of a user, reused from foaf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>foaf:gender</AbbreviatedIRI>
+        <AbbreviatedIRI>foaf:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>foaf:lastName</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the last name of a person.
+Reused from foaf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>foaf:lastName</AbbreviatedIRI>
+        <AbbreviatedIRI>foaf:</AbbreviatedIRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
