@@ -17,6 +17,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://purl.org/toco/"
      versionIRI="http://purl.org/toco/">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="UO" IRI="http://purl.oclc.org/net/unis/ontology/sensordata.owl/"/>
     <Prefix name="om" IRI="http://purl.oclc.org/net/unis/ontology/sensordata.owl/"/>
     <Prefix name="geo" IRI="http://www.w3.org/2003/01/geo/wgs84_pos/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
@@ -46,6 +48,105 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Literal datatypeIRI="&xsd;anyURI">https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document</Literal>
     </Annotation>
     <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000001"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000003"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000008"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000010"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000016"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000017"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000028"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000031"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000032"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000034"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000035"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000036"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000058"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000060"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000092"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000094"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000105"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000106"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000111"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000113"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000114"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000223"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000224"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000231"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000232"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000233"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000235"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000325"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000331"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000332"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0010005"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0010008"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/uo.owl/unit"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
     </Declaration>
     <Declaration>
@@ -53,6 +154,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </Declaration>
     <Declaration>
         <Class IRI="Action"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Attached"/>
     </Declaration>
     <Declaration>
         <Class IRI="AudioService"/>
@@ -68,6 +172,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </Declaration>
     <Declaration>
         <Class IRI="ConceptEntities"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Detached"/>
     </Declaration>
     <Declaration>
         <Class IRI="Device"/>
@@ -112,6 +219,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Output"/>
     </Declaration>
     <Declaration>
+        <Class IRI="PathFlow"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="PhysicalInfrastructure"/>
     </Declaration>
     <Declaration>
@@ -145,6 +255,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="UserDevice"/>
     </Declaration>
     <Declaration>
+        <Class IRI="UserDeviceStatus"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="UserEquipment"/>
     </Declaration>
     <Declaration>
@@ -175,6 +288,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="WirelessAssociation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="unReachable"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
     </Declaration>
     <Declaration>
@@ -182,9 +298,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="foaf:Person"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="units:Units"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="om:hasUnits"/>
@@ -256,6 +369,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty IRI="hasTransmitPower"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="hasUserDeviceStatus"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="hasWLAN"/>
     </Declaration>
     <Declaration>
@@ -299,6 +415,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </Declaration>
     <Declaration>
         <DataProperty IRI="cookie"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="driver"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="flags"/>
@@ -394,6 +513,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <DataProperty IRI="idle_timeout"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="isUP"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="priority"/>
     </Declaration>
     <Declaration>
@@ -401,6 +523,15 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </Declaration>
     <Declaration>
         <DataProperty IRI="table_id"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#alt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="foaf:firstName"/>
@@ -418,6 +549,138 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <AnnotationProperty IRI="license"/>
     </Declaration>
     <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000001"/>
+        <Class IRI="http://purl.obolibrary.org/obo/uo.owl/unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000003"/>
+        <Class IRI="http://purl.obolibrary.org/obo/uo.owl/unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000008"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000001"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000010"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000003"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000016"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000001"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000017"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000001"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000028"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000003"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000031"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000003"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000032"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000003"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000034"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000003"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000035"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000003"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000036"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000003"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000058"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000105"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000060"/>
+        <Class IRI="http://purl.obolibrary.org/obo/uo.owl/unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000092"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000058"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000094"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000060"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000105"/>
+        <Class IRI="http://purl.obolibrary.org/obo/uo.owl/unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000106"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000105"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000111"/>
+        <Class IRI="http://purl.obolibrary.org/obo/uo.owl/unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000113"/>
+        <Class IRI="http://purl.obolibrary.org/obo/uo.owl/unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000114"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000113"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000223"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000111"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000224"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000111"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000231"/>
+        <Class IRI="http://purl.obolibrary.org/obo/uo.owl/unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000232"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000231"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000233"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000231"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000235"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000231"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000325"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000105"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000331"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000231"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000332"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000231"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0010005"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000060"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0010008"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000060"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/uo.owl/unit"/>
+        <Class IRI="ConceptEntities"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
         <Class IRI="ConceptEntities"/>
     </SubClassOf>
@@ -428,6 +691,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <SubClassOf>
         <Class IRI="Action"/>
         <Class IRI="ConceptEntities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Attached"/>
+        <Class IRI="UserDeviceStatus"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="AudioService"/>
@@ -444,6 +711,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <SubClassOf>
         <Class IRI="CellularUserEquipment"/>
         <Class IRI="UserEquipment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Detached"/>
+        <Class IRI="UserDeviceStatus"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Device"/>
@@ -502,6 +773,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Action"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="PathFlow"/>
+        <Class IRI="Flow"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="SatelliteAssociation"/>
         <Class IRI="WirelessAssociation"/>
     </SubClassOf>
@@ -540,6 +815,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <SubClassOf>
         <Class IRI="UserDevice"/>
         <Class IRI="Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="UserDeviceStatus"/>
+        <Class IRI="ConceptEntities"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="UserEquipment"/>
@@ -582,6 +861,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Link"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="unReachable"/>
+        <Class IRI="UserDeviceStatus"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
         <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
     </SubClassOf>
@@ -591,10 +874,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="foaf:Person"/>
-        <Class IRI="ConceptEntities"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="units:Units"/>
         <Class IRI="ConceptEntities"/>
     </SubClassOf>
     <DisjointClasses>
@@ -674,8 +953,8 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty IRI="hasLink"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="BelongsTo"/>
         <ObjectProperty IRI="hasDevice"/>
+        <ObjectProperty IRI="BelongsTo"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="isIn"/>
@@ -766,6 +1045,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Interface"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasUserDeviceStatus"/>
+        <Class IRI="UserDevice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="hasWLAN"/>
         <Class IRI="Device"/>
     </ObjectPropertyDomain>
@@ -807,7 +1090,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="om:hasUnits"/>
-        <Class abbreviatedIRI="units:Units"/>
+        <Class IRI="http://purl.obolibrary.org/obo/uo.owl/unit"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="APsInRange"/>
@@ -892,6 +1175,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasTransmitPower"/>
         <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasUserDeviceStatus"/>
+        <Class IRI="UserDeviceStatus"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasWLAN"/>
@@ -1026,6 +1313,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Flow"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="driver"/>
+        <Class IRI="AccessPoint"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="flags"/>
         <Class IRI="Flow"/>
     </DataPropertyDomain>
@@ -1146,6 +1437,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Flow"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="isUP"/>
+        <Class IRI="Interface"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="priority"/>
         <Class IRI="Flow"/>
     </DataPropertyDomain>
@@ -1156,6 +1451,18 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <DataPropertyDomain>
         <DataProperty IRI="table_id"/>
         <Class IRI="Flow"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#alt"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty abbreviatedIRI="foaf:firstName"/>
@@ -1187,6 +1494,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="cookie"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="driver"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -1310,6 +1621,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="isUP"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="priority"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
@@ -1320,6 +1635,18 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <DataPropertyRange>
         <DataProperty IRI="table_id"/>
         <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#alt"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI="foaf:firstName"/>
@@ -1334,9 +1661,334 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000001</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000001</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">length unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000003</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000003</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">time unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000008</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000008</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">meter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000010</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000010</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">second</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000016</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000016</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">millimeter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000017</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000017</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">micrometer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000028</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000028</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">millisecond</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000031</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000031</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">minute</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000032</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000032</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">hour</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000034</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000034</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">week</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000035</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000035</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">month</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000036</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000036</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">year</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000058</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000058</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">rotational frequency unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000060</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000060</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">speed/velocity unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000092</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000092</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">turns per second</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000094</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000094</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">meter per second</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000105</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">frequency unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000106</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000106</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">hertz</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000111</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000111</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">energy unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000113</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">power unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000114</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000114</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">watt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000223</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000223</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">watt-hour</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000224</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000224</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">kilowatt-hour</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000231</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000231</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">information unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000232</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000232</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">bit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000233</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000233</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">byte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000235</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000235</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">megabyte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000325</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000325</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">megaHertz</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000331</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000331</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">gigabyte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000332</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000332</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">terabyte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0010005</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0010005</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">millimeters per day</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0010008</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0010008</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">kilometer per hour</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl/unit</IRI>
+        <Literal datatypeIRI="&xsd;string">reused from Units of measurement Ontology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl/unit</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>om:ObervationAndMeasurement</AbbreviatedIRI>
         <Literal datatypeIRI="&xsd;string">reused from SenSei Observation And Measurement Ontology (http://purl.oclc.org/net/unis/ontology/sensordata.owl).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>om:ObervationAndMeasurement</AbbreviatedIRI>
+        <IRI>http://purl.oclc.org/net/unis/ontology/sensordata.owl</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1346,7 +1998,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <AbbreviatedIRI>om:hasUnit</AbbreviatedIRI>
-        <IRI></IRI>
+        <AbbreviatedIRI>om:</AbbreviatedIRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1918,6 +2570,16 @@ The most common value is Pi/3.</Literal>
         <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isUP</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">indicate whether a interface is up or not.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>isUP</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>priority</IRI>
         <IRI></IRI>
@@ -1995,6 +2657,26 @@ The most common value is Pi/3.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#alt</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the altitude of a spartial thing, i.e., a point.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#alt</IRI>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#lat</IRI>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#lat</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the latitude of a point</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#location</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">The relation between something and the point, 
  or other geometrical thing in space, where it is.  For example, the realtionship between
@@ -2008,6 +2690,16 @@ The most common value is Pi/3.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#location</IRI>
         <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#long</IRI>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#long</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the longitude of a spartial thing, i.e., a point.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -2044,11 +2736,6 @@ Reused from foaf</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <AbbreviatedIRI>foaf:lastName</AbbreviatedIRI>
         <AbbreviatedIRI>foaf:</AbbreviatedIRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>units:Units</AbbreviatedIRI>
-        <Literal datatypeIRI="&xsd;string">reused from NASA SWEET (semantic web for earth and environmental terminology) Ontology</Literal>
     </AnnotationAssertion>
 </Ontology>
 
