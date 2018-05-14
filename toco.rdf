@@ -86,9 +86,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
-    <!-- http://purl.org/toco/APsInRange -->
+    <!-- http://purl.org/toco/apsInRange -->
 
-    <ObjectProperty rdf:about="&toco;APsInRange">
+    <ObjectProperty rdf:about="&toco;apsInRange">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
         <rdfs:range rdf:resource="&toco;AccessPoint"/>
         <rdfs:domain rdf:resource="&toco;UserDevice"/>
@@ -96,9 +96,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
-    <!-- http://purl.org/toco/BelongsTo -->
+    <!-- http://purl.org/toco/belongsTo -->
 
-    <ObjectProperty rdf:about="&toco;BelongsTo">
+    <ObjectProperty rdf:about="&toco;belongsTo">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
         <rdfs:range rdf:resource="&toco;User"/>
         <rdfs:domain rdf:resource="&toco;UserDevice"/>
@@ -106,22 +106,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
-    <!-- http://purl.org/toco/From -->
+    <!-- http://purl.org/toco/from -->
 
-    <ObjectProperty rdf:about="&toco;From">
+    <ObjectProperty rdf:about="&toco;from">
         <rdfs:comment rdf:datatype="&xsd;string">the source node that the link is transmit from.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
-        <rdfs:range rdf:resource="&toco;Interface"/>
-        <rdfs:domain rdf:resource="&toco;Link"/>
-        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
-    </ObjectProperty>
-    
-
-
-    <!-- http://purl.org/toco/To -->
-
-    <ObjectProperty rdf:about="&toco;To">
-        <rdfs:comment rdf:datatype="&xsd;string">the destination node of the link.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
         <rdfs:range rdf:resource="&toco;Interface"/>
         <rdfs:domain rdf:resource="&toco;Link"/>
@@ -147,6 +135,18 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <ObjectProperty rdf:about="&toco;hasBandwidth">
         <rdfs:comment rdf:datatype="&xsd;string">the bandwidth of the link</rdfs:comment>
         <rdfs:range rdf:resource="&om;ObervationAndMeasurement"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
+        <rdfs:domain rdf:resource="&toco;Link"/>
+        <rdfs:subPropertyOf rdf:resource="&toco;hasLinkProperty"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.org/toco/hasDatarate -->
+
+    <ObjectProperty rdf:about="&toco;hasDatarate">
+        <rdfs:range rdf:resource="&om;ObervationAndMeasurement"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
         <rdfs:domain rdf:resource="&toco;Link"/>
         <rdfs:subPropertyOf rdf:resource="&toco;hasLinkProperty"/>
     </ObjectProperty>
@@ -157,9 +157,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
 
     <ObjectProperty rdf:about="&toco;hasDevice">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
-        <inverseOf rdf:resource="&toco;BelongsTo"/>
         <rdfs:domain rdf:resource="&toco;User"/>
         <rdfs:range rdf:resource="&toco;UserDevice"/>
+        <inverseOf rdf:resource="&toco;belongsTo"/>
     </ObjectProperty>
     
 
@@ -313,6 +313,17 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
+    <!-- http://purl.org/toco/hasTxpower -->
+
+    <ObjectProperty rdf:about="&toco;hasTxpower">
+        <rdfs:range rdf:resource="&om;ObervationAndMeasurement"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
+        <rdfs:domain rdf:resource="&toco;Link"/>
+        <rdfs:subPropertyOf rdf:resource="&toco;hasLinkProperty"/>
+    </ObjectProperty>
+    
+
+
     <!-- http://purl.org/toco/hasUserDeviceStatus -->
 
     <ObjectProperty rdf:about="&toco;hasUserDeviceStatus">
@@ -407,6 +418,18 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
+    <!-- http://purl.org/toco/to -->
+
+    <ObjectProperty rdf:about="&toco;to">
+        <rdfs:comment rdf:datatype="&xsd;string">the destination node of the link.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
+        <rdfs:range rdf:resource="&toco;Interface"/>
+        <rdfs:domain rdf:resource="&toco;Link"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </ObjectProperty>
+    
+
+
     <!-- http://purl.org/toco/toPort -->
 
     <ObjectProperty rdf:about="&toco;toPort">
@@ -468,23 +491,13 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
-    <!-- http://purl.org/toco/Channel -->
+    <!-- http://purl.org/toco/channel -->
 
-    <DatatypeProperty rdf:about="&toco;Channel">
+    <DatatypeProperty rdf:about="&toco;channel">
         <rdfs:comment rdf:datatype="&xsd;string">the channel id of a interface.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
         <rdfs:domain rdf:resource="&toco;Interface"/>
         <rdfs:range rdf:resource="&xsd;int"/>
-    </DatatypeProperty>
-    
-
-
-    <!-- http://purl.org/toco/Frequency -->
-
-    <DatatypeProperty rdf:about="&toco;Frequency">
-        <rdfs:comment rdf:datatype="&xsd;string">the frequency of the radio wave transmitted by a wireless interface (WLAN).</rdfs:comment>
-        <rdfs:domain rdf:resource="&toco;Interface"/>
-        <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
     
 
@@ -520,9 +533,19 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
-    <!-- http://purl.org/toco/hard_timeout -->
+    <!-- http://purl.org/toco/frequency -->
 
-    <DatatypeProperty rdf:about="&toco;hard_timeout">
+    <DatatypeProperty rdf:about="&toco;frequency">
+        <rdfs:comment rdf:datatype="&xsd;string">the frequency of the radio wave transmitted by a wireless interface (WLAN).</rdfs:comment>
+        <rdfs:domain rdf:resource="&toco;Interface"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/toco/hardTimeout -->
+
+    <DatatypeProperty rdf:about="&toco;hardTimeout">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
         <rdfs:domain rdf:resource="&toco;Flow"/>
         <rdfs:subPropertyOf rdf:resource="&toco;hasFlowProperty"/>
@@ -849,9 +872,9 @@ The most common value is Pi/3.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/toco/idle_timeout -->
+    <!-- http://purl.org/toco/idleTimeout -->
 
-    <DatatypeProperty rdf:about="&toco;idle_timeout">
+    <DatatypeProperty rdf:about="&toco;idleTimeout">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
         <rdfs:domain rdf:resource="&toco;Flow"/>
         <rdfs:subPropertyOf rdf:resource="&toco;hasFlowProperty"/>
@@ -867,6 +890,15 @@ The most common value is Pi/3.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
         <rdfs:domain rdf:resource="&toco;Interface"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/toco/mode -->
+
+    <DatatypeProperty rdf:about="&toco;mode">
+        <rdfs:domain rdf:resource="&toco;Interface"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
     </DatatypeProperty>
     
 
@@ -893,9 +925,9 @@ The most common value is Pi/3.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/toco/table_id -->
+    <!-- http://purl.org/toco/tableId -->
 
-    <DatatypeProperty rdf:about="&toco;table_id">
+    <DatatypeProperty rdf:about="&toco;tableId">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
         <rdfs:domain rdf:resource="&toco;Flow"/>
         <rdfs:subPropertyOf rdf:resource="&toco;hasFlowProperty"/>
@@ -1708,6 +1740,7 @@ Please be reminded the electromagnetic wave (which is the links of all wireless 
 
     <Class rdf:about="&toco;WiredLink">
         <rdfs:subClassOf rdf:resource="&toco;Link"/>
+        <disjointWith rdf:resource="&toco;WirelessAssociation"/>
         <rdfs:comment>wired link through twisted cable, optical fiber, etc.</rdfs:comment>
     </Class>
     

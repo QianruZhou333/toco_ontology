@@ -303,22 +303,22 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty abbreviatedIRI="om:hasUnits"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="APsInRange"/>
+        <ObjectProperty IRI="apsInRange"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="BelongsTo"/>
+        <ObjectProperty IRI="belongsTo"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="From"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="To"/>
+        <ObjectProperty IRI="from"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasAssociatedStations"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasBandwidth"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasDatarate"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasDevice"/>
@@ -369,6 +369,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty IRI="hasTransmitPower"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="hasTxpower"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="hasUserDeviceStatus"/>
     </Declaration>
     <Declaration>
@@ -396,6 +399,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty IRI="stationsInRange"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="to"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="toPort"/>
     </Declaration>
     <Declaration>
@@ -408,10 +414,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <DataProperty abbreviatedIRI="om:hasValue"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="Channel"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="Frequency"/>
+        <DataProperty IRI="channel"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="cookie"/>
@@ -423,7 +426,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <DataProperty IRI="flags"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="hard_timeout"/>
+        <DataProperty IRI="frequency"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hardTimeout"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasAntennaGain"/>
@@ -510,10 +516,13 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <DataProperty IRI="hasWirelessLinkProperty"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="idle_timeout"/>
+        <DataProperty IRI="idleTimeout"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="isUP"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="mode"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="priority"/>
@@ -522,7 +531,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <DataProperty IRI="ssid"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="table_id"/>
+        <DataProperty IRI="tableId"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#alt"/>
@@ -880,12 +889,12 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="ConceptEntities"/>
         <Class IRI="PhysicalInfrastructure"/>
     </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="WiredLink"/>
+        <Class IRI="WirelessAssociation"/>
+    </DisjointClasses>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="From"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="To"/>
+        <ObjectProperty IRI="from"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -894,6 +903,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="hasBandwidth"/>
+        <ObjectProperty IRI="hasLinkProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasDatarate"/>
         <ObjectProperty IRI="hasLinkProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -933,6 +946,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasTxpower"/>
+        <ObjectProperty IRI="hasLinkProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="hasWLAN"/>
         <ObjectProperty IRI="hasInterface"/>
     </SubObjectPropertyOf>
@@ -952,9 +969,13 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty IRI="hasWirelessAssociation"/>
         <ObjectProperty IRI="hasLink"/>
     </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="to"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
     <InverseObjectProperties>
         <ObjectProperty IRI="hasDevice"/>
-        <ObjectProperty IRI="BelongsTo"/>
+        <ObjectProperty IRI="belongsTo"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="isIn"/>
@@ -965,19 +986,15 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="APsInRange"/>
+        <ObjectProperty IRI="apsInRange"/>
         <Class IRI="UserDevice"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="BelongsTo"/>
+        <ObjectProperty IRI="belongsTo"/>
         <Class IRI="UserDevice"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="From"/>
-        <Class IRI="Link"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="To"/>
+        <ObjectProperty IRI="from"/>
         <Class IRI="Link"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -986,6 +1003,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasBandwidth"/>
+        <Class IRI="Link"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasDatarate"/>
         <Class IRI="Link"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -1045,6 +1066,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Interface"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasTxpower"/>
+        <Class IRI="Link"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="hasUserDeviceStatus"/>
         <Class IRI="UserDevice"/>
     </ObjectPropertyDomain>
@@ -1081,6 +1106,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="AccessPoint"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="to"/>
+        <Class IRI="Link"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="toPort"/>
         <Class IRI="Action"/>
     </ObjectPropertyDomain>
@@ -1093,19 +1122,15 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="http://purl.obolibrary.org/obo/uo.owl/unit"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="APsInRange"/>
+        <ObjectProperty IRI="apsInRange"/>
         <Class IRI="AccessPoint"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="BelongsTo"/>
+        <ObjectProperty IRI="belongsTo"/>
         <Class IRI="User"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="From"/>
-        <Class IRI="Interface"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="To"/>
+        <ObjectProperty IRI="from"/>
         <Class IRI="Interface"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -1114,6 +1139,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasBandwidth"/>
+        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasDatarate"/>
         <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -1177,6 +1206,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="hasTxpower"/>
+        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="hasUserDeviceStatus"/>
         <Class IRI="UserDeviceStatus"/>
     </ObjectPropertyRange>
@@ -1213,6 +1246,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="UserEquipment"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="to"/>
+        <Class IRI="Interface"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="toPort"/>
         <Class IRI="Interface"/>
     </ObjectPropertyRange>
@@ -1233,7 +1270,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <DataProperty IRI="hasFlowProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="hard_timeout"/>
+        <DataProperty IRI="hardTimeout"/>
         <DataProperty IRI="hasFlowProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
@@ -1281,7 +1318,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <DataProperty IRI="hasLinkProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="idle_timeout"/>
+        <DataProperty IRI="idleTimeout"/>
         <DataProperty IRI="hasFlowProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
@@ -1289,7 +1326,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <DataProperty IRI="hasFlowProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="table_id"/>
+        <DataProperty IRI="tableId"/>
         <DataProperty IRI="hasFlowProperty"/>
     </SubDataPropertyOf>
     <DataPropertyDomain>
@@ -1301,11 +1338,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="Channel"/>
-        <Class IRI="Interface"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="Frequency"/>
+        <DataProperty IRI="channel"/>
         <Class IRI="Interface"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -1321,7 +1354,11 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Flow"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="hard_timeout"/>
+        <DataProperty IRI="frequency"/>
+        <Class IRI="Interface"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hardTimeout"/>
         <Class IRI="Flow"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -1433,11 +1470,15 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="WirelessAssociation"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="idle_timeout"/>
+        <DataProperty IRI="idleTimeout"/>
         <Class IRI="Flow"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="isUP"/>
+        <Class IRI="Interface"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="mode"/>
         <Class IRI="Interface"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -1449,7 +1490,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Device"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="table_id"/>
+        <DataProperty IRI="tableId"/>
         <Class IRI="Flow"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -1485,12 +1526,8 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="Channel"/>
+        <DataProperty IRI="channel"/>
         <Datatype abbreviatedIRI="xsd:int"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="Frequency"/>
-        <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="cookie"/>
@@ -1505,7 +1542,11 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="hard_timeout"/>
+        <DataProperty IRI="frequency"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hardTimeout"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -1617,12 +1658,16 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="idle_timeout"/>
+        <DataProperty IRI="idleTimeout"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="isUP"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="mode"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="priority"/>
@@ -1633,7 +1678,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="table_id"/>
+        <DataProperty IRI="tableId"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -2021,11 +2066,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <AbbreviatedIRI>om:</AbbreviatedIRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>APsInRange</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>AccessPoint</IRI>
         <Literal datatypeIRI="&xsd;string">a wireless access point, or more generally just access point (AP), is a networking hardware device that allows a Wi-Fi/Li-Fi device to connect to a wired network. The AP usually connects to a router (via a wired network) as a standalone device, but it can also be an integral component of the router itself. An AP is differentiated from a hotspot, which is the physical location where Wi-Fi access to a WLAN is available.</Literal>
@@ -2043,24 +2083,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
 it is a transceiver connecting a number of other devices to one another and/or to a wider area. In LTE, it is also known as eNodeB.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>BelongsTo</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>CellularUserEquipment</IRI>
         <Literal datatypeIRI="&xsd;string">User deivce in a Cellular network.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Channel</IRI>
-        <Literal datatypeIRI="&xsd;string">the channel id of a interface.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>Channel</IRI>
-        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2073,21 +2098,6 @@ According to its user, could be divided into UserDevice and SystemDevice.</Liter
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Flow</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">the flow entry in a flow table inside a switch or route. Defined by OpenFlow protocol.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Frequency</IRI>
-        <Literal datatypeIRI="&xsd;string">the frequency of the radio wave transmitted by a wireless interface (WLAN).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>From</IRI>
-        <Literal datatypeIRI="&xsd;string">the source node that the link is transmit from.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>From</IRI>
-        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2158,16 +2168,6 @@ Please be reminded the electromagnetic wave (which is the links of all wireless 
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>To</IRI>
-        <Literal datatypeIRI="&xsd;string">the destination node of the link.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>To</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>User</IRI>
         <Literal datatypeIRI="&xsd;string">reused from foaf (http://xmlns.com/foaf/0.1/). Represent a user in the telecommunication system.</Literal>
     </AnnotationAssertion>
@@ -2218,6 +2218,26 @@ Please be reminded the electromagnetic wave (which is the links of all wireless 
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>apsInRange</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>belongsTo</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>channel</IRI>
+        <Literal datatypeIRI="&xsd;string">the channel id of a interface.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>channel</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>cookie</IRI>
         <IRI></IRI>
     </AnnotationAssertion>
@@ -2227,8 +2247,23 @@ Please be reminded the electromagnetic wave (which is the links of all wireless 
         <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>frequency</IRI>
+        <Literal datatypeIRI="&xsd;string">the frequency of the radio wave transmitted by a wireless interface (WLAN).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>from</IRI>
+        <Literal datatypeIRI="&xsd;string">the source node that the link is transmit from.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>hard_timeout</IRI>
+        <IRI>from</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hardTimeout</IRI>
         <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -2265,6 +2300,16 @@ Please be reminded the electromagnetic wave (which is the links of all wireless 
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasBandwidth</IRI>
         <Literal datatypeIRI="&xsd;string">the bandwidth of the link</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasBandwidth</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasDatarate</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -2545,6 +2590,11 @@ The most common value is Pi/3.</Literal>
         <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasTxpower</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasUserID</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">the user ID of the user</Literal>
@@ -2556,7 +2606,7 @@ The most common value is Pi/3.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>idle_timeout</IRI>
+        <IRI>idleTimeout</IRI>
         <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -2616,7 +2666,17 @@ The most common value is Pi/3.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>table_id</IRI>
+        <IRI>tableId</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>to</IRI>
+        <Literal datatypeIRI="&xsd;string">the destination node of the link.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>to</IRI>
         <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
