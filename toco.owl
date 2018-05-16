@@ -18,7 +18,6 @@
      ontologyIRI="http://purl.org/toco/"
      versionIRI="http://purl.org/toco/">
     <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="UO" IRI="http://purl.oclc.org/net/unis/ontology/sensordata.owl/"/>
     <Prefix name="om" IRI="http://purl.oclc.org/net/unis/ontology/sensordata.owl/"/>
     <Prefix name="geo" IRI="http://www.w3.org/2003/01/geo/wgs84_pos/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
@@ -28,6 +27,7 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
     <Prefix name="toco" IRI="http://purl.org/toco/"/>
+    <Prefix name="toco2" IRI="https://w3id.org/toco/"/>
     <Prefix name="units" IRI="https://sweet.jpl.nasa.gov/"/>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -40,11 +40,11 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Literal datatypeIRI="&xsd;string">Qianru Zhou (qz1@hw.ac.uk)</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty IRI="https://w3id.org/toco/contributor"/>
+        <AnnotationProperty abbreviatedIRI="toco2:contributor"/>
         <Literal datatypeIRI="&xsd;string">Mohammad Soltani Dehghani (for LiFi networks)</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty IRI="https://w3id.org/toco/license"/>
+        <AnnotationProperty abbreviatedIRI="toco2:license"/>
         <Literal datatypeIRI="&xsd;anyURI">https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document</Literal>
     </Annotation>
     <Declaration>
@@ -970,6 +970,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty IRI="hasLink"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasWirelessLinkProperty"/>
+        <ObjectProperty IRI="hasLinkProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="to"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -1038,6 +1042,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Interface"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasLinkProperty"/>
+        <Class IRI="Link"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="hasPort"/>
         <Class IRI="Device"/>
     </ObjectPropertyDomain>
@@ -1092,6 +1100,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasWirelessAssociation"/>
         <Class IRI="WLAN"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasWirelessLinkProperty"/>
+        <Class IRI="WirelessAssociation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="isIn"/>
@@ -1314,10 +1326,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <DataProperty IRI="hasLiFiAccessPointProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="hasWirelessLinkProperty"/>
-        <DataProperty IRI="hasLinkProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
         <DataProperty IRI="idleTimeout"/>
         <DataProperty IRI="hasFlowProperty"/>
     </SubDataPropertyOf>
@@ -1422,10 +1430,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="LiFiUserEquipment"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="hasLinkProperty"/>
-        <Class IRI="Link"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="hasMAC"/>
         <Class IRI="Interface"/>
     </DataPropertyDomain>
@@ -1464,10 +1468,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <DataPropertyDomain>
         <DataProperty IRI="hasUserID"/>
         <Class IRI="User"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="hasWirelessLinkProperty"/>
-        <Class IRI="WirelessAssociation"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="idleTimeout"/>
@@ -2053,7 +2053,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <AbbreviatedIRI>om:hasUnits</AbbreviatedIRI>
-        <AbbreviatedIRI>om:</AbbreviatedIRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2063,7 +2063,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <AbbreviatedIRI>om:hasValue</AbbreviatedIRI>
-        <AbbreviatedIRI>om:</AbbreviatedIRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
