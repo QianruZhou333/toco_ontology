@@ -2048,7 +2048,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>om:hasUnits</AbbreviatedIRI>
-        <Literal datatypeIRI="&xsd;string">reused from SenSei Observation and Measurement Ontology (http://purl.oclc.org/net/unis/ontology/sensordata.owl/).</Literal>
+        <Literal datatypeIRI="&xsd;string">the unit of an observation or measurement.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -2058,7 +2058,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>om:hasValue</AbbreviatedIRI>
-        <Literal datatypeIRI="&xsd;string">reused from SENSEI observation and measurement ontology.</Literal>
+        <Literal datatypeIRI="&xsd;string">the value of an observation or measurement.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
