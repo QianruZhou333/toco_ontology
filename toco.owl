@@ -348,9 +348,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty IRI="hasLinkProperty"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasPort"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="hasRoundTripTime"/>
     </Declaration>
     <Declaration>
@@ -402,7 +399,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty IRI="to"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="toPort"/>
+        <ObjectProperty IRI="toInterface"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
@@ -922,10 +919,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty IRI="hasWLAN"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasPort"/>
-        <ObjectProperty IRI="hasInterface"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="hasRoundTripTime"/>
         <ObjectProperty IRI="hasLinkProperty"/>
     </SubObjectPropertyOf>
@@ -1046,10 +1039,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Link"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasPort"/>
-        <Class IRI="Device"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="hasRoundTripTime"/>
         <Class IRI="Link"/>
     </ObjectPropertyDomain>
@@ -1122,7 +1111,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Link"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="toPort"/>
+        <ObjectProperty IRI="toInterface"/>
         <Class IRI="Action"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -1188,10 +1177,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasLink"/>
         <Class IRI="Link"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasPort"/>
-        <Class IRI="Interface"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasRoundTripTime"/>
@@ -1262,7 +1247,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Interface"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="toPort"/>
+        <ObjectProperty IRI="toInterface"/>
         <Class IRI="Interface"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -2681,12 +2666,12 @@ The most common value is Pi/3.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>toPort</IRI>
+        <IRI>toInterface</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">the port to send to, defined in an flow action &quot;Output&quot; and &quot;Forward&quot;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>toPort</IRI>
+        <IRI>toInterface</IRI>
         <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
