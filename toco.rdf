@@ -75,9 +75,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
-    <!-- http://purl.oclc.org/net/unis/ontology/sensordata.owl/hasUnits -->
+    <!-- http://purl.oclc.org/net/unis/ontology/sensordata.owl/hasUnit -->
 
-    <ObjectProperty rdf:about="&om;hasUnits">
+    <ObjectProperty rdf:about="&om;hasUnit">
         <rdfs:comment rdf:datatype="&xsd;string">the unit of an observation or measurement.</rdfs:comment>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/uo.owl/unit"/>
         <rdfs:domain rdf:resource="&om;ObervationAndMeasurement"/>
@@ -477,17 +477,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://purl.oclc.org/net/unis/ontology/sensordata.owl/hasUnit -->
-
-    <DatatypeProperty rdf:about="&om;hasUnit">
-        <rdfs:comment rdf:datatype="&xsd;string">reused from SENSEI Observation and Measurement Ontology.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.oclc.org/net/unis/ontology/sensordata.owl/"/>
-        <rdfs:domain rdf:resource="&om;ObervationAndMeasurement"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </DatatypeProperty>
     
 
 
