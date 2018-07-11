@@ -214,6 +214,15 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
+    <!-- http://purl.org/toco/hasLiFiAssociationProperty -->
+
+    <ObjectProperty rdf:about="&toco;hasLiFiAssociationProperty">
+        <rdfs:domain rdf:resource="&toco;LiFiAssociation"/>
+        <rdfs:subPropertyOf rdf:resource="&toco;hasWirelessLinkProperty"/>
+    </ObjectProperty>
+    
+
+
     <!-- http://purl.org/toco/hasLiFiWLAN -->
 
     <ObjectProperty rdf:about="&toco;hasLiFiWLAN">
@@ -248,6 +257,15 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <rdfs:domain rdf:resource="&toco;Device"/>
         <rdfs:range rdf:resource="&toco;Interface"/>
         <rdfs:subPropertyOf rdf:resource="&toco;hasInterface"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.org/toco/hasRadianceAngle -->
+
+    <ObjectProperty rdf:about="&toco;hasRadianceAngle">
+        <rdfs:domain rdf:resource="&toco;LiFiAssociation"/>
+        <rdfs:subPropertyOf rdf:resource="&toco;hasLiFiAssociationProperty"/>
     </ObjectProperty>
     
 
@@ -441,17 +459,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     
 
 
-    <!-- http://purl.org/toco/toInterface -->
-
-    <ObjectProperty rdf:about="&toco;toInterface">
-        <rdfs:comment>the port to send to, defined in an flow action &quot;Output&quot; and &quot;Forward&quot;</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
-        <rdfs:domain rdf:resource="&toco;Action"/>
-        <rdfs:range rdf:resource="&toco;Interface"/>
-    </ObjectProperty>
-    
-
-
     <!-- http://www.w3.org/2003/01/geo/wgs84_pos#location -->
 
     <ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
@@ -517,6 +524,28 @@ A ontology developed for telecommunciation network systems with hybrid technolog
 
     <DatatypeProperty rdf:about="&toco;cookie">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
+        <rdfs:domain rdf:resource="&toco;Flow"/>
+        <rdfs:subPropertyOf rdf:resource="&toco;hasFlowProperty"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/toco/dlDst -->
+
+    <DatatypeProperty rdf:about="&toco;dlDst">
+        <rdfs:comment>the Ethernet destination address of the flow. It should be an MAC address, with 6 pairs of hexadecimal digits.</rdfs:comment>
+        <rdfs:domain rdf:resource="&toco;Flow"/>
+        <rdfs:subPropertyOf rdf:resource="&toco;hasFlowProperty"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/toco/dlSrc -->
+
+    <DatatypeProperty rdf:about="&toco;dlSrc">
+        <rdfs:comment>the Ethernet source address of the flow. It should be an MAC address with 6 pairs of hexadecimal digits</rdfs:comment>
         <rdfs:domain rdf:resource="&toco;Flow"/>
         <rdfs:subPropertyOf rdf:resource="&toco;hasFlowProperty"/>
         <rdfs:range rdf:resource="&xsd;string"/>
@@ -700,7 +729,7 @@ The most common value is Pi/3.</rdfs:comment>
     <!-- http://purl.org/toco/hasInterfaceName -->
 
     <DatatypeProperty rdf:about="&toco;hasInterfaceName">
-        <rdfs:comment rdf:datatype="&xsd;string">the name of an interface</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">the port number of an interface</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
         <rdfs:domain rdf:resource="&toco;Interface"/>
         <rdfs:range rdf:resource="&xsd;string"/>
@@ -733,9 +762,6 @@ The most common value is Pi/3.</rdfs:comment>
     <!-- http://purl.org/toco/hasLiFiAssociationProperty -->
 
     <DatatypeProperty rdf:about="&toco;hasLiFiAssociationProperty">
-        <rdfs:comment rdf:datatype="&xsd;string">The properties of the visiable light association between the LED on LiFi access point and LiFi user equipment.</rdfs:comment>
-        <rdfs:domain rdf:resource="&toco;LiFiAssociation"/>
-        <rdfs:subPropertyOf rdf:resource="&toco;hasWirelessLinkProperty"/>
         <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
     
@@ -797,10 +823,6 @@ The most common value is Pi/3.</rdfs:comment>
     <!-- http://purl.org/toco/hasRadianceAngle -->
 
     <DatatypeProperty rdf:about="&toco;hasRadianceAngle">
-        <rdfs:comment rdf:datatype="&xsd;string">the radiance angle of the light ray transmitted from LED on LiFi access point.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
-        <rdfs:domain rdf:resource="&toco;LiFiAssociation"/>
-        <rdfs:subPropertyOf rdf:resource="&toco;hasLiFiAssociationProperty"/>
         <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
     
@@ -891,6 +913,17 @@ The most common value is Pi/3.</rdfs:comment>
     
 
 
+    <!-- http://purl.org/toco/inPort -->
+
+    <DatatypeProperty rdf:about="&toco;inPort">
+        <rdfs:comment>the port number of the in port of the flow, or could be a keyword, such as &quot;LOCAL&quot;</rdfs:comment>
+        <rdfs:domain rdf:resource="&toco;Flow"/>
+        <rdfs:subPropertyOf rdf:resource="&toco;hasFlowProperty"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
     <!-- http://purl.org/toco/isUP -->
 
     <DatatypeProperty rdf:about="&toco;isUP">
@@ -906,6 +939,28 @@ The most common value is Pi/3.</rdfs:comment>
 
     <DatatypeProperty rdf:about="&toco;mode">
         <rdfs:domain rdf:resource="&toco;Interface"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/toco/nwProtocol -->
+
+    <DatatypeProperty rdf:about="&toco;nwProtocol">
+        <rdfs:comment>network protocol. The nw_proto property of a flow.</rdfs:comment>
+        <rdfs:domain rdf:resource="&toco;Flow"/>
+        <rdfs:subPropertyOf rdf:resource="&toco;hasFlowProperty"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/toco/nwTos -->
+
+    <DatatypeProperty rdf:about="&toco;nwTos">
+        <rdfs:comment>network type of service. the nw_tos property of a flow. It should be a decimal number with the value between 0-255.</rdfs:comment>
+        <rdfs:domain rdf:resource="&toco;Flow"/>
+        <rdfs:subPropertyOf rdf:resource="&toco;hasFlowProperty"/>
         <rdfs:range rdf:resource="&xsd;int"/>
     </DatatypeProperty>
     
@@ -939,6 +994,16 @@ The most common value is Pi/3.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
         <rdfs:domain rdf:resource="&toco;Flow"/>
         <rdfs:subPropertyOf rdf:resource="&toco;hasFlowProperty"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/toco/toPort -->
+
+    <DatatypeProperty rdf:about="&toco;toPort">
+        <rdfs:comment>the port number of the port forward to defined by the to_port property of the flow action OUTPUT.</rdfs:comment>
+        <rdfs:domain rdf:resource="&toco;Action"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </DatatypeProperty>
     
@@ -1814,7 +1879,14 @@ Please be reminded the electromagnetic wave (which is the links of all wireless 
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="&toco;hasLiFiAssociationProperty">
+        <rdfs:comment rdf:datatype="&xsd;string">The properties of the visiable light association between the LED on LiFi access point and LiFi user equipment.</rdfs:comment>
+    </rdf:Description>
     <rdf:Description rdf:about="&toco;hasLinkProperty">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&toco;hasRadianceAngle">
+        <rdfs:comment rdf:datatype="&xsd;string">the radiance angle of the light ray transmitted from LED on LiFi access point.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
     </rdf:Description>
 </rdf:RDF>

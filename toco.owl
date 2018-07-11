@@ -348,6 +348,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty IRI="hasLinkProperty"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="hasPort"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="hasRoundTripTime"/>
     </Declaration>
     <Declaration>
@@ -387,6 +390,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty IRI="hasWirelessAssociation"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="hasWirelessLinkProperty"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="isIn"/>
     </Declaration>
     <Declaration>
@@ -397,9 +403,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="to"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="toInterface"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
@@ -415,6 +418,12 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </Declaration>
     <Declaration>
         <DataProperty IRI="cookie"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="dlDst"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="dlSrc"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="driver"/>
@@ -516,10 +525,19 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <DataProperty IRI="idleTimeout"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="inPort"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="isUP"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="mode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="nwProtocol"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="nwTos"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="priority"/>
@@ -529,6 +547,9 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </Declaration>
     <Declaration>
         <DataProperty IRI="tableId"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="toPort"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#alt"/>
@@ -915,8 +936,20 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <ObjectProperty IRI="hasWirelessAssociation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasLiFiAssociationProperty"/>
+        <ObjectProperty IRI="hasWirelessLinkProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="hasLiFiWLAN"/>
         <ObjectProperty IRI="hasWLAN"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasPort"/>
+        <ObjectProperty IRI="hasInterface"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasRadianceAngle"/>
+        <ObjectProperty IRI="hasLiFiAssociationProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="hasRoundTripTime"/>
@@ -1027,6 +1060,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="LiFiWLAN"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasLiFiAssociationProperty"/>
+        <Class IRI="LiFiAssociation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="hasLiFiWLAN"/>
         <Class IRI="Device"/>
     </ObjectPropertyDomain>
@@ -1037,6 +1074,14 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasLinkProperty"/>
         <Class IRI="Link"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasPort"/>
+        <Class IRI="Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasRadianceAngle"/>
+        <Class IRI="LiFiAssociation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasRoundTripTime"/>
@@ -1111,10 +1156,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Link"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="toInterface"/>
-        <Class IRI="Action"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
         <Class IRI="Device"/>
     </ObjectPropertyDomain>
@@ -1177,6 +1218,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasLink"/>
         <Class IRI="Link"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasPort"/>
+        <Class IRI="Interface"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasRoundTripTime"/>
@@ -1247,10 +1292,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Interface"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="toInterface"/>
-        <Class IRI="Interface"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
         <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
     </ObjectPropertyRange>
@@ -1260,6 +1301,14 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </DisjointObjectProperties>
     <SubDataPropertyOf>
         <DataProperty IRI="cookie"/>
+        <DataProperty IRI="hasFlowProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="dlDst"/>
+        <DataProperty IRI="hasFlowProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="dlSrc"/>
         <DataProperty IRI="hasFlowProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
@@ -1295,16 +1344,8 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <DataProperty IRI="hasLiFiAssociationProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="hasLiFiAssociationProperty"/>
-        <DataProperty IRI="hasWirelessLinkProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
         <DataProperty IRI="hasOpticalTransmittedPower"/>
         <DataProperty IRI="hasLiFiAccessPointProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="hasRadianceAngle"/>
-        <DataProperty IRI="hasLiFiAssociationProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="hasRespansivity"/>
@@ -1312,6 +1353,18 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="idleTimeout"/>
+        <DataProperty IRI="hasFlowProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="inPort"/>
+        <DataProperty IRI="hasFlowProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="nwProtocol"/>
+        <DataProperty IRI="hasFlowProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="nwTos"/>
         <DataProperty IRI="hasFlowProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
@@ -1336,6 +1389,14 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="cookie"/>
+        <Class IRI="Flow"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="dlDst"/>
+        <Class IRI="Flow"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="dlSrc"/>
         <Class IRI="Flow"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -1407,10 +1468,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="LiFiAccessPoint"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="hasLiFiAssociationProperty"/>
-        <Class IRI="LiFiAssociation"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="hasLiFiUserEquipmentProperty"/>
         <Class IRI="LiFiUserEquipment"/>
     </DataPropertyDomain>
@@ -1425,10 +1482,6 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <DataPropertyDomain>
         <DataProperty IRI="hasPacketLoss"/>
         <Class IRI="Link"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="hasRadianceAngle"/>
-        <Class IRI="LiFiAssociation"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="hasRespansivity"/>
@@ -1459,12 +1512,24 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="Flow"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="inPort"/>
+        <Class IRI="Flow"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="isUP"/>
         <Class IRI="Interface"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="mode"/>
         <Class IRI="Interface"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="nwProtocol"/>
+        <Class IRI="Flow"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="nwTos"/>
+        <Class IRI="Flow"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="priority"/>
@@ -1477,6 +1542,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <DataPropertyDomain>
         <DataProperty IRI="tableId"/>
         <Class IRI="Flow"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="toPort"/>
+        <Class IRI="Action"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#alt"/>
@@ -1516,6 +1585,14 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="cookie"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="dlDst"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="dlSrc"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -1647,11 +1724,23 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="inPort"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="isUP"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="mode"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="nwProtocol"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="nwTos"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -1664,6 +1753,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="tableId"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="toPort"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -2227,6 +2320,16 @@ Please be reminded the electromagnetic wave (which is the links of all wireless 
         <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>dlDst</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the Ethernet destination address of the flow. It should be an MAC address, with 6 pairs of hexadecimal digits.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>dlSrc</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the Ethernet source address of the flow. It should be an MAC address with 6 pairs of hexadecimal digits</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>flags</IRI>
         <IRI></IRI>
@@ -2417,7 +2520,7 @@ The most common value is Pi/3.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasInterfaceName</IRI>
-        <Literal datatypeIRI="&xsd;string">the name of an interface</Literal>
+        <Literal datatypeIRI="&xsd;string">the port number of an interface</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -2596,6 +2699,11 @@ The most common value is Pi/3.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>inPort</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the port number of the in port of the flow, or could be a keyword, such as &quot;LOCAL&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>isIn</IRI>
         <Literal datatypeIRI="&xsd;string">the relation that a interface belongs to a device. A device can have multiple interfaces, but a interface can be in one and only one device.</Literal>
     </AnnotationAssertion>
@@ -2613,6 +2721,16 @@ The most common value is Pi/3.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>isUP</IRI>
         <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>nwProtocol</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">network protocol. The nw_proto property of a flow.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>nwTos</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">network type of service. the nw_tos property of a flow. It should be a decimal number with the value between 0-255.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -2666,13 +2784,8 @@ The most common value is Pi/3.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>toInterface</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">the port to send to, defined in an flow action &quot;Output&quot; and &quot;Forward&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>toInterface</IRI>
-        <IRI></IRI>
+        <IRI>toPort</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the port number of the port forward to defined by the to_port property of the flow action OUTPUT.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
