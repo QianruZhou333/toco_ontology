@@ -1,4 +1,5 @@
-# TOUCAN Ontology (ToCo)
+# TOUCAN Ontology (ToCo)  
+## IRI: http://purl.org/toco/
 An ontology for hybrid telecommunication networks. An Device-Interface-Link (DIL) ontology design pattern is proposed for the first time to our knowledge. 
 
 This development is part of an on-going project which is addressing the convergence of telecommunication networks across multiple technology domains. 
