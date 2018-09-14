@@ -1,0 +1,2903 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://purl.org/toco/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://purl.org/toco/"
+     versionIRI="http://purl.org/toco/">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="om" IRI="http://purl.oclc.org/net/unis/ontology/sensordata.owl/"/>
+    <Prefix name="geo" IRI="http://www.w3.org/2003/01/geo/wgs84_pos/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
+    <Prefix name="toco" IRI="http://purl.org/toco/"/>
+    <Prefix name="toco2" IRI="https://w3id.org/toco/"/>
+    <Prefix name="units" IRI="https://sweet.jpl.nasa.gov/"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Toucan Ontology (ToCo)
+
+A ontology developed for telecommunciation network systems with hybrid technologies, e.g., WiFi, LiFi, LTE, 2G/3G, optical, etc.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <Literal datatypeIRI="&xsd;string">Qianru Zhou (qz1@hw.ac.uk)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="toco2:contributor"/>
+        <Literal datatypeIRI="&xsd;string">Mohammad Soltani Dehghani (for LiFi networks)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="toco2:license"/>
+        <Literal datatypeIRI="&xsd;anyURI">https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000001"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000003"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000008"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000010"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000016"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000017"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000028"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000031"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000032"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000034"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000035"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000036"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000058"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000060"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000092"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000094"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000105"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000106"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000111"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000113"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000114"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000223"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000224"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000231"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000232"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000233"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000235"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000325"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000331"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000332"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0010005"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0010008"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/uo.owl/unit"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="AccessPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Action"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Attached"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="AudioService"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="AudioSession"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BaseStation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CellularUserEquipment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ConceptEntities"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Detached"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Drop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="FileTransferService"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Flow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Forward"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Host"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Interface"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="LTEAssociation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="LiFiAccessPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="LiFiAssociation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="LiFiUserEquipment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="LiFiWLAN"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Link"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Output"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PathFlow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PhysicalInfrastructure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SatelliteAssociation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SatelliteGroundStation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SatelliteRelayStation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Session"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Switch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SystemDevice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Text"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="User"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="UserDevice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="UserDeviceStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="UserEquipment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="VideoService"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="VideoSession"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WLAN"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WiFiAccessPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WiFiAssociation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WiFiUserEquipment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WiFiWLAN"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WiredLink"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WirelessAssociation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="unReachable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="om:hasUnits"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="apsInRange"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="belongsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="from"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasAssociatedStations"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasBandwidth"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasDatarate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasDevice"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasFlow"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasFlowAction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasInterface"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasLTEAssociation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasLiFiAssociation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasLiFiWLAN"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasLink"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasLinkProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasPort"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasRoundTripTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSatelliteAssociation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasService"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasStandardDeviation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasThroughPut"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasTransmitPower"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasTxpower"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasUserDeviceStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasWLAN"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasWiFiAssociation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasWiFiWLAN"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasWiredLink"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasWirelessAssociation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasWirelessLinkProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="range"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="stationsInRange"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="om:hasUnit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="om:hasValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="channel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="cookie"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="dlDst"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="dlSrc"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="driver"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="flags"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="frequency"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hardTimeout"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasAntennaGain"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasAntennaHeight"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasDistance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasErrorCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasFieldOfView"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasFlowProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasGainOfConcentrator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasGainofOpticalFilter"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasHalfIntensityAngle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasIP"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasIncidentAngle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasInterfaceName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasJoinDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasLiFiAccessPointProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasLiFiAssociationProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasLiFiUserEquipmentProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasLinkProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasMAC"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasOpticalTransmittedPower"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasPacketLoss"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasRadianceAngle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasRespansivity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasServiceEndTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasServiceStartTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasServiceStatus"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasServiceType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasUserID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasWirelessLinkProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="idleTimeout"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="inPort"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="isUP"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="mode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="nwProtocol"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="nwTos"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="priority"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="ssid"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="tableId"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="toPort"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#alt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="foaf:firstName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="foaf:gender"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="foaf:lastName"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="license"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000001"/>
+        <Class IRI="http://purl.obolibrary.org/obo/uo.owl/unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000003"/>
+        <Class IRI="http://purl.obolibrary.org/obo/uo.owl/unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000008"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000001"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000010"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000003"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000016"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000001"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000017"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000001"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000028"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000003"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000031"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000003"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000032"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000003"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000034"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000003"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000035"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000003"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000036"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000003"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000058"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000105"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000060"/>
+        <Class IRI="http://purl.obolibrary.org/obo/uo.owl/unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000092"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000058"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000094"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000060"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000105"/>
+        <Class IRI="http://purl.obolibrary.org/obo/uo.owl/unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000106"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000105"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000111"/>
+        <Class IRI="http://purl.obolibrary.org/obo/uo.owl/unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000113"/>
+        <Class IRI="http://purl.obolibrary.org/obo/uo.owl/unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000114"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000113"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000223"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000111"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000224"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000111"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000231"/>
+        <Class IRI="http://purl.obolibrary.org/obo/uo.owl/unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000232"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000231"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000233"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000231"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000235"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000231"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000325"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000105"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000331"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000231"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000332"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000231"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0010005"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000060"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0010008"/>
+        <Class IRI="http://purl.obolibrary.org/obo/UO_0000060"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/uo.owl/unit"/>
+        <Class IRI="ConceptEntities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+        <Class IRI="ConceptEntities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AccessPoint"/>
+        <Class IRI="SystemDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Action"/>
+        <Class IRI="ConceptEntities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Attached"/>
+        <Class IRI="UserDeviceStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AudioService"/>
+        <Class IRI="Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AudioSession"/>
+        <Class IRI="Session"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BaseStation"/>
+        <Class IRI="SystemDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CellularUserEquipment"/>
+        <Class IRI="UserEquipment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Detached"/>
+        <Class IRI="UserDeviceStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Device"/>
+        <Class IRI="PhysicalInfrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Drop"/>
+        <Class IRI="Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="FileTransferService"/>
+        <Class IRI="Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Flow"/>
+        <Class IRI="ConceptEntities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Forward"/>
+        <Class IRI="Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Host"/>
+        <Class IRI="UserDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Interface"/>
+        <Class IRI="PhysicalInfrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="LTEAssociation"/>
+        <Class IRI="WirelessAssociation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="LiFiAccessPoint"/>
+        <Class IRI="AccessPoint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="LiFiAssociation"/>
+        <Class IRI="WirelessAssociation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="LiFiUserEquipment"/>
+        <Class IRI="UserEquipment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="LiFiWLAN"/>
+        <Class IRI="WLAN"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Link"/>
+        <Class IRI="PhysicalInfrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Output"/>
+        <Class IRI="Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PathFlow"/>
+        <Class IRI="Flow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SatelliteAssociation"/>
+        <Class IRI="WirelessAssociation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SatelliteGroundStation"/>
+        <Class IRI="UserEquipment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SatelliteRelayStation"/>
+        <Class IRI="SystemDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Service"/>
+        <Class IRI="ConceptEntities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Session"/>
+        <Class IRI="ConceptEntities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Switch"/>
+        <Class IRI="SystemDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SystemDevice"/>
+        <Class IRI="Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Text"/>
+        <Class IRI="Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="User"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="UserDevice"/>
+        <Class IRI="Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="UserDeviceStatus"/>
+        <Class IRI="ConceptEntities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="UserEquipment"/>
+        <Class IRI="UserDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="VideoService"/>
+        <Class IRI="Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="VideoSession"/>
+        <Class IRI="Session"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WLAN"/>
+        <Class IRI="Interface"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WiFiAccessPoint"/>
+        <Class IRI="AccessPoint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WiFiAssociation"/>
+        <Class IRI="WirelessAssociation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WiFiUserEquipment"/>
+        <Class IRI="UserEquipment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WiFiWLAN"/>
+        <Class IRI="WLAN"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WiredLink"/>
+        <Class IRI="Link"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WirelessAssociation"/>
+        <Class IRI="Link"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="unReachable"/>
+        <Class IRI="UserDeviceStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+        <Class IRI="ConceptEntities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <Class IRI="ConceptEntities"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="ConceptEntities"/>
+        <Class IRI="PhysicalInfrastructure"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="WiredLink"/>
+        <Class IRI="WirelessAssociation"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="from"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasAssociatedStations"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasBandwidth"/>
+        <ObjectProperty IRI="hasLinkProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasDatarate"/>
+        <ObjectProperty IRI="hasLinkProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasLTEAssociation"/>
+        <ObjectProperty IRI="hasWirelessAssociation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasLiFiAssociation"/>
+        <ObjectProperty IRI="hasWirelessAssociation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasLiFiAssociationProperty"/>
+        <ObjectProperty IRI="hasWirelessLinkProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasLiFiWLAN"/>
+        <ObjectProperty IRI="hasWLAN"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasPort"/>
+        <ObjectProperty IRI="hasInterface"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasRadianceAngle"/>
+        <ObjectProperty IRI="hasLiFiAssociationProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasRoundTripTime"/>
+        <ObjectProperty IRI="hasLinkProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasSatelliteAssociation"/>
+        <ObjectProperty IRI="hasWirelessAssociation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasStandardDeviation"/>
+        <ObjectProperty IRI="hasLinkProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasThroughPut"/>
+        <ObjectProperty IRI="hasLinkProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasTransmitPower"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasTxpower"/>
+        <ObjectProperty IRI="hasLinkProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasWLAN"/>
+        <ObjectProperty IRI="hasInterface"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasWiFiAssociation"/>
+        <ObjectProperty IRI="hasWirelessAssociation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasWiFiWLAN"/>
+        <ObjectProperty IRI="hasWLAN"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasWiredLink"/>
+        <ObjectProperty IRI="hasLink"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasWirelessAssociation"/>
+        <ObjectProperty IRI="hasLink"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasWirelessLinkProperty"/>
+        <ObjectProperty IRI="hasLinkProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="to"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasDevice"/>
+        <ObjectProperty IRI="belongsTo"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="isIn"/>
+        <ObjectProperty IRI="hasInterface"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="om:hasUnits"/>
+        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="apsInRange"/>
+        <Class IRI="UserDevice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="belongsTo"/>
+        <Class IRI="UserDevice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="from"/>
+        <Class IRI="Link"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasAssociatedStations"/>
+        <Class IRI="AccessPoint"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasBandwidth"/>
+        <Class IRI="Link"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasDatarate"/>
+        <Class IRI="Link"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasDevice"/>
+        <Class IRI="User"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasFlow"/>
+        <Class IRI="SystemDevice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasFlowAction"/>
+        <Class IRI="Flow"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasInterface"/>
+        <Class IRI="Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasLiFiAssociation"/>
+        <Class IRI="LiFiWLAN"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasLiFiAssociationProperty"/>
+        <Class IRI="LiFiAssociation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasLiFiWLAN"/>
+        <Class IRI="Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasLink"/>
+        <Class IRI="Interface"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasLinkProperty"/>
+        <Class IRI="Link"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasPort"/>
+        <Class IRI="Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasRadianceAngle"/>
+        <Class IRI="LiFiAssociation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasRoundTripTime"/>
+        <Class IRI="Link"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSatelliteAssociation"/>
+        <Class IRI="Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasService"/>
+        <Class IRI="UserDevice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasStandardDeviation"/>
+        <Class IRI="Link"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasThroughPut"/>
+        <Class IRI="Link"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasTransmitPower"/>
+        <Class IRI="Interface"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasTxpower"/>
+        <Class IRI="Link"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasUserDeviceStatus"/>
+        <Class IRI="UserDevice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasWLAN"/>
+        <Class IRI="Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasWiFiAssociation"/>
+        <Class IRI="WiFiWLAN"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasWiFiWLAN"/>
+        <Class IRI="Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasWiredLink"/>
+        <Class IRI="Interface"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasWirelessAssociation"/>
+        <Class IRI="WLAN"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasWirelessLinkProperty"/>
+        <Class IRI="WirelessAssociation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isIn"/>
+        <Class IRI="Interface"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="range"/>
+        <Class IRI="Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="stationsInRange"/>
+        <Class IRI="AccessPoint"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="to"/>
+        <Class IRI="Link"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+        <Class IRI="Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="om:hasUnits"/>
+        <Class IRI="http://purl.obolibrary.org/obo/uo.owl/unit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="apsInRange"/>
+        <Class IRI="AccessPoint"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="belongsTo"/>
+        <Class IRI="User"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="from"/>
+        <Class IRI="Interface"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasAssociatedStations"/>
+        <Class IRI="UserDevice"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasBandwidth"/>
+        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasDatarate"/>
+        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasDevice"/>
+        <Class IRI="UserDevice"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasFlow"/>
+        <Class IRI="Flow"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasFlowAction"/>
+        <Class IRI="Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasInterface"/>
+        <Class IRI="Interface"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasLTEAssociation"/>
+        <Class IRI="LTEAssociation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasLiFiAssociation"/>
+        <Class IRI="LiFiAssociation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasLiFiWLAN"/>
+        <Class IRI="LiFiWLAN"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasLink"/>
+        <Class IRI="Link"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasPort"/>
+        <Class IRI="Interface"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasRoundTripTime"/>
+        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSatelliteAssociation"/>
+        <Class IRI="SatelliteAssociation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasService"/>
+        <Class IRI="Service"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasStandardDeviation"/>
+        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasThroughPut"/>
+        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasTransmitPower"/>
+        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasTxpower"/>
+        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasUserDeviceStatus"/>
+        <Class IRI="UserDeviceStatus"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasWLAN"/>
+        <Class IRI="WLAN"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasWiFiAssociation"/>
+        <Class IRI="WiFiAssociation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasWiFiWLAN"/>
+        <Class IRI="WiFiWLAN"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasWiredLink"/>
+        <Class IRI="WiredLink"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasWirelessAssociation"/>
+        <Class IRI="WirelessAssociation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isIn"/>
+        <Class IRI="Device"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="range"/>
+        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="stationsInRange"/>
+        <Class IRI="UserEquipment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="to"/>
+        <Class IRI="Interface"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+    </ObjectPropertyRange>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="hasWiredLink"/>
+        <ObjectProperty IRI="hasWirelessAssociation"/>
+    </DisjointObjectProperties>
+    <SubDataPropertyOf>
+        <DataProperty IRI="cookie"/>
+        <DataProperty IRI="hasFlowProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="dlDst"/>
+        <DataProperty IRI="hasFlowProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="dlSrc"/>
+        <DataProperty IRI="hasFlowProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="flags"/>
+        <DataProperty IRI="hasFlowProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hardTimeout"/>
+        <DataProperty IRI="hasFlowProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasDistance"/>
+        <DataProperty IRI="hasLiFiAssociationProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasFieldOfView"/>
+        <DataProperty IRI="hasLiFiUserEquipmentProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasGainOfConcentrator"/>
+        <DataProperty IRI="hasLiFiUserEquipmentProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasGainofOpticalFilter"/>
+        <DataProperty IRI="hasLiFiAccessPointProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasHalfIntensityAngle"/>
+        <DataProperty IRI="hasLiFiAccessPointProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasIncidentAngle"/>
+        <DataProperty IRI="hasLiFiAssociationProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasOpticalTransmittedPower"/>
+        <DataProperty IRI="hasLiFiAccessPointProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasRespansivity"/>
+        <DataProperty IRI="hasLiFiAccessPointProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="idleTimeout"/>
+        <DataProperty IRI="hasFlowProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="inPort"/>
+        <DataProperty IRI="hasFlowProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="nwProtocol"/>
+        <DataProperty IRI="hasFlowProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="nwTos"/>
+        <DataProperty IRI="hasFlowProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="priority"/>
+        <DataProperty IRI="hasFlowProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="tableId"/>
+        <DataProperty IRI="hasFlowProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="om:hasUnit"/>
+        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="om:hasValue"/>
+        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="channel"/>
+        <Class IRI="Interface"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="cookie"/>
+        <Class IRI="Flow"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="dlDst"/>
+        <Class IRI="Flow"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="dlSrc"/>
+        <Class IRI="Flow"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="driver"/>
+        <Class IRI="AccessPoint"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="flags"/>
+        <Class IRI="Flow"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="frequency"/>
+        <Class IRI="Interface"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hardTimeout"/>
+        <Class IRI="Flow"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasAntennaGain"/>
+        <Class IRI="WLAN"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasAntennaHeight"/>
+        <Class IRI="WLAN"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasDistance"/>
+        <Class IRI="LiFiAssociation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasErrorCode"/>
+        <Class IRI="Service"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasFieldOfView"/>
+        <Class IRI="LiFiUserEquipment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasGainOfConcentrator"/>
+        <Class IRI="LiFiUserEquipment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasGainofOpticalFilter"/>
+        <Class IRI="LiFiAccessPoint"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasHalfIntensityAngle"/>
+        <Class IRI="LiFiAccessPoint"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasIP"/>
+        <Class IRI="Interface"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasIncidentAngle"/>
+        <Class IRI="LiFiAssociation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasInterfaceName"/>
+        <Class IRI="Interface"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasJoinDate"/>
+        <Class IRI="UserDevice"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasLiFiAccessPointProperty"/>
+        <Class IRI="LiFiAccessPoint"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasLiFiUserEquipmentProperty"/>
+        <Class IRI="LiFiUserEquipment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasMAC"/>
+        <Class IRI="Interface"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasOpticalTransmittedPower"/>
+        <Class IRI="LiFiAccessPoint"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasPacketLoss"/>
+        <Class IRI="Link"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasRespansivity"/>
+        <Class IRI="LiFiAccessPoint"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasServiceEndTime"/>
+        <Class IRI="Service"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasServiceStartTime"/>
+        <Class IRI="Service"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasServiceStatus"/>
+        <Class IRI="Service"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasServiceType"/>
+        <Class IRI="Service"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasUserID"/>
+        <Class IRI="User"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="idleTimeout"/>
+        <Class IRI="Flow"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="inPort"/>
+        <Class IRI="Flow"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="isUP"/>
+        <Class IRI="Interface"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="mode"/>
+        <Class IRI="Interface"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="nwProtocol"/>
+        <Class IRI="Flow"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="nwTos"/>
+        <Class IRI="Flow"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="priority"/>
+        <Class IRI="Flow"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="ssid"/>
+        <Class IRI="Device"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="tableId"/>
+        <Class IRI="Flow"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="toPort"/>
+        <Class IRI="Action"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#alt"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="foaf:firstName"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="foaf:gender"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="foaf:lastName"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="om:hasUnit"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="om:hasValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="channel"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="cookie"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="dlDst"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="dlSrc"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="driver"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="flags"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="frequency"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hardTimeout"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasAntennaGain"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasAntennaHeight"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasDistance"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasErrorCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasFieldOfView"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasGainOfConcentrator"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasGainofOpticalFilter"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasHalfIntensityAngle"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasIP"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasIncidentAngle"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasInterfaceName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasJoinDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasLiFiAccessPointProperty"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasLiFiAssociationProperty"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasLiFiUserEquipmentProperty"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasLinkProperty"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasMAC"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasOpticalTransmittedPower"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasPacketLoss"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasRadianceAngle"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasRespansivity"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasServiceEndTime"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasServiceStartTime"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasServiceStatus"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasServiceType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasUserID"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasWirelessLinkProperty"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="idleTimeout"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="inPort"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="isUP"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="mode"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="nwProtocol"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="nwTos"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="priority"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="ssid"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="tableId"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="toPort"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#alt"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="foaf:firstName"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="foaf:gender"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="foaf:lastName"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000001</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000001</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">length unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000003</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000003</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">time unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000008</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000008</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">meter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000010</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000010</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">second</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000016</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000016</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">millimeter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000017</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000017</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">micrometer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000028</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000028</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">millisecond</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000031</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000031</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">minute</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000032</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000032</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">hour</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000034</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000034</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">week</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000035</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000035</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">month</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000036</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000036</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">year</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000058</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000058</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">rotational frequency unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000060</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000060</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">speed/velocity unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000092</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000092</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">turns per second</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000094</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000094</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">meter per second</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000105</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">frequency unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000106</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000106</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">hertz</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000111</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000111</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">energy unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000113</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">power unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000114</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000114</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">watt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000223</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000223</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">watt-hour</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000224</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000224</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">kilowatt-hour</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000231</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000231</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">information unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000232</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000232</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">bit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000233</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000233</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">byte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000235</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000235</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">megabyte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000325</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000325</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">megaHertz</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000331</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000331</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">gigabyte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000332</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0000332</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">terabyte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0010005</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0010005</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">millimeters per day</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0010008</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/UO_0010008</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">kilometer per hour</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl/unit</IRI>
+        <Literal datatypeIRI="&xsd;string">reused from Units of measurement Ontology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl/unit</IRI>
+        <IRI>http://purl.obolibrary.org/obo/uo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>om:ObervationAndMeasurement</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">reused from SenSei Observation And Measurement Ontology (http://purl.oclc.org/net/unis/ontology/sensordata.owl).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>om:ObervationAndMeasurement</AbbreviatedIRI>
+        <IRI>http://purl.oclc.org/net/unis/ontology/sensordata.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>om:hasUnit</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">reused from SENSEI Observation and Measurement Ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>om:hasUnit</AbbreviatedIRI>
+        <AbbreviatedIRI>om:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>om:hasUnits</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">the unit of an observation or measurement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>om:hasUnits</AbbreviatedIRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>om:hasValue</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">the value of an observation or measurement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>om:hasValue</AbbreviatedIRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>AccessPoint</IRI>
+        <Literal datatypeIRI="&xsd;string">a wireless access point, or more generally just access point (AP), is a networking hardware device that allows a Wi-Fi/Li-Fi device to connect to a wired network. The AP usually connects to a router (via a wired network) as a standalone device, but it can also be an integral component of the router itself. An AP is differentiated from a hotspot, which is the physical location where Wi-Fi access to a WLAN is available.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Action</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the action of a flow defined in OpenFlow protocol</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>BaseStation</IRI>
+        <Literal datatypeIRI="&xsd;string">a &quot;land station in the land mobile service.&quot; -- according to the International Telecommunication Union&apos;s (ITU) Radio Regulations (RR).
+
+it is a transceiver connecting a number of other devices to one another and/or to a wider area. In LTE, it is also known as eNodeB.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>CellularUserEquipment</IRI>
+        <Literal datatypeIRI="&xsd;string">User deivce in a Cellular network.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Device</IRI>
+        <Literal datatypeIRI="&xsd;string">represent all the devices in the physical infrastructure of telecommunciation system. 
+
+According to its user, could be divided into UserDevice and SystemDevice.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Flow</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the flow entry in a flow table inside a switch or route. Defined by OpenFlow protocol.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Host</IRI>
+        <Literal datatypeIRI="&xsd;string">A host is a computer or other device connected to a computer network. It is a network node that is assigned a network address.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>LTEAssociation</IRI>
+        <Literal datatypeIRI="&xsd;string">the electromagnetic wave carring modulated signal between LTE base station, or eNodeB, and user equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>LiFiAccessPoint</IRI>
+        <Literal datatypeIRI="&xsd;string">The access point in Li-Fi network. Li-Fi is a wireless optical networking technology that uses light-emitting diodes (LEDs) for data transmission.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>LiFiAssociation</IRI>
+        <Literal datatypeIRI="&xsd;string">the visiable light carring modulated signals in Li-Fi network. Transmited and received by LiFi user equipment and LiFi access point.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>LiFiUserEquipment</IRI>
+        <Literal datatypeIRI="&xsd;string">any device used directly by an end-user to communicate. It can be a hand-held telephone, a laptop computer equipped with a mobile broadband adapter, or any other device.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>LiFiWLAN</IRI>
+        <Literal datatypeIRI="&xsd;string">WLAN interface on the devices in LIFi network, e.g., LiFi user equipment, LiFi access point.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>PhysicalInfrastructure</IRI>
+        <Literal datatypeIRI="&xsd;string">Describe all the physical resources in a telecommunication network system, which is divided into three main modules, namely, device, interface, link. 
+
+Please be reminded the electromagnetic wave (which is the links of all wireless communication netwoks), even if it is invisable, physically exists. Thus, it is also described in the subclass of &quot;net;PhysicalInfrastructure&quot;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SatelliteAssociation</IRI>
+        <Literal datatypeIRI="&xsd;string">the milli-meter electromagnetic wave carring modulated signal between satellite base stations and ground station.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SatelliteGroundStation</IRI>
+        <Literal datatypeIRI="&xsd;string">used in satellite network. Also known as earth station, or earth terminal, it is a terrestrial radio station designed for extraplanetary telecommunication with spacecraft (constituting part of the ground segment of the spacecraft system), or reception of radio waves from astronomical radio sources. Ground stations may be located either on the surface of the Earth, or in its atmosphere.[1] Earth stations communicate with spacecraft by transmitting and receiving radio waves in the super high frequency or extremely high frequency bands (e.g., microwaves). When a ground station successfully transmits radio waves to a spacecraft (or vice versa), it establishes a telecommunications link. A principal telecommunications device of the ground station is the parabolic antenna.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SatelliteRelayStation</IRI>
+        <Literal datatypeIRI="&xsd;string">An artificial satellite, that relays and amplifies radio telecommunications signals via a transponder; it creates a communication channel between a source transmitter and a receiver at different locations on Earth. Communications satellites are used for television, telephone, radio, internet, and military applications.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Service</IRI>
+        <Literal datatypeIRI="&xsd;string">a communication service, e.g., voice, video, file uploading/downloading, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Switch</IRI>
+        <Literal datatypeIRI="&xsd;string">A network switch (also called switching hub, bridging hub, officially MAC bridge) is a computer networking device that connects devices together on a computer network by using packet switching to receive, process, and forward data to the destination device.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SystemDevice</IRI>
+        <Literal datatypeIRI="&xsd;string">All the physical facilities in the telecommunication system that provide the communication service to uses. For example: base station towers, Wi-Fi access points, switches, servers, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>User</IRI>
+        <Literal datatypeIRI="&xsd;string">reused from foaf (http://xmlns.com/foaf/0.1/). Represent a user in the telecommunication system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>UserDevice</IRI>
+        <Literal datatypeIRI="&xsd;string">User Devices, requiring connectivity services, e.g., phones, tablets, laptops, wearable devices, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>UserEquipment</IRI>
+        <Literal datatypeIRI="&xsd;string">any device used directly by an end-user to communicate. It can be a hand-held telephone, a laptop computer equipped with a mobile broadband adapter, or any other device.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>WLAN</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A wireless local area network (WLAN) interface, also known as WLAN, is the interface of a wireless computer network that links two or more devices using wireless communication within a limited area such as a home, school, computer laboratory, or office building.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>WiFiAccessPoint</IRI>
+        <Literal datatypeIRI="&xsd;string">An access point in a WiFi network</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>WiFiAssociation</IRI>
+        <Literal datatypeIRI="&xsd;string">the electromagnetic wave carring modulated signal between LTE base station, or eNodeB, and user equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>WiFiUserEquipment</IRI>
+        <Literal datatypeIRI="&xsd;string">a user quipment in Wi-Fi network</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>WiFiWLAN</IRI>
+        <Literal datatypeIRI="&xsd;string">WLAN interface on the devices in LIFi network, e.g., LiFi user equipment, LiFi access point.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>WiredLink</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">wired link through twisted cable, optical fiber, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>WirelessAssociation</IRI>
+        <Literal datatypeIRI="&xsd;string">the electromeganetic radio transmiting through wireless channels in wireless network, carring communication data. Depend on its frequency, it could be visiable light, micro waves, radio waves.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>apsInRange</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>belongsTo</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>channel</IRI>
+        <Literal datatypeIRI="&xsd;string">the channel id of a interface.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>channel</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>cookie</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>dlDst</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the Ethernet destination address of the flow. It should be an MAC address, with 6 pairs of hexadecimal digits.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>dlSrc</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the Ethernet source address of the flow. It should be an MAC address with 6 pairs of hexadecimal digits</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>flags</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>frequency</IRI>
+        <Literal datatypeIRI="&xsd;string">the frequency of the radio wave transmitted by a wireless interface (WLAN).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>from</IRI>
+        <Literal datatypeIRI="&xsd;string">the source node that the link is transmit from.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>from</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hardTimeout</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasAntennaGain</IRI>
+        <Literal datatypeIRI="&xsd;string">the gain of an antenna on the wireless interface.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasAntennaGain</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasAntennaHeight</IRI>
+        <Literal datatypeIRI="&xsd;string">the height of the antenna of a wireless interface</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasAntennaHeight</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasAssociatedStations</IRI>
+        <Literal datatypeIRI="&xsd;string">in wireless networks, the user equipments (mobile stations in another term, e.g., phones, laptops, tablets, etc.) that are associated to the access point.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasAssociatedStations</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasBandwidth</IRI>
+        <Literal datatypeIRI="&xsd;string">the bandwidth of the link</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasBandwidth</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasDatarate</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasDevice</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasDistance</IRI>
+        <Literal datatypeIRI="&xsd;string">the Euclidean distance between the LiFi user equipment and access point.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasDistance</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasErrorCode</IRI>
+        <Literal datatypeIRI="&xsd;string">the error code of a service.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasErrorCode</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasFieldOfView</IRI>
+        <Literal datatypeIRI="&xsd;string">Field of view (FOV) is the open observable area where a LiFi user equipment could receive visiable light signal. It is defined by let the incident angle of the LiFi user equipment equals to Pi/2.
+
+If the incident angle larger than Pi/2, the light ray is out of the FOV, thus cannot be received by the LiFi user equipment.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasFieldOfView</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasFlow</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasFlowAction</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasFlowProperty</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasGainOfConcentrator</IRI>
+        <Literal datatypeIRI="&xsd;string">The gain of the concentrator on the LiFi user equipment, usually equals to 1.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasGainOfConcentrator</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasGainofOpticalFilter</IRI>
+        <Literal datatypeIRI="&xsd;string">Gain of optical filter on LiFi access point.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasGainofOpticalFilter</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasHalfIntensityAngle</IRI>
+        <Literal datatypeIRI="&xsd;string">The angle of half intensity of the LED light transmiting visible light signal in a LiFi access point. 
+
+A fixed value. It is the angle where the radiated intensity will be half as intense as it would be at 0 degrees, or pointing straight ahead.
+
+Factors that contribute to the angle of half intensity include the amount of diffusing material in the epoxy, the shape of the reflector cup which surrounds the LED chip, the shape of the LED lens, the distance from the LED to the tip of the lens, and the type of emitter chip.
+
+The most common value is Pi/3.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasHalfIntensityAngle</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasIP</IRI>
+        <Literal datatypeIRI="&xsd;string">the IP address of the interface.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasIP</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasIncidentAngle</IRI>
+        <Literal datatypeIRI="&xsd;string">The angle of incidence of the LED receiver on LiFi user equipment, which is the angle between the visiable light ray incident on a surface and the line perpendicular to the surface at the point of incidence, called the normal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasIncidentAngle</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasInterface</IRI>
+        <Literal datatypeIRI="&xsd;string">the fact that a device has a interface.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasInterface</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasInterfaceName</IRI>
+        <Literal datatypeIRI="&xsd;string">the port number of an interface</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasInterfaceName</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasJoinDate</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the join date of the user device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasJoinDate</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasLiFiAccessPointProperty</IRI>
+        <Literal datatypeIRI="&xsd;string">datatype properties dedicated for LiFi access points</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasLiFiAccessPointProperty</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasLiFiAssociationProperty</IRI>
+        <Literal datatypeIRI="&xsd;string">The properties of the visiable light association between the LED on LiFi access point and LiFi user equipment.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasLiFiUserEquipmentProperty</IRI>
+        <Literal datatypeIRI="&xsd;string">properties of LiFi user equipments.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasLiFiUserEquipmentProperty</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasLink</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasLinkProperty</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasMAC</IRI>
+        <Literal datatypeIRI="&xsd;string">the MAC address of the interface.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasMAC</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasOpticalTransmittedPower</IRI>
+        <Literal datatypeIRI="&xsd;string">the transmitted power of the LED on the LiFi access point</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasOpticalTransmittedPower</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasPacketLoss</IRI>
+        <Literal datatypeIRI="&xsd;string">the packet loss rate of a link, usually in percentage.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasPacketLoss</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasRadianceAngle</IRI>
+        <Literal datatypeIRI="&xsd;string">the radiance angle of the light ray transmitted from LED on LiFi access point.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasRadianceAngle</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasRespansivity</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasRoundTripTime</IRI>
+        <Literal datatypeIRI="&xsd;string">the round trip time of a link, which is the time taken for signal travel a round trip via this link.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasService</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasServiceEndTime</IRI>
+        <Literal datatypeIRI="&xsd;string">the time that a service ends.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasServiceEndTime</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasServiceStartTime</IRI>
+        <Literal datatypeIRI="&xsd;string">the start time of a service.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasServiceStartTime</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasServiceStatus</IRI>
+        <Literal datatypeIRI="&xsd;string">the status of the service.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasServiceStatus</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasServiceType</IRI>
+        <Literal datatypeIRI="&xsd;string">the type of communication services, e.g., video, audio, file transmit, text transmiting, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasServiceType</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasStandardDeviation</IRI>
+        <Literal datatypeIRI="&xsd;string">After multiple round trip time tested on a link, the deviation of these test results.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasTransmitPower</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasTxpower</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasUserID</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the user ID of the user</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasUserID</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>idleTimeout</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>inPort</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the port number of the in port of the flow, or could be a keyword, such as &quot;LOCAL&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isIn</IRI>
+        <Literal datatypeIRI="&xsd;string">the relation that a interface belongs to a device. A device can have multiple interfaces, but a interface can be in one and only one device.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>isIn</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isUP</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">indicate whether a interface is up or not.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>isUP</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>nwProtocol</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">network protocol. The nw_proto property of a flow.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>nwTos</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">network type of service. the nw_tos property of a flow. It should be a decimal number with the value between 0-255.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>priority</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>range</IRI>
+        <Literal datatypeIRI="&xsd;string">the signal range of wireless devices, such as WiFi access point, LiFi access point, WiFi mobile station, and LiFi mobile station.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>range</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ssid</IRI>
+        <Literal datatypeIRI="&xsd;string">in wireless networks, the ssid of the network this device belongs to.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>ssid</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>stationsInRange</IRI>
+        <Literal datatypeIRI="&xsd;string">in wireless networks (WiFi/LiFi), the mobile stations in the range of the access points.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>stationsInRange</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>tableId</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>to</IRI>
+        <Literal datatypeIRI="&xsd;string">the destination node of the link.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>to</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>toPort</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the port number of the port forward to defined by the to_port property of the flow action OUTPUT.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#Point</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The relation between something and the point, 
+ or other geometrical thing in space, where it is.  For example, the realtionship between
+ a radio tower and a Point with a given lat and long.
+ Or a relationship between a park and its outline as a closed arc of points, or a road and
+ its location as a arc (a sequence of points).
+ Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
+ an accuracy appropriate for the size of the object and uses such as mapping .</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#Point</IRI>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#Point</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">location</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing</IRI>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#alt</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the altitude of a spartial thing, i.e., a point.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#alt</IRI>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#lat</IRI>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#lat</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the latitude of a point</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#location</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The relation between something and the point, 
+ or other geometrical thing in space, where it is.  For example, the realtionship between
+ a radio tower and a Point with a given lat and long.
+ Or a relationship between a park and its outline as a closed arc of points, or a road and
+ its location as a arc (a sequence of points).
+ Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
+ an accuracy appropriate for the size of the object and uses such as mapping .</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#location</IRI>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#long</IRI>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#long</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the longitude of a spartial thing, i.e., a point.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>foaf:Person</AbbreviatedIRI>
+        <AbbreviatedIRI>foaf:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>foaf:firstName</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the first name of a user.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>foaf:firstName</AbbreviatedIRI>
+        <AbbreviatedIRI>foaf:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>foaf:gender</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the gender of a user, reused from foaf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>foaf:gender</AbbreviatedIRI>
+        <AbbreviatedIRI>foaf:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>foaf:lastName</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the last name of a person.
+Reused from foaf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>foaf:lastName</AbbreviatedIRI>
+        <AbbreviatedIRI>foaf:</AbbreviatedIRI>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
