@@ -294,7 +294,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#spatialThing"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="foaf:Person"/>
@@ -893,10 +893,10 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
-        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#spatialThing"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#spatialThing"/>
         <Class IRI="ConceptEntities"/>
     </SubClassOf>
     <SubClassOf>
@@ -1293,7 +1293,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
-        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#spatialThing"/>
     </ObjectPropertyRange>
     <DisjointObjectProperties>
         <ObjectProperty IRI="hasWiredLink"/>
@@ -1549,15 +1549,15 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#alt"/>
-        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#spatialThing"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
-        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#spatialThing"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
-        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#spatialThing"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty abbreviatedIRI="foaf:firstName"/>
@@ -2810,13 +2810,13 @@ The most common value is Pi/3.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing</IRI>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#spatialThing</IRI>
         <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#alt</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">the altitude of a spartial thing, i.e., a point.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the altitude of a spatial thing, i.e., a point.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -2857,7 +2857,7 @@ The most common value is Pi/3.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#long</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">the longitude of a spartial thing, i.e., a point.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the longitude of a spatial thing, i.e., a point.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>

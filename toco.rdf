@@ -471,7 +471,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
  an accuracy appropriate for the size of the object and uses such as mapping .</rdfs:comment>
         <rdfs:domain rdf:resource="&toco;Device"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#spatialThing"/>
     </ObjectProperty>
     
 
@@ -1012,10 +1012,10 @@ The most common value is Pi/3.</rdfs:comment>
     <!-- http://www.w3.org/2003/01/geo/wgs84_pos#alt -->
 
     <DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#alt">
-        <rdfs:comment>the altitude of a spartial thing, i.e., a point.</rdfs:comment>
+        <rdfs:comment>the altitude of a spatial thing, i.e., a point.</rdfs:comment>
         <rdfs:range rdf:resource="&xsd;float"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#spatialThing"/>
     </DatatypeProperty>
     
 
@@ -1026,7 +1026,7 @@ The most common value is Pi/3.</rdfs:comment>
         <rdfs:isDefinedBy>the latitude of a point</rdfs:isDefinedBy>
         <rdfs:range rdf:resource="&xsd;float"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#spatialThing"/>
     </DatatypeProperty>
     
 
@@ -1034,10 +1034,10 @@ The most common value is Pi/3.</rdfs:comment>
     <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
 
     <DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
-        <rdfs:isDefinedBy>the longitude of a spartial thing, i.e., a point.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>the longitude of a spatial thing, i.e., a point.</rdfs:isDefinedBy>
         <rdfs:range rdf:resource="&xsd;float"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#spatialThing"/>
     </DatatypeProperty>
     
 
@@ -1840,7 +1840,7 @@ Please be reminded the electromagnetic wave (which is the links of all wireless 
 
     <Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#Point">
         <rdfs:label>location</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#spatialThing"/>
         <rdfs:comment>The relation between something and the point, 
  or other geometrical thing in space, where it is.  For example, the realtionship between
  a radio tower and a Point with a given lat and long.
@@ -1853,9 +1853,9 @@ Please be reminded the electromagnetic wave (which is the links of all wireless 
     
 
 
-    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing -->
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#spatialThing -->
 
-    <Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpartialThing">
+    <Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#spatialThing">
         <rdfs:subClassOf rdf:resource="&toco;ConceptEntities"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
     </Class>
