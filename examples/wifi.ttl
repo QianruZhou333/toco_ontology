@@ -1,0 +1,26 @@
+ex:wifi20 a net:WiFiAccessPoint ;
+    net:driver "nl80211"^^xsd:string ;
+    net:hasWLAN ex:wifi20-wlan1 ;
+    net:ssid "wifi"^^xsd:string ;
+    net:stationsInRange 
+	ex:sta1, ex:sta2, ex:sta3 ,
+        ex:sta4, ex:sta5, ex:sta6 ;
+    net:hasAssociatedStations ex:sta1 ;
+    geo:location ex:wifi20_location .
+ex:wifi20_location geo:alt  "0.0"^^xsd:float ;
+    geo:lat "50.0"^^xsd:float ;
+    geo:long "50.0"^^xsd:float .
+
+ex:sta1 a net:WiFiUserEquipment ; 
+    net:hasWiFiWLAN ex:sta1-wlan0 ; 
+    net:hasName "sta1"^^xsd:string ;
+    geo:location ex:sta1_location .
+
+ex:sta1_h1 a net:WiFiAssociation ;
+    net:from ex:sta1 ; 
+    net:to ex:h1 ;
+    net:hasBandWidth ex:sta1_h1_bw .
+ex:h1_sta1_bw a om:ObservationAndMeasurement ; 
+    net:hasUnit UO:0000325 ; 
+    net:hasValue "51.5"^^xsd:float . 
+

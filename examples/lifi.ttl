@@ -1,0 +1,26 @@
+ex:LiFi1 a net:LiFiAccessPoint ; 
+    net:hasGainOfOpticalFilter "1"^^xsd:int ; 
+    net:hasHalfIntensityAngle "45.0"^^xsd:float ; 
+    net:hasOpticalTransmittedPower  "0.3"^^xsd:float ; 
+    net:hasRespansivity "1"^^xsd:float ; 
+    net:stationsInRange ex:sta1 ; 
+    geo:location ex:LiFi1_location . 
+
+ex:sta1 a net:LiFiUserEquipment ; 
+    net:hasFieldOfView "90"^^xsd:float ;
+    net:hasGainOfConcentrator "1"^^xsd:float ; 
+    net:hasLiFiWLAN ex:sta1_wlan0 ; 
+    geo:location ex:sta1_location . 
+
+ex:sta1_wlan0 a net:WLAN ; 
+    net:hasWirelessAssociation ex:sta1_ap1 .
+
+ex:sta1_ap1 a net:LiFiAssociation ; 
+    net:hasDistance "9"^^xsd:float ; 
+    net:hasIncidentAngle "15"^^xsd:float ; 
+    net:hasRadianceAngle "27.5"^^xsd:float ; 
+    net:hasBandwidth ex:sta1_ap1_bw .
+ex:sta1_ap1_bw a om:ObservationAndMeasurement ; 
+    net:hasValue "5"^^xsd:float ; 
+    net:hasUnit UO:0000325 .   
+

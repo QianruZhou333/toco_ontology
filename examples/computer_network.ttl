@@ -1,0 +1,17 @@
+ex:s1 a net:Swtich ;
+    net:hasInterface ex:s1_eth0, ex:s1_eth1, ex:s1_eth2 . 
+
+ex:h1 a net:Host ;
+    net:hasInterface ex:h1-eth0, ex:h1-eth1, ex:h1-eth2 . 
+
+ex:h1-eth0 a net:Interface ;
+    net:hasIP "10.0.0.1" ;
+    net:hasMAC "f6:8a:d8:0b:6d:e7" ;
+    net:isIn ex:h1 . 
+
+ex:s1_eth1 net:hasLink ex:s1_h1 .
+ex:s1_h1 a net:WiredLink ; 
+    ex:hasBandwidth ex:s1_h1_bw .
+ex:s1_h1_bw a om:ObservationAndMeasurement ;
+    net:hasValue "50"^^xsd:float ; 
+    net:hasUnit UO:0000325 .  

@@ -1,0 +1,13 @@
+ex:s1 net:hasFlow ex:s1_flow1 . 
+ex:s1_flow1 a net:Flow ;        
+    net:idleTimeout 0 ; 
+    net:tableId 0 ;
+    net:flags 0 ;
+    net:hardTimeout 0 ;
+    net:priority 0 ;
+    net:cookie 2 ;
+    net:hasAction ; 
+    ex:s1_flow2_action0 .	
+
+ex:s1_flow2_action0 a net:Output ;
+    net:toPort ex:s1_port1 . 
