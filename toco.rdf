@@ -80,7 +80,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <ObjectProperty rdf:about="&om;hasUnits">
         <rdfs:comment rdf:datatype="&xsd;string">the unit of an observation or measurement.</rdfs:comment>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/uo.owl/unit"/>
-        <rdfs:domain rdf:resource="&om;ObervationAndMeasurement"/>
+        <rdfs:domain rdf:resource="&om;ObservationAndMeasurement"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
     </ObjectProperty>
     
@@ -134,7 +134,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
 
     <ObjectProperty rdf:about="&toco;hasBandwidth">
         <rdfs:comment rdf:datatype="&xsd;string">the bandwidth of the link</rdfs:comment>
-        <rdfs:range rdf:resource="&om;ObervationAndMeasurement"/>
+        <rdfs:range rdf:resource="&om;ObservationAndMeasurement"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
         <rdfs:domain rdf:resource="&toco;Link"/>
         <rdfs:subPropertyOf rdf:resource="&toco;hasLinkProperty"/>
@@ -145,7 +145,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <!-- http://purl.org/toco/hasDatarate -->
 
     <ObjectProperty rdf:about="&toco;hasDatarate">
-        <rdfs:range rdf:resource="&om;ObervationAndMeasurement"/>
+        <rdfs:range rdf:resource="&om;ObservationAndMeasurement"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
         <rdfs:domain rdf:resource="&toco;Link"/>
         <rdfs:subPropertyOf rdf:resource="&toco;hasLinkProperty"/>
@@ -274,7 +274,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
 
     <ObjectProperty rdf:about="&toco;hasRoundTripTime">
         <rdfs:comment rdf:datatype="&xsd;string">the round trip time of a link, which is the time taken for signal travel a round trip via this link.</rdfs:comment>
-        <rdfs:range rdf:resource="&om;ObervationAndMeasurement"/>
+        <rdfs:range rdf:resource="&om;ObservationAndMeasurement"/>
         <rdfs:domain rdf:resource="&toco;Link"/>
         <rdfs:subPropertyOf rdf:resource="&toco;hasLinkProperty"/>
     </ObjectProperty>
@@ -305,7 +305,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
 
     <ObjectProperty rdf:about="&toco;hasStandardDeviation">
         <rdfs:comment rdf:datatype="&xsd;string">After multiple round trip time tested on a link, the deviation of these test results.</rdfs:comment>
-        <rdfs:range rdf:resource="&om;ObervationAndMeasurement"/>
+        <rdfs:range rdf:resource="&om;ObservationAndMeasurement"/>
         <rdfs:domain rdf:resource="&toco;Link"/>
         <rdfs:subPropertyOf rdf:resource="&toco;hasLinkProperty"/>
     </ObjectProperty>
@@ -315,7 +315,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <!-- http://purl.org/toco/hasThroughPut -->
 
     <ObjectProperty rdf:about="&toco;hasThroughPut">
-        <rdfs:range rdf:resource="&om;ObervationAndMeasurement"/>
+        <rdfs:range rdf:resource="&om;ObservationAndMeasurement"/>
         <rdfs:domain rdf:resource="&toco;Link"/>
         <rdfs:subPropertyOf rdf:resource="&toco;hasLinkProperty"/>
     </ObjectProperty>
@@ -325,7 +325,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <!-- http://purl.org/toco/hasTransmitPower -->
 
     <ObjectProperty rdf:about="&toco;hasTransmitPower">
-        <rdfs:range rdf:resource="&om;ObervationAndMeasurement"/>
+        <rdfs:range rdf:resource="&om;ObservationAndMeasurement"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
         <rdfs:domain rdf:resource="&toco;Interface"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
@@ -336,7 +336,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <!-- http://purl.org/toco/hasTxpower -->
 
     <ObjectProperty rdf:about="&toco;hasTxpower">
-        <rdfs:range rdf:resource="&om;ObervationAndMeasurement"/>
+        <rdfs:range rdf:resource="&om;ObservationAndMeasurement"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
         <rdfs:domain rdf:resource="&toco;Link"/>
         <rdfs:subPropertyOf rdf:resource="&toco;hasLinkProperty"/>
@@ -429,7 +429,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
 
     <ObjectProperty rdf:about="&toco;range">
         <rdfs:comment rdf:datatype="&xsd;string">the signal range of wireless devices, such as WiFi access point, LiFi access point, WiFi mobile station, and LiFi mobile station.</rdfs:comment>
-        <rdfs:range rdf:resource="&om;ObervationAndMeasurement"/>
+        <rdfs:range rdf:resource="&om;ObservationAndMeasurement"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
         <rdfs:domain rdf:resource="&toco;Device"/>
     </ObjectProperty>
@@ -492,7 +492,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     <DatatypeProperty rdf:about="&om;hasUnit">
         <rdfs:comment rdf:datatype="&xsd;string">reused from SENSEI Observation and Measurement Ontology.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.oclc.org/net/unis/ontology/sensordata.owl/"/>
-        <rdfs:domain rdf:resource="&om;ObervationAndMeasurement"/>
+        <rdfs:domain rdf:resource="&om;ObservationAndMeasurement"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </DatatypeProperty>
     
@@ -502,7 +502,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
 
     <DatatypeProperty rdf:about="&om;hasValue">
         <rdfs:comment rdf:datatype="&xsd;string">the value of an observation or measurement.</rdfs:comment>
-        <rdfs:domain rdf:resource="&om;ObervationAndMeasurement"/>
+        <rdfs:domain rdf:resource="&om;ObservationAndMeasurement"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/toco/"/>
         <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
@@ -1415,9 +1415,9 @@ Reused from foaf</rdfs:comment>
     
 
 
-    <!-- http://purl.oclc.org/net/unis/ontology/sensordata.owl/ObervationAndMeasurement -->
+    <!-- http://purl.oclc.org/net/unis/ontology/sensordata.owl/ObservationAndMeasurement -->
 
-    <Class rdf:about="&om;ObervationAndMeasurement">
+    <Class rdf:about="&om;ObservationAndMeasurement">
         <rdfs:subClassOf rdf:resource="&toco;ConceptEntities"/>
         <rdfs:comment rdf:datatype="&xsd;string">reused from SenSei Observation And Measurement Ontology (http://purl.oclc.org/net/unis/ontology/sensordata.owl).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.oclc.org/net/unis/ontology/sensordata.owl"/>

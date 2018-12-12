@@ -147,7 +147,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="http://purl.obolibrary.org/obo/uo.owl/unit"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+        <Class abbreviatedIRI="om:ObservationAndMeasurement"/>
     </Declaration>
     <Declaration>
         <Class IRI="AccessPoint"/>
@@ -708,7 +708,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
         <Class IRI="ConceptEntities"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+        <Class abbreviatedIRI="om:ObservationAndMeasurement"/>
         <Class IRI="ConceptEntities"/>
     </SubClassOf>
     <SubClassOf>
@@ -1013,7 +1013,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </InverseObjectProperties>
     <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="om:hasUnits"/>
-        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+        <Class abbreviatedIRI="om:ObservationAndMeasurement"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="apsInRange"/>
@@ -1181,11 +1181,11 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasBandwidth"/>
-        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+        <Class abbreviatedIRI="om:ObservationAndMeasurement"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasDatarate"/>
-        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+        <Class abbreviatedIRI="om:ObservationAndMeasurement"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasDevice"/>
@@ -1225,7 +1225,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasRoundTripTime"/>
-        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+        <Class abbreviatedIRI="om:ObservationAndMeasurement"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasSatelliteAssociation"/>
