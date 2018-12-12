@@ -1237,19 +1237,19 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasStandardDeviation"/>
-        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+        <Class abbreviatedIRI="om:ObservationAndMeasurement"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasThroughPut"/>
-        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+        <Class abbreviatedIRI="om:ObservationAndMeasurement"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasTransmitPower"/>
-        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+        <Class abbreviatedIRI="om:ObservationAndMeasurement"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasTxpower"/>
-        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+        <Class abbreviatedIRI="om:ObservationAndMeasurement"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasUserDeviceStatus"/>
@@ -1281,7 +1281,7 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="range"/>
-        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+        <Class abbreviatedIRI="om:ObservationAndMeasurement"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="stationsInRange"/>
@@ -1377,11 +1377,11 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </SubDataPropertyOf>
     <DataPropertyDomain>
         <DataProperty abbreviatedIRI="om:hasUnit"/>
-        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+        <Class abbreviatedIRI="om:ObservationAndMeasurement"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty abbreviatedIRI="om:hasValue"/>
-        <Class abbreviatedIRI="om:ObervationAndMeasurement"/>
+        <Class abbreviatedIRI="om:ObservationAndMeasurement"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="channel"/>
@@ -2105,12 +2105,12 @@ A ontology developed for telecommunciation network systems with hybrid technolog
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>om:ObervationAndMeasurement</AbbreviatedIRI>
+        <AbbreviatedIRI>om:ObservationAndMeasurement</AbbreviatedIRI>
         <Literal datatypeIRI="&xsd;string">reused from SenSei Observation And Measurement Ontology (http://purl.oclc.org/net/unis/ontology/sensordata.owl).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <AbbreviatedIRI>om:ObervationAndMeasurement</AbbreviatedIRI>
+        <AbbreviatedIRI>om:ObservationAndMeasurement</AbbreviatedIRI>
         <IRI>http://purl.oclc.org/net/unis/ontology/sensordata.owl</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
