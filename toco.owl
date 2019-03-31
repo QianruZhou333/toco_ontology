@@ -16,6 +16,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://purl.org/toco/">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="cc" IRI="http://creativecommons.org/ns#"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="geo" IRI="http://www.w3.org/2003/01/geo/wgs84_pos/"/>
@@ -419,722 +420,14 @@
         <Class abbreviatedIRI="foaf:Person"/>
         <Class IRI="ConceptEntities"/>
     </SubClassOf>
-    <ClassAssertion>
-        <Class abbreviatedIRI="foaf:Organization"/>
-        <NamedIndividual IRI="http://hw.ac.uk"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual abbreviatedIRI="mobile:Device"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual abbreviatedIRI="mobile:User"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000001"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000003"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000008"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000010"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000016"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000017"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000028"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000031"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000032"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000034"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000035"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000036"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000058"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000060"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000092"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000094"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000105"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000106"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000111"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000113"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000114"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000223"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000224"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000231"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000232"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000233"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000235"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000325"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000331"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0000332"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0010005"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/UO_0010008"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://purl.obolibrary.org/obo/uo.owl/unit"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual abbreviatedIRI="sensor:ObservationAndMeasurement"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual abbreviatedIRI="sensor:hasUnit"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual abbreviatedIRI="sensor:hasUnits"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual abbreviatedIRI="sensor:hasValue"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="AccessPoint"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="Action"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="Attached"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="AudioService"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="AudioSession"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="BaseStation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="CellularUserEquipment"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="ConceptEntities"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="Detached"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="Drop"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="FileTransferService"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="Flow"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="Forward"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="Host"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="Interface"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="LTEAssociation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="LiFiAccessPoint"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="LiFiAssociation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="LiFiUserEquipment"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="LiFiWLAN"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="Link"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="Output"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="PathFlow"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="PhysicalInfrastructure"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="SatelliteAssociation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="SatelliteGroundStation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="SatelliteRelayStation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="Service"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="Session"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="Switch"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="SystemDevice"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="Text"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="UserDevice"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="UserDeviceStatus"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="UserEquipment"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="VideoService"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="VideoSession"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="WLAN"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="WiFiAccessPoint"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="WiFiAssociation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="WiFiUserEquipment"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="WiFiWLAN"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="WiredLink"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="WirelessAssociation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="apsInRange"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="belongsTo"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="channel"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="AnnotationProperty"/>
-        <NamedIndividual IRI="contributor"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="cookie"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="dlDst"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="dlSrc"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="driver"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="flags"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="frequency"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="from"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hardTimeout"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasAntennaGain"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasAntennaHeight"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasAssociatedStations"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasBandwidth"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasDatarate"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasDevice"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasDistance"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasErrorCode"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasFieldOfView"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasFlow"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasFlowAction"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasFlowProperty"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasGainOfConcentrator"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasGainofOpticalFilter"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasHalfIntensityAngle"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasIP"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasIncidentAngle"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasInterface"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasInterfaceName"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasJoinDate"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasLTEAssociation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasLiFiAccessPointProperty"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasLiFiAssociation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasLiFiAssociationProperty"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasLiFiAssociationProperty"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasLiFiUserEquipmentProperty"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasLiFiWLAN"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasLink"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasLinkProperty"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasLinkProperty"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasMAC"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasOpticalTransmittedPower"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasPacketLoss"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasPort"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasRadianceAngle"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasRadianceAngle"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasRespansivity"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasRoundTripTime"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasSatelliteAssociation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasService"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasServiceEndTime"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasServiceStartTime"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasServiceStatus"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasServiceType"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasStandardDeviation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasThroughPut"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasTransmitPower"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasTxpower"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasUserDeviceStatus"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasUserID"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasWLAN"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasWiFiAssociation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasWiFiWLAN"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasWiredLink"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasWirelessAssociation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="hasWirelessLinkProperty"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="hasWirelessLinkProperty"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="idleTimeout"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="inPort"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="isIn"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="isUP"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="AnnotationProperty"/>
-        <NamedIndividual IRI="license"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="mode"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="nwProtocol"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="nwTos"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="priority"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="range"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="ssid"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="stationsInRange"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="tableId"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="to"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="toPort"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="unReachable"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="http://www.w3.org/2003/01/geo/wgs84_pos#alt"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ObjectProperty"/>
-        <NamedIndividual IRI="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual IRI="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual IRI="http://www.w3.org/2003/01/geo/wgs84_pos#spatialThing"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Class"/>
-        <NamedIndividual abbreviatedIRI="foaf:Person"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual abbreviatedIRI="foaf:firstName"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual abbreviatedIRI="foaf:gender"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="DatatypeProperty"/>
-        <NamedIndividual abbreviatedIRI="foaf:lastName"/>
-    </ClassAssertion>
+    <DisjointClasses>
+        <Class IRI="ConceptEntities"/>
+        <Class IRI="PhysicalInfrastructure"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="WiredLink"/>
+        <Class IRI="WirelessAssociation"/>
+    </DisjointClasses>
     <ClassAssertion>
         <Class abbreviatedIRI="foaf:Person"/>
         <NamedIndividual IRI="https://qianruzhou333.github.io/toco_ontology/qianru.rdf#alasdair"/>
@@ -2327,6 +1620,11 @@ According to its user, could be divided into UserDevice and SystemDevice.</Liter
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Attached</IRI>
+        <Literal datatypeIRI="&xsd;string">a status of a user device (normally a phone, a tablet, or a wearable device), indicating it is normally attached with a base station.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>BaseStation</IRI>
         <Literal datatypeIRI="&xsd;string">a &quot;land station in the land mobile service.&quot; -- according to the International Telecommunication Union&apos;s (ITU) Radio Regulations (RR).
 
@@ -2338,9 +1636,14 @@ it is a transceiver connecting a number of other devices to one another and/or t
         <Literal datatypeIRI="&xsd;string">User deivce in a Cellular network.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="disjointWith"/>
-        <IRI>ConceptEntities</IRI>
-        <IRI>PhysicalInfrastructure</IRI>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Detached</IRI>
+        <Literal datatypeIRI="&xsd;string">a status of a user device (normally a phone, a tablet, or a wearable device), indicating it is normally detached from the base station.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Drop</IRI>
+        <Literal datatypeIRI="&xsd;string">An action type in an flow entity defined by OpenFlow protocol, indicating to drop the packets matching the pattern defined in the flow.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2349,8 +1652,18 @@ it is a transceiver connecting a number of other devices to one another and/or t
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Forward</IRI>
+        <Literal datatypeIRI="&xsd;string">An action type in an flow entity defined by OpenFlow protocol, indicating to forward the packets matching the pattern defined in the flow.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Host</IRI>
         <Literal datatypeIRI="&xsd;string">A host is a computer or other device connected to a computer network. It is a network node that is assigned a network address.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Interface</IRI>
+        <Literal datatypeIRI="&xsd;string">The physical point where two devices meet and interact.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2376,6 +1689,16 @@ it is a transceiver connecting a number of other devices to one another and/or t
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>LiFiWLAN</IRI>
         <Literal datatypeIRI="&xsd;string">WLAN interface on the devices in LIFi network, e.g., LiFi user equipment, LiFi access point.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Link</IRI>
+        <Literal datatypeIRI="&xsd;string">the means of transport between two devices, could be wired, e.g., optic cable, twisted cable, or wireless, e.g., through electromagnetic wave.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Output</IRI>
+        <Literal datatypeIRI="&xsd;string">An action type in an flow entity defined by OpenFlow protocol, indicating to redirect the packets matching the pattern defined in the flow.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2448,11 +1771,6 @@ Please be reminded the electromagnetic wave (which is the links of all wireless 
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>WiFiWLAN</IRI>
         <Literal datatypeIRI="&xsd;string">WLAN interface on the devices in LIFi network, e.g., LiFi user equipment, LiFi access point.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="disjointWith"/>
-        <IRI>WiredLink</IRI>
-        <IRI>WirelessAssociation</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2971,6 +2289,11 @@ The most common value is Pi/3.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>toPort</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">the port number of the port forward to defined by the to_port property of the flow action OUTPUT.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>unReachable</IRI>
+        <Literal datatypeIRI="&xsd;string">a status of a user device (normally a phone, a tablelet, or a wearable device), indicating an abnormal situation that the device break down connection with the base station without a required detaching process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
