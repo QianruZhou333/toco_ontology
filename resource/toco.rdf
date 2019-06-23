@@ -3,7 +3,6 @@
 
 <!DOCTYPE rdf:RDF [
     <!ENTITY toco "http://purl.org/toco/" >
-    <!ENTITY toco2 "https://w3id.org/toco/" >
     <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
     <!ENTITY units "https://sweet.jpl.nasa.gov/" >
     <!ENTITY time "http://www.w3.org/2006/time#" >
@@ -11,6 +10,9 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY geo "http://www.w3.org/2003/01/geo/wgs84_pos/" >
+    <!ENTITY dc "http://purl.org/dc/terms/" >
+    <!ENTITY cc "http://creativecommons.org/ns#" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY om "http://purl.oclc.org/net/unis/ontology/sensordata.owl/" >
 ]>
@@ -25,18 +27,29 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:dc="http://purl.org/dc/terms/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:vann="http://purl.org/vacob/vann/"
      xmlns:units="https://sweet.jpl.nasa.gov/"
-     xmlns:toco2="https://w3id.org/toco/"
      xmlns:om="http://purl.oclc.org/net/unis/ontology/sensordata.owl/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/">
     <Ontology rdf:about="http://purl.org/toco/">
-        <toco2:contributor rdf:datatype="&xsd;string">Mohammad Soltani Dehghani (for LiFi networks)</toco2:contributor>
-        <rdfs:isDefinedBy rdf:datatype="&xsd;string">Qianru Zhou (qz1@hw.ac.uk)</rdfs:isDefinedBy>
-        <toco2:license rdf:datatype="&xsd;anyURI">https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document</toco2:license>
-        <rdfs:comment>Toucan Ontology (ToCo)
-
-A ontology developed for telecommunciation network systems with hybrid technologies, e.g., WiFi, LiFi, LTE, 2G/3G, optical, etc.</rdfs:comment>
-        <versionIRI rdf:resource="http://purl.org/toco/"/>
+        <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/> 
+        <dc:title xml:lang="en">Toucan Ontology</dc:title>
+        <owl:versionInfo rdf:datatype="&xsd;decimal">1.1</owl:versionInfo>
+        <dc:issued rdf:datatype="&xsd;date">2015-3-1</dc:issued>
+        <dc:modified rdf:datatype="&xsd;date">2019-3-29</dc:modified>
+        <vann:preferredNamespacePrefix>toco</vann:preferredNamespacePrefix>
+        <dc:description>A ontology developed for telecommunciation network systems with hybrid technologies, e.g., WiFi, LiFi, LTE, 2G/3G, optical, etc.</dc:description>
+        <rdfs:comment xml:lang="en">Version 1.1: creation</rdfs:comment>
+        <vann:preferredNamespaceUri>http://purl.org/toco/</vann:preferredNamespaceUri>
+        <dc:rights>Copyright  © 2015 Qianru Zhou</dc:rights>
+        <dc:publisher rdf:resource="http://hw.ac.uk"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+        <dc:contributor rdf:resource="https://qianruzhou333.github.io/toco_ontology/qianru.rdf#alasdair"/>
+        <dc:contributor rdf:resource="https://qianruzhou333.github.io/toco_ontology/qianru.rdf#mohammad"/>
+        <dc:creator rdf:resource="https://qianruzhou333.github.io/toco_ontology/qianru.rdf#qianru"/>
+        <dc:contributor rdf:resource="https://qianruzhou333.github.io/toco_ontology/qianru.rdf#steve"/>
     </Ontology>
     
 
