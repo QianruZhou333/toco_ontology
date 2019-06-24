@@ -21,10 +21,10 @@ Ontology: <http://purl.org/toco/>
 
 Annotations: 
     cc:license <http://creativecommons.org/licenses/by/3.0/>,
-    dc:contributor <https://qianruzhou333.github.io/toco_ontology/qianru.rdf#alasdair>,
-    dc:contributor <https://qianruzhou333.github.io/toco_ontology/qianru.rdf#mohammad>,
-    dc:contributor <https://qianruzhou333.github.io/toco_ontology/qianru.rdf#steve>,
-    dc:creator <https://qianruzhou333.github.io/toco_ontology/qianru.rdf#qianru>,
+    dc:contributor <http://www.macs.hw.ac.uk/~ajg33/>,
+    dc:contributor <https://www.eng.ed.ac.uk/about/people/mr-mohammad-dehghani-soltani>,
+    dc:contributor <https://www.hw.ac.uk/staff/uk/eps/stephen-mclaughlin.htm>,
+    dc:creator <https://www.gla.ac.uk/schools/computing/staff/qianruzhou/>,
     dc:description "A ontology developed for telecommunciation network systems with hybrid technologies, e.g., WiFi, LiFi, LTE, 2G/3G, optical, etc.",
     dc:issued "2015-3-1"^^xsd:date,
     dc:modified "2019-3-29"^^xsd:date,

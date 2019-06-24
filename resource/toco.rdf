@@ -46,10 +46,10 @@
         <dc:rights>Copyright  © 2015 Qianru Zhou</dc:rights>
         <dc:publisher rdf:resource="http://hw.ac.uk"/>
         <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
-        <dc:contributor rdf:resource="https://qianruzhou333.github.io/toco_ontology/qianru.rdf#alasdair"/>
-        <dc:contributor rdf:resource="https://qianruzhou333.github.io/toco_ontology/qianru.rdf#mohammad"/>
-        <dc:creator rdf:resource="https://qianruzhou333.github.io/toco_ontology/qianru.rdf#qianru"/>
-        <dc:contributor rdf:resource="https://qianruzhou333.github.io/toco_ontology/qianru.rdf#steve"/>
+        <dc:contributor rdf:resource="http://www.macs.hw.ac.uk/~ajg33/"/>
+        <dc:contributor rdf:resource="https://www.eng.ed.ac.uk/about/people/mr-mohammad-dehghani-soltani"/>
+        <dc:creator rdf:resource="https://www.gla.ac.uk/schools/computing/staff/qianruzhou/"/>
+        <dc:contributor rdf:resource="https://www.hw.ac.uk/staff/uk/eps/stephen-mclaughlin.htm"/>
     </Ontology>
     
 
