@@ -1,6 +1,8 @@
 # TOUCAN Ontology (ToCo)  
 ## IRI: http://purl.org/toco/
-An ontology for hybrid telecommunication networks. An Device-Interface-Link (DIL) ontology design pattern is proposed for the first time to our knowledge. Have been published on LOV (Linked Open Vocabulary) with the entry: https://lov.linkeddata.es/dataset/lov/vocabs/toco
+An ontology for hybrid telecommunication networks. An Device-Interface-Link (DIL) ontology design pattern is proposed for the first time to our knowledge. 
+
+Have been published on LOV (Linked Open Vocabulary) with the entry: https://lov.linkeddata.es/dataset/lov/vocabs/toco
 
 This development is part of an on-going project which is addressing the convergence of telecommunication networks across multiple technology domains. 
 The DIL pattern is observed and summarised through the ontology developing progress. It could describe all kinds of networks. 
@@ -14,3 +16,8 @@ Build around the DIL pattern, the ToCo ontology describes the physical infrastru
   
 ## Creator
  Qianru Zhou (chowqianru AT gmail DOT com)
+
+## Reference
+More information, examples, and use cases could be found in:
+
+Zhou Q., Gray A.J.G., McLaughlin S., "ToCo: An Ontology for Representing Hybrid Telecommunication Networks," In Proc. ESWC, Portorzos, Slovenia, June 2019, vol. 11503, Springer.
