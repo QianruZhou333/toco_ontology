@@ -20,4 +20,4 @@ Build around the DIL pattern, the ToCo ontology describes the physical infrastru
 ## Reference
 More information, examples, and use cases could be found in:
 
-Zhou Q., Gray A.J.G., McLaughlin S., "ToCo: An Ontology for Representing Hybrid Telecommunication Networks," In Proc. ESWC, Portorzos, Slovenia, June 2019, vol. 11503, Springer.
+Zhou Q., Gray A.J.G., McLaughlin S., "ToCo: An Ontology for Representing Hybrid Telecommunication Networks," In Proc. ESWC, Portorzos, Slovenia, June 2019, vol. 11503, Springer. DOI: https://doi.org/10.1007/978-3-030-21348-0_33 
