@@ -15,7 +15,7 @@ Build around the DIL pattern, the ToCo ontology describes the physical infrastru
 ####  revise and pull request
   
 ## Creator
- Qianru Zhou (chowqianru AT gmail DOT com)
+ Qianru Zhou (zhouqr333 AT 126 DOT com)
 
 ## Reference
 More information, examples, and use cases could be found in:
